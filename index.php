@@ -382,121 +382,189 @@ session_start();
 
 <!-- Teachers Section -->
     <section class="py-16 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-black mb-4">Meet Our Teachers</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Learn from industry experts and experienced professionals who are passionate about sharing their knowledge.
-      </p>
-    </div>
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-black mb-4">Meet Our Teachers</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Learn from industry experts and experienced professionals who are passionate about sharing their knowledge.
+                </p>
+            </div>
 
-    <!-- Dynamic Teachers Grid -->
-    <div id="teachers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-  </div>
-</section>
+            <!-- Teachers Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher Card 1 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Sarah Johnson</h3>
+                    <p class="text-gray-600 mb-3">Web Development Expert</p>
+                    <p class="text-sm text-gray-500 mb-4">5+ years experience in full-stack development with expertise in React, Node.js, and modern web technologies.</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
 
+                <!-- Teacher Card 2 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Michael Chen</h3>
+                    <p class="text-gray-600 mb-3">Data Science Specialist</p>
+                    <p class="text-sm text-gray-500 mb-4">PhD in Statistics with 8+ years in machine learning and data analysis. Former Google data scientist.</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
 
-<script>
-  const teachers = [
-  {
-    "name": "demo Johnson",
-    "title": "Web Development Expert",
-    "bio": "5+ years experience in full-stack development with expertise in React, Node.js, and modern web technologies.",
-    "socialMedia": {
-      "instagram": "https://instagram.com/msverma",
-      "linkedin": "https://linkedin.com/in/msverma",
-      "facebook": "",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Michael Chen",
-    "title": "Data Science Specialist",
-    "bio": "PhD in Statistics with 8+ years in machine learning and data analysis. Former Google data scientist.",
-    "socialMedia": {
-      "instagram": "",
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Emma Rodriguez",
-    "title": "Digital Marketing Guru",
-    "bio": "10+ years in digital marketing with expertise in SEO, social media, and content strategy for Fortune 500 companies.",
-    "socialMedia": {
-      "instagram": "",
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "David Thompson",
-    "title": "UX/UI Design Master",
-    "bio": "Award-winning designer with 12+ years creating user experiences for startups and established brands.",
-    "socialMedia": {
-      "instagram": "",
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "Lisa Park",
-    "title": "Project Management Pro",
-    "bio": "PMP certified with 15+ years managing complex projects across various industries. Expert in Agile methodologies.",
-    "socialMedia": {
-      "instagram": "",
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    }
-  },
-  {
-    "name": "James Wilson",
-    "title": "Business Analytics Expert",
-    "bio": "MBA with 9+ years in business intelligence and analytics. Specializes in turning data into strategic insights.",
-    "socialMedia": {
-      "instagram": "",
-      "linkedin": "",
-      "facebook": "",
-      "twitter": ""
-    }
-  }
-]
+                <!-- Teacher Card 3 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Emma Rodriguez</h3>
+                    <p class="text-gray-600 mb-3">Digital Marketing Guru</p>
+                    <p class="text-sm text-gray-500 mb-4">10+ years in digital marketing with expertise in SEO, social media, and content strategy for Fortune 500 companies.</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
 
+                <!-- Teacher Card 4 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">David Thompson</h3>
+                    <p class="text-gray-600 mb-3">UX/UI Design Master</p>
+                    <p class="text-sm text-gray-500 mb-4">Award-winning designer with 12+ years creating user experiences for startups and established brands.</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
 
-  const container = document.getElementById("teachers-grid");
+                <!-- Teacher Card 5 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Lisa Park</h3>
+                    <p class="text-gray-600 mb-3">Project Management Pro</p>
+                    <p class="text-sm text-gray-500 mb-4">PMP certified with 15+ years managing complex projects across various industries. Expert in Agile methodologies.</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
 
-  teachers.forEach(teacher => {
-    const card = `
-      <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-        <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
-          <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-          </svg>
+                <!-- Teacher Card 6 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+                    <div class="w-32 h-32 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">James Wilson</h3>
+                    <p class="text-gray-600 mb-3">Business Analytics Expert</p>
+                    <p class="text-sm text-gray-500 mb-4">MBA with 9+ years in business intelligence and analytics. Specializes in turning data into strategic insights.</p>
+                    <div class="flex justify-center space-x-3">
+                    
+                      <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="mt-16 bg-black text-white rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl text-white font-bold mb-2">50+</div>
+                        <div class="text-white">Expert Teachers</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl text-white font-bold mb-2">15+</div>
+                        <div class="text-white">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl text-white font-bold mb-2">10k+</div>
+                        <div class="text-white">Students Taught</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl text-white font-bold mb-2">95%</div>
+                        <div class="text-white">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <h3 class="text-2xl font-bold text-black mb-4">Want to Join Our Teaching Team?</h3>
+                <p class="text-gray-600 mb-6">We're always looking for passionate educators to share their expertise.</p>
+                <button class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                    Apply to Teach
+                </button>
+            </div>
         </div>
-        <h3 class="text-xl font-bold text-black mb-2">${teacher.name}</h3>
-        <p class="text-gray-600 mb-3">${teacher.title}</p>
-        <p class="text-sm text-gray-500 mb-4">${teacher.bio}</p>
-        <div class="flex justify-center space-x-3">
-          <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
-            <i class="fa-solid fa-envelope"></i>
-          </button>
-          <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
-            <i class="fa-brands fa-git-alt"></i>
-          </button>
-          <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </button>
-        </div>
-      </div>
-    `;
-    container.innerHTML += card;
-  });
-</script>
-
+    </section>
 
 
   <script src="./MobileMenuToggle.js"></script>
