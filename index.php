@@ -9,6 +9,12 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudentManagementSystem</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -398,15 +404,14 @@ session_start();
                     <p class="text-gray-600 mb-3">Web Development Expert</p>
                     <p class="text-sm text-gray-500 mb-4">5+ years experience in full-stack development with expertise in React, Node.js, and modern web technologies.</p>
                     <div class="flex justify-center space-x-3">
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
                         </button>
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
                         </button>
                     </div>
                 </div>
@@ -422,15 +427,14 @@ session_start();
                     <p class="text-gray-600 mb-3">Data Science Specialist</p>
                     <p class="text-sm text-gray-500 mb-4">PhD in Statistics with 8+ years in machine learning and data analysis. Former Google data scientist.</p>
                     <div class="flex justify-center space-x-3">
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
                         </button>
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
                         </button>
                     </div>
                 </div>
@@ -446,15 +450,14 @@ session_start();
                     <p class="text-gray-600 mb-3">Digital Marketing Guru</p>
                     <p class="text-sm text-gray-500 mb-4">10+ years in digital marketing with expertise in SEO, social media, and content strategy for Fortune 500 companies.</p>
                     <div class="flex justify-center space-x-3">
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
                         </button>
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
                         </button>
                     </div>
                 </div>
@@ -470,15 +473,14 @@ session_start();
                     <p class="text-gray-600 mb-3">UX/UI Design Master</p>
                     <p class="text-sm text-gray-500 mb-4">Award-winning designer with 12+ years creating user experiences for startups and established brands.</p>
                     <div class="flex justify-center space-x-3">
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
                         </button>
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
                         </button>
                     </div>
                 </div>
@@ -494,15 +496,14 @@ session_start();
                     <p class="text-gray-600 mb-3">Project Management Pro</p>
                     <p class="text-sm text-gray-500 mb-4">PMP certified with 15+ years managing complex projects across various industries. Expert in Agile methodologies.</p>
                     <div class="flex justify-center space-x-3">
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
                         </button>
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
                         </button>
                     </div>
                 </div>
@@ -518,15 +519,15 @@ session_start();
                     <p class="text-gray-600 mb-3">Business Analytics Expert</p>
                     <p class="text-sm text-gray-500 mb-4">MBA with 9+ years in business intelligence and analytics. Specializes in turning data into strategic insights.</p>
                     <div class="flex justify-center space-x-3">
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
+                    
+                      <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                             <i class="fa-solid fa-envelope"></i>
                         </button>
-                        <button class="w-8 h-8 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
+                        <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-git-alt"></i>
+                        </button>
+                         <button class="w-10 h-10 rounded-full transition-colors flex items-center justify-center">
+                           <i class="fa-brands fa-linkedin-in"></i>
                         </button>
                     </div>
                 </div>
@@ -536,20 +537,20 @@ session_start();
             <div class="mt-16 bg-black text-white rounded-lg p-8">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <div class="text-3xl font-bold mb-2">50+</div>
-                        <div class="text-gray-300">Expert Teachers</div>
+                        <div class="text-3xl text-white font-bold mb-2">50+</div>
+                        <div class="text-white">Expert Teachers</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold mb-2">15+</div>
-                        <div class="text-gray-300">Years Experience</div>
+                        <div class="text-3xl text-white font-bold mb-2">15+</div>
+                        <div class="text-white">Years Experience</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold mb-2">10k+</div>
-                        <div class="text-gray-300">Students Taught</div>
+                        <div class="text-3xl text-white font-bold mb-2">10k+</div>
+                        <div class="text-white">Students Taught</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold mb-2">95%</div>
-                        <div class="text-gray-300">Success Rate</div>
+                        <div class="text-3xl text-white font-bold mb-2">95%</div>
+                        <div class="text-white">Success Rate</div>
                     </div>
                 </div>
             </div>
