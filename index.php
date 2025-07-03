@@ -13,7 +13,7 @@ session_start();
 </head>
 
 <body class="bg-gray-50">
-  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-lg">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
 
@@ -89,9 +89,9 @@ session_start();
   </nav>
   
   <!------------------------------- hero section start ---------->
-  <section class="gradient-bg flex items-center justify-center py-12 px-4">
+  <section class="flex items-center justify-center py-12 px-4"> 
     <div class="max-w-6xl w-full mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg">
 
         <!-- Left Side - Company Info -->
         <div class="bg-white/20 backdrop-blur-sm p-12 flex flex-col justify-center text-white">
@@ -101,7 +101,7 @@ session_start();
               <h1 class="text-4xl lg:text-5xl font-bold mb-2 tracking-tight">
                 Smt ZS Patel 
               </h1>
-              <div class="w-20 h-1 bg-white/60 rounded-full"></div>
+              <div class="w-20 h-1 bg-black rounded-full"></div>
             </div>
 
             <!-- Slogan -->
@@ -116,8 +116,8 @@ session_start();
               <p class="text-lg opacity-80 leading-relaxed">
                 Join thousands of successful students who have transformed their careers with our cutting-edge programs.
               </p>
-              <button class="cta-button bg-gray-900 text-white font-semibold py-4 px-8 rounded-xl text-lg hover:bg-gray-800 inline-flex items-center space-x-2">
-                <span>Learn More</span>
+              <button class="cta-button bg-gray-900 font-semibold py-4 px-8 rounded-xl text-lg hover:bg-gray-800 inline-flex items-center space-x-2">
+                <span class="text-white">Learn More</span>
                 </svg>
               </button>
             </div>
@@ -143,7 +143,7 @@ session_start();
                   id="name"
                   name="name"
                   required
-                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                  class="form-input w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none"
                   placeholder="Enter your full name">
               </div>
 
@@ -155,7 +155,7 @@ session_start();
                   id="email"
                   name="email"
                   required
-                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                  class="form-input w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none"
                   placeholder="Enter your email address">
               </div>
 
@@ -167,7 +167,7 @@ session_start();
                   id="phone"
                   name="phone"
                   required
-                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                  class="form-input w-full px-4 py-3 border border-gray-900 rounded-lg focus:ring-2 focus:ring-black focus:border-black outline-none"
                   placeholder="Enter your phone number">
               </div>
 

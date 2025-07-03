@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
+*{
+    color: black;
+
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -24,9 +29,6 @@ body {
 }
 
 
-.gradient-bg {
-    background: linear-gradient(360deg, #fff 0%, #000 100%);
-}
 
 .form-input {
     transition: all 0.3s ease;
