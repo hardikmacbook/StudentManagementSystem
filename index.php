@@ -234,9 +234,9 @@ session_start();
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-black mb-4">Our Courses</h2>
+                <h2 class="text-4xl font-bold text-black mb-4">Our Premium Courses</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Discover our comprehensive selection of courses designed to help you master new skills and advance your career.
+                    Discover our comprehensive selection of premium courses, carefully crafted to help you master new skills, boost your confidence, and accelerate your career growth.
                 </p>
             </div>
 
