@@ -106,5 +106,8 @@
             </div>
         </div>
     </nav>
+
+    <!----------------------- JS ----------------------->
+    <script src="./MobileMenuToggle.js"></script>
 </body>
 </html>
