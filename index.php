@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,24 +18,23 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex-shrink-0">
-          <a href="./index.php" class="text-lg font-semibold text-gray-900 transition-colors duration-200">
+          <a href="index.php" class="text-lg font-semibold text-gray-900 transition-colors duration-200">
             <img class="w-[100px] sm:w-[150px] lg:w-[150px]" src="./assest/images/z.s patel.png" alt="">
           </a>
         </div>
 
-
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
+          <a href="index.php" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
             Home
           </a>
-          <a href="#" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
+          <a href="about.php" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
             About
           </a>
-          <a href="#" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
+          <a href="course.php" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
             Course
           </a>
-          <a href="#" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
+          <a href="contact.php" class="nav-link text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200">
             Contact
           </a>
         </div>
@@ -40,10 +42,10 @@
         <!-- CTA Button -->
         <div class="hidden md:block">
           <div class="flex gap-4">
-            <a href="#" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
+            <a href="" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
               Get Started
             </a>
-            <a href="#" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
+            <a href="" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
               Login
             </a>
           </div>
@@ -62,22 +64,22 @@
       <!-- Mobile Navigation -->
       <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
+          <a href="index.php" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
             Home
           </a>
-          <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
+          <a href="about.php" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
             About
           </a>
-          <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
+          <a href="course.php" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
             Course
           </a>
-          <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
+          <a href="contact.php" class="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md">
             Contact
           </a>
-          <a href="#" class="bg-gray-900 text-white hover:bg-gray-800 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md mt-3">
+          <a href="register.php" class="bg-gray-900 text-white hover:bg-gray-800 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md mt-3">
             Get Started
           </a>
-          <a href="#" class="bg-gray-900 text-white hover:bg-gray-800 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md mt-3">
+          <a href="login.php" class="bg-gray-900 text-white hover:bg-gray-800 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md mt-3">
             Login
           </a>
         </div>
@@ -85,7 +87,8 @@
     </div>
   </nav>
 
-  <!----------------------- JS ----------------------->
+  <h1 class="text-center text-2xl font-bold mt-10">Welcome to Student Management System</h1>
+
   <script src="./MobileMenuToggle.js"></script>
 </body>
 
