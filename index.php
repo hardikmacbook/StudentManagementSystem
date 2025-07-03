@@ -13,6 +13,7 @@ session_start();
 </head>
 
 <body class="bg-gray-50">
+  <!------------------------------- Navbar start ---------->
   <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-lg">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -87,6 +88,7 @@ session_start();
       </div>
     </div>
   </nav>
+  <!------------------------------- Navbar start ---------->
   
   <!------------------------------- hero section start ---------->
   <section class="flex items-center justify-center py-12 px-4"> 
@@ -223,6 +225,127 @@ session_start();
     }
   </script>
   <!------------------------------- hero section end ---------->
+
+
+
+
+   <!-- Course Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-black mb-4">Our Courses</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Discover our comprehensive selection of courses designed to help you master new skills and advance your career.
+                </p>
+            </div>
+
+            <!-- Course Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-full h-48 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="./assest//images/z.s patel.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Web Development</h3>
+                    <p class="text-gray-600 mb-4">Learn HTML, CSS, JavaScript, and modern frameworks to build stunning websites.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-black">₹99</span>
+                        <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-full h-48 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="./assest//images/z.s patel.png" alt="">
+                      
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-4">Master social media, SEO, and content marketing to grow your business online.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-black">₹79</span>
+                        <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-full h-48 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="./assest//images/z.s patel.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Data Science</h3>
+                    <p class="text-gray-600 mb-4">Analyze data, build models, and make data-driven decisions with Python and R.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-black">₹129</span>
+                        <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-full h-48 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="./assest//images/z.s patel.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Graphic Design</h3>
+                    <p class="text-gray-600 mb-4">Create stunning visuals and master design principles using industry-standard tools.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-black">₹89</span>
+                        <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-full h-48 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="./assest//images/z.s patel.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Project Management</h3>
+                    <p class="text-gray-600 mb-4">Learn to plan, execute, and deliver projects on time and within budget.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-black">₹109</span>
+                        <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="bg-white border-2 border-black rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-full h-48 rounded-lg mb-4 flex items-center justify-center">
+                        <img src="./assest//images/z.s patel.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Business Analytics</h3>
+                    <p class="text-gray-600 mb-4">Transform raw data into actionable insights to drive business growth.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-black">₹119</span>
+                        <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <div class="bg-black text-white rounded-lg p-8 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Start Learning?</h3>
+                    <p class="text-gray-300 mb-6">Join thousands of students who have transformed their careers with our courses.</p>
+                    <button class="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        View All Courses
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
   <script src="./MobileMenuToggle.js"></script>
