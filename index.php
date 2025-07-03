@@ -87,10 +87,8 @@ session_start();
       </div>
     </div>
   </nav>
-
-
-
-
+  
+  <!------------------------------- hero section start ---------->
   <section class="gradient-bg flex items-center justify-center py-12 px-4">
     <div class="max-w-6xl w-full mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
@@ -101,7 +99,7 @@ session_start();
             <!-- Company Name -->
             <div>
               <h1 class="text-4xl lg:text-5xl font-bold mb-2 tracking-tight">
-                EduTech Pro
+                Smt ZS Patel 
               </h1>
               <div class="w-20 h-1 bg-white/60 rounded-full"></div>
             </div>
@@ -118,10 +116,8 @@ session_start();
               <p class="text-lg opacity-80 leading-relaxed">
                 Join thousands of successful students who have transformed their careers with our cutting-edge programs.
               </p>
-              <button class="cta-button bg-white text-purple-700 font-semibold py-4 px-8 rounded-full text-lg hover:bg-white/90 inline-flex items-center space-x-2">
+              <button class="cta-button bg-gray-900 text-white font-semibold py-4 px-8 rounded-xl text-lg hover:bg-gray-800 inline-flex items-center space-x-2">
                 <span>Learn More</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </button>
             </div>
@@ -178,7 +174,7 @@ session_start();
               <!-- Submit Button -->
               <button
                 type="submit"
-                class="submit-button w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                class="submit-button w-full bg-gray-900 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-700 hover:bg-gray-800 transition-all duration-300">
                 Submit Application
               </button>
             </form>
@@ -192,7 +188,7 @@ session_start();
       </div>
     </div>
   </section>
-
+  <!-- admisson sumbittion -->
   <script>
     function handleSubmit(event) {
       event.preventDefault();
@@ -226,6 +222,8 @@ session_start();
       }, 2000);
     }
   </script>
+  <!------------------------------- hero section end ---------->
+
 
   <script src="./MobileMenuToggle.js"></script>
 </body>
