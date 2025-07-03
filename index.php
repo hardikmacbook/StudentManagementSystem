@@ -88,7 +88,7 @@ session_start();
       </div>
     </div>
   </nav>
-  <!------------------------------- Navbar start ---------->
+  <!------------------------------- Navbar end ---------->
   
   <!------------------------------- hero section start ---------->
   <section class="flex items-center justify-center py-12 px-4"> 
@@ -227,8 +227,6 @@ session_start();
   <!------------------------------- hero section end ---------->
 
 
-
-
    <!-- Course Section -->
     <section class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
@@ -249,6 +247,10 @@ session_start();
                     </div>
                     <h3 class="text-xl font-bold text-black mb-2">Web Development</h3>
                     <p class="text-gray-600 mb-4">Learn HTML, CSS, JavaScript, and modern frameworks to build stunning websites.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold text-black">₹99</span>
                         <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
