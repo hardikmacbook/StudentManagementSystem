@@ -267,6 +267,10 @@ session_start();
                     </div>
                     <h3 class="text-xl font-bold text-black mb-2">Digital Marketing</h3>
                     <p class="text-gray-600 mb-4">Master social media, SEO, and content marketing to grow your business online.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold text-black">₹79</span>
                         <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
@@ -282,6 +286,10 @@ session_start();
                     </div>
                     <h3 class="text-xl font-bold text-black mb-2">Data Science</h3>
                     <p class="text-gray-600 mb-4">Analyze data, build models, and make data-driven decisions with Python and R.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold text-black">₹129</span>
                         <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
@@ -297,6 +305,10 @@ session_start();
                     </div>
                     <h3 class="text-xl font-bold text-black mb-2">Graphic Design</h3>
                     <p class="text-gray-600 mb-4">Create stunning visuals and master design principles using industry-standard tools.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold text-black">₹89</span>
                         <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
@@ -312,6 +324,10 @@ session_start();
                     </div>
                     <h3 class="text-xl font-bold text-black mb-2">Project Management</h3>
                     <p class="text-gray-600 mb-4">Learn to plan, execute, and deliver projects on time and within budget.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold text-black">₹109</span>
                         <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
@@ -327,6 +343,10 @@ session_start();
                     </div>
                     <h3 class="text-xl font-bold text-black mb-2">Business Analytics</h3>
                     <p class="text-gray-600 mb-4">Transform raw data into actionable insights to drive business growth.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <div class="flex items-center justify-between">
                         <span class="text-2xl font-bold text-black">₹119</span>
                         <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
@@ -341,6 +361,10 @@ session_start();
                 <div class="bg-black text-white rounded-lg p-8 max-w-2xl mx-auto">
                     <h3 class="text-2xl font-bold mb-4">Ready to Start Learning?</h3>
                     <p class="text-gray-300 mb-6">Join thousands of students who have transformed their careers with our courses.</p>
+                    <div class="mb-4">
+                    <b class="text-2xl text-black">Duration:</b>
+                    <span class="text-xl">45 house</span>
+                    </div>
                     <button class="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                         View All Courses
                     </button>
