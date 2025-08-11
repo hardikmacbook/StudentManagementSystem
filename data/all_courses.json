@@ -1,0 +1,488 @@
+{
+  "courses": [
+    {
+      "id": "bbc",
+      "title": "Bachelor of Business Commerce",
+      "code": "BBC",
+      "instructor": "Dr. Rajesh Patel",
+      "description": "A comprehensive program covering business commerce fundamentals and advanced concepts.",
+      "image": "https://3.bp.blogspot.com/-tt5Rv-z227U/WSL5TrX0N3I/AAAAAAAAkrM/R51O6FtdvZQzs4SCiW5VaqIKrlFxu0bKgCLcB/s1600/bca.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "bbc101",
+              "title": "Introduction to Business",
+              "description": "Fundamentals of business operations and management.",
+              "pdf": "assest/pdfs/bbc/year1/intro_business.pdf"
+            },
+            {
+              "id": "bbc102",
+              "title": "Principles of Accounting",
+              "description": "Basic accounting concepts and financial statements.",
+              "pdf": "assest/pdfs/bbc/year1/accounting.pdf"
+            },
+            {
+              "id": "bbc103",
+              "title": "Business Economics",
+              "description": "Economic principles applied to business decision-making.",
+              "pdf": "assest/pdfs/bbc/year1/economics.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "bbc201",
+              "title": "Business Law",
+              "description": "Legal framework governing business operations.",
+              "pdf": "assest/pdfs/bbc/year2/business_law.pdf"
+            },
+            {
+              "id": "bbc202",
+              "title": "Marketing Management",
+              "description": "Principles and strategies of marketing in business.",
+              "pdf": "assest/pdfs/bbc/year2/marketing.pdf"
+            },
+            {
+              "id": "bbc203",
+              "title": "Financial Management",
+              "description": "Managing financial resources and investment decisions.",
+              "pdf": "assest/pdfs/bbc/year2/finance.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 3,
+          "subjects": [
+            {
+              "id": "bbc301",
+              "title": "Strategic Management",
+              "description": "Formulating and implementing business strategies.",
+              "pdf": "assest/pdfs/bbc/year3/strategy.pdf"
+            },
+            {
+              "id": "bbc302",
+              "title": "International Business",
+              "description": "Global business operations and cross-cultural management.",
+              "pdf": "assest/pdfs/bbc/year3/international.pdf"
+            },
+            {
+              "id": "bbc303",
+              "title": "Business Ethics",
+              "description": "Ethical considerations in business decision-making.",
+              "pdf": "assest/pdfs/bbc/year3/ethics.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bba",
+      "title": "Bachelor of Business Administration",
+      "code": "BBA",
+      "instructor": "Dr. Priya Sharma",
+      "description": "A program designed to develop management skills and business acumen for future business leaders.",
+      "image": "assest/images/bba.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "bba101",
+              "title": "Principles of Management",
+              "description": "Fundamentals of management theory and practice.",
+              "pdf": "assest/pdfs/bba/year1/management.pdf"
+            },
+            {
+              "id": "bba102",
+              "title": "Business Communication",
+              "description": "Effective communication in business contexts.",
+              "pdf": "assest/pdfs/bba/year1/communication.pdf"
+            },
+            {
+              "id": "bba103",
+              "title": "Microeconomics",
+              "description": "Economic principles at the individual and firm level.",
+              "pdf": "assest/pdfs/bba/year1/microeconomics.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "bba201",
+              "title": "Organizational Behavior",
+              "description": "Human behavior in organizational settings.",
+              "pdf": "assest/pdfs/bba/year2/org_behavior.pdf"
+            },
+            {
+              "id": "bba202",
+              "title": "Marketing Research",
+              "description": "Methods and techniques for market research.",
+              "pdf": "assest/pdfs/bba/year2/market_research.pdf"
+            },
+            {
+              "id": "bba203",
+              "title": "Human Resource Management",
+              "description": "Managing human resources in organizations.",
+              "pdf": "assest/pdfs/bba/year2/hrm.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 3,
+          "subjects": [
+            {
+              "id": "bba301",
+              "title": "Operations Management",
+              "description": "Managing production and service operations.",
+              "pdf": "assest/pdfs/bba/year3/operations.pdf"
+            },
+            {
+              "id": "bba302",
+              "title": "Business Analytics",
+              "description": "Data-driven decision making in business.",
+              "pdf": "assest/pdfs/bba/year3/analytics.pdf"
+            },
+            {
+              "id": "bba303",
+              "title": "Entrepreneurship",
+              "description": "Starting and managing new business ventures.",
+              "pdf": "assest/pdfs/bba/year3/entrepreneurship.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bcom_guj",
+      "title": "Bachelor of Commerce (Gujarati Medium)",
+      "code": "BCOM-GUJ",
+      "instructor": "Dr. Amit Desai",
+      "description": "A comprehensive commerce program taught in Gujarati medium covering accounting, finance, and business principles.",
+      "image": "assest/images/bcom_guj.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "bcomg101",
+              "title": "Financial Accounting (Gujarati)",
+              "description": "Basic accounting principles and financial statements in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year1/accounting.pdf"
+            },
+            {
+              "id": "bcomg102",
+              "title": "Business Mathematics (Gujarati)",
+              "description": "Mathematical concepts applied to business problems in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year1/mathematics.pdf"
+            },
+            {
+              "id": "bcomg103",
+              "title": "Business Economics (Gujarati)",
+              "description": "Economic principles for business in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year1/economics.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "bcomg201",
+              "title": "Corporate Accounting (Gujarati)",
+              "description": "Accounting for corporations in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year2/corporate.pdf"
+            },
+            {
+              "id": "bcomg202",
+              "title": "Business Law (Gujarati)",
+              "description": "Legal aspects of business in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year2/law.pdf"
+            },
+            {
+              "id": "bcomg203",
+              "title": "Taxation (Gujarati)",
+              "description": "Principles of taxation in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year2/taxation.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 3,
+          "subjects": [
+            {
+              "id": "bcomg301",
+              "title": "Auditing (Gujarati)",
+              "description": "Principles and procedures of auditing in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year3/auditing.pdf"
+            },
+            {
+              "id": "bcomg302",
+              "title": "Financial Management (Gujarati)",
+              "description": "Managing financial resources in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year3/finance.pdf"
+            },
+            {
+              "id": "bcomg303",
+              "title": "Cost Accounting (Gujarati)",
+              "description": "Cost accounting principles in Gujarati medium.",
+              "pdf": "assest/pdfs/bcom_guj/year3/cost.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bcom_eng",
+      "title": "Bachelor of Commerce (English Medium)",
+      "code": "BCOM-ENG",
+      "instructor": "Dr. Sarah Johnson",
+      "description": "A comprehensive commerce program taught in English medium covering accounting, finance, and business principles.",
+      "image": "assest/images/bcom_eng.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "bcome101",
+              "title": "Financial Accounting",
+              "description": "Basic accounting principles and financial statements.",
+              "pdf": "assest/pdfs/bcom_eng/year1/accounting.pdf"
+            },
+            {
+              "id": "bcome102",
+              "title": "Business Mathematics",
+              "description": "Mathematical concepts applied to business problems.",
+              "pdf": "assest/pdfs/bcom_eng/year1/mathematics.pdf"
+            },
+            {
+              "id": "bcome103",
+              "title": "Business Economics",
+              "description": "Economic principles for business.",
+              "pdf": "assest/pdfs/bcom_eng/year1/economics.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "bcome201",
+              "title": "Corporate Accounting",
+              "description": "Accounting for corporations.",
+              "pdf": "assest/pdfs/bcom_eng/year2/corporate.pdf"
+            },
+            {
+              "id": "bcome202",
+              "title": "Business Law",
+              "description": "Legal aspects of business.",
+              "pdf": "assest/pdfs/bcom_eng/year2/law.pdf"
+            },
+            {
+              "id": "bcome203",
+              "title": "Taxation",
+              "description": "Principles of taxation.",
+              "pdf": "assest/pdfs/bcom_eng/year2/taxation.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 3,
+          "subjects": [
+            {
+              "id": "bcome301",
+              "title": "Auditing",
+              "description": "Principles and procedures of auditing.",
+              "pdf": "assest/pdfs/bcom_eng/year3/auditing.pdf"
+            },
+            {
+              "id": "bcome302",
+              "title": "Financial Management",
+              "description": "Managing financial resources.",
+              "pdf": "assest/pdfs/bcom_eng/year3/finance.pdf"
+            },
+            {
+              "id": "bcome303",
+              "title": "Cost Accounting",
+              "description": "Cost accounting principles.",
+              "pdf": "assest/pdfs/bcom_eng/year3/cost.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mca",
+      "title": "Master of Computer Applications",
+      "code": "MCA",
+      "instructor": "Prof. Vikram Singh",
+      "description": "An advanced program in computer applications covering software development, database management, and system analysis.",
+      "image": "assest/images/mca.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "mca101",
+              "title": "Programming Fundamentals",
+              "description": "Basic programming concepts and algorithms.",
+              "pdf": "assest/pdfs/mca/year1/programming.pdf"
+            },
+            {
+              "id": "mca102",
+              "title": "Database Management Systems",
+              "description": "Concepts and applications of database systems.",
+              "pdf": "assest/pdfs/mca/year1/database.pdf"
+            },
+            {
+              "id": "mca103",
+              "title": "Computer Organization",
+              "description": "Architecture and organization of computer systems.",
+              "pdf": "assest/pdfs/mca/year1/organization.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "mca201",
+              "title": "Software Engineering",
+              "description": "Principles and practices of software development.",
+              "pdf": "assest/pdfs/mca/year2/software_eng.pdf"
+            },
+            {
+              "id": "mca202",
+              "title": "Web Technologies",
+              "description": "Technologies for web application development.",
+              "pdf": "assest/pdfs/mca/year2/web_tech.pdf"
+            },
+            {
+              "id": "mca203",
+              "title": "Data Structures and Algorithms",
+              "description": "Advanced data structures and algorithm design.",
+              "pdf": "assest/pdfs/mca/year2/data_structures.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mba",
+      "title": "Master of Business Administration",
+      "code": "MBA",
+      "instructor": "Dr. Neha Gupta",
+      "description": "An advanced management program developing leadership skills and strategic thinking for business executives.",
+      "image": "assest/images/mba.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "mba101",
+              "title": "Management Principles",
+              "description": "Advanced concepts in management theory and practice.",
+              "pdf": "assest/pdfs/mba/year1/principles.pdf"
+            },
+            {
+              "id": "mba102",
+              "title": "Financial Accounting for Managers",
+              "description": "Accounting concepts for managerial decision-making.",
+              "pdf": "assest/pdfs/mba/year1/accounting.pdf"
+            },
+            {
+              "id": "mba103",
+              "title": "Marketing Management",
+              "description": "Strategic marketing concepts and applications.",
+              "pdf": "assest/pdfs/mba/year1/marketing.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "mba201",
+              "title": "Strategic Management",
+              "description": "Formulating and implementing business strategies.",
+              "pdf": "assest/pdfs/mba/year2/strategy.pdf"
+            },
+            {
+              "id": "mba202",
+              "title": "Operations Research",
+              "description": "Quantitative methods for business decision-making.",
+              "pdf": "assest/pdfs/mba/year2/operations.pdf"
+            },
+            {
+              "id": "mba203",
+              "title": "Business Analytics",
+              "description": "Data-driven decision making for business.",
+              "pdf": "assest/pdfs/mba/year2/analytics.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "msc_it",
+      "title": "Master of Science in Information Technology",
+      "code": "MSC-IT",
+      "instructor": "Dr. Rahul Mehta",
+      "description": "An advanced program in information technology covering network management, cybersecurity, and IT project management.",
+      "image": "assest/images/msc_it.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "subjects": [
+            {
+              "id": "mscit101",
+              "title": "Advanced Programming",
+              "description": "Advanced programming concepts and techniques.",
+              "pdf": "assest/pdfs/msc_it/year1/programming.pdf"
+            },
+            {
+              "id": "mscit102",
+              "title": "Network Security",
+              "description": "Security concepts for computer networks.",
+              "pdf": "assest/pdfs/msc_it/year1/security.pdf"
+            },
+            {
+              "id": "mscit103",
+              "title": "Database Administration",
+              "description": "Managing and administering database systems.",
+              "pdf": "assest/pdfs/msc_it/year1/database.pdf"
+            }
+          ]
+        },
+        {
+          "year_number": 2,
+          "subjects": [
+            {
+              "id": "mscit201",
+              "title": "Cloud Computing",
+              "description": "Concepts and applications of cloud computing.",
+              "pdf": "assest/pdfs/msc_it/year2/cloud.pdf"
+            },
+            {
+              "id": "mscit202",
+              "title": "IT Project Management",
+              "description": "Managing IT projects and resources.",
+              "pdf": "assest/pdfs/msc_it/year2/project_mgmt.pdf"
+            },
+            {
+              "id": "mscit203",
+              "title": "Artificial Intelligence",
+              "description": "Principles and applications of AI in IT.",
+              "pdf": "assest/pdfs/msc_it/year2/ai.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
