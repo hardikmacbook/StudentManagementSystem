@@ -35,9 +35,11 @@
   <header class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[40%] max-w-5xl z-50">
     <div class="glass flex justify-between items-center px-6 py-3">
       <!-- Logo -->
-      <a href="/StudentManagementSystem/index.php" class="text-xl font-bold text-black tracking-wide">
-        Course Portal
-      </a>
+<a href="/StudentManagementSystem/index.php" class="text-xl font-bold text-black tracking-tight flex items-center space-x-2">
+  <i class="fas fa-graduation-cap"></i> 
+  <p class="tracking-tight">Open<span>2</span>Learn</p>
+</a>
+
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-8">
