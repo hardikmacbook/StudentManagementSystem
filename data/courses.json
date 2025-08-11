@@ -22,5 +22,13 @@
     "instructor": "Prof. Robert Chen",
     "description": "An introduction to the fundamental principles of physics, including mechanics, thermodynamics, and electromagnetism.",
     "image": "assest/images/phys101.jpg"
+  },
+   {
+    "id": "web101",
+    "title": "Web Development Fundamentals",
+    "code": "WEB101",
+    "instructor": "Prof. Michael Lee",
+    "description": "A beginner's guide to web development, covering HTML, CSS, and JavaScript.",
+    "image": "assest/images/web101.jpg"
   }
 ]

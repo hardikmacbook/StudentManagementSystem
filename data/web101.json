@@ -1,0 +1,34 @@
+{
+  "id": "web",
+  "title": "Advanced Mathematics",
+  "code": "MATH201",
+  "instructor": "Dr. Emily Johnson",
+  "description": "Covers advanced mathematical concepts including calculus, linear algebra, and differential equations.",
+  "image": "assest/images/math201.jpg",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "demo and Continuity",
+      "description": "Understanding the concept of limits and continuity in functions.",
+      "pdf": "assest/pdfs/math201/chapter1.pdf"
+    },
+    {
+      "number": 2,
+      "title": "Differentiation",
+      "description": "Rules and applications of differentiation.",
+      "pdf": "assest/pdfs/math201/chapter2.pdf"
+    },
+    {
+      "number": 3,
+      "title": "Integration",
+      "description": "Techniques and applications of integration.",
+      "pdf": "assest/pdfs/math201/chapter3.pdf"
+    },
+    {
+      "number": 4,
+      "title": "Linear Algebra Basics",
+      "description": "Introduction to matrices, determinants, and vector spaces.",
+      "pdf": "assest/pdfs/math201/chapter4.pdf"
+    }
+  ]
+}
