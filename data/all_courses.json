@@ -5,8 +5,8 @@
       "title": "Bachelor of Computer Applications",
       "code": "BCA",
       "instructor": "Dr. Anil Kumar",
-      "description": "A comprehensive program covering computer applications and programming.",
-      "image": "https://3.bp.blogspot.com/-tt5Rv-z227U/WSL5TrX0N3I/AAAAAAAAkrM/R51O6FtdvZQzs4SCiW5VaqIKrlFxu0bKgCLcB/s1600/bca.jpg",
+      "description": " It Will Prepare Aspiring Students To Become A Computer Programmers Who Can Work In Companies At Entry-level And Can Also, Work Independently.",
+      "image": "https://iulonline.in/images/bac-text.png",
       "years": [
         {
           "year_number": 1,
@@ -16,17 +16,52 @@
               "subjects": [
                 {
                   "id": "bca101",
-                  "title": "Introduction to Computer Applications",
-                  "description": "Fundamentals of computer concepts and basic programming.",
+                  "title": "Communication Skills",
+                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
                   "pdf": "assest/pdfs/bca/year1/sem1/intro_computer_applications.pdf",
-                  "image": "assest/images/subjects/intro_computer.jpg"
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085856.jpeg"
                 },
                 {
                   "id": "bca102",
-                  "title": "Principles of Accounting",
-                  "description": "Basic accounting concepts and financial statements.",
+                  "title": "Mathematics",
+                  "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
                   "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "assest/images/subjects/accounting.jpg"
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085714.jpeg"
+                },
+                {
+                  "id": "bca103",
+                  "title": "Introduction to Computers",
+                  "description": "The objective is to provide knowledge of functional units, number System, Devices and memory & its storage.",
+                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085826.jpeg"
+                },
+                {
+                  "id": "bca104",
+                  "title": "Computer Programming & Programming Methodology",
+                  "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
+                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085792.jpeg"
+                },
+                {
+                  "id": "bca105",
+                  "title": "Data Processing and Analysis",
+                  "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
+                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085755.jpeg"
+                },
+                 {
+                  "id": "bca106",
+                  "title": "Practical",
+                  "description": "The objective of this course is to introduce the essentials of computer programming language, introduction of compiler - based programming language, concepts of data and representation of data, use of query languages, and storing and accessing data using query languages.",
+                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085952.jpeg"
+                },
+                 {
+                  "id": "bca107",
+                  "title": "Introduction to Cybersecurity and Information Security",
+                  "description": "",
+                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1727799936.jpeg"
                 }
               ]
             },

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open2Learn</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -122,7 +121,7 @@
     index = (index + 1) % totalSlides;
     slider.style.transform = `translateX(-${index * 100}%)`;
     updateIndicators();
-  }, 5000);
+  }, 6000);
 </script>
 
 <!-- Stats Section -->

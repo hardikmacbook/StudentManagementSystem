@@ -69,7 +69,7 @@ if (!$semester) {
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
     <!-- Back Button -->
-    <div class="mb-6">
+    <div class="mb-6 pt-10">
         <a href="year_semesters.php?course_id=<?= urlencode($courseId) ?>&year=<?= urlencode($yearNumber) ?>" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-all duration-300 ease-in-out transform hover:translate-x-[-5px]">
             <i class="fas fa-arrow-left mr-2"></i> Back to Semesters
         </a>
@@ -100,10 +100,14 @@ if (!$semester) {
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <?php foreach ($semester['subjects'] as $subject): ?>
                 <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col overflow-hidden border border-gray-100">
+                    
                     <!-- Subject Image -->
-                    <div class="h-48 bg-gray-100 overflow-hidden">
-                        <?php if (!empty($subject['image']) && file_exists($subject['image'])): ?>
-                            <img src="<?= htmlspecialchars($subject['image']) ?>" alt="<?= htmlspecialchars($subject['title']) ?>" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    <div class="h-80 bg-gray-100 overflow-hidden">
+                        <?php if (!empty($subject['image'])): ?>
+                            <img src="<?= htmlspecialchars($subject['image']) ?>" 
+                                 alt="<?= htmlspecialchars($subject['title']) ?>" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.onerror=null;this.src='images/default-placeholder.png';">
                         <?php else: ?>
                             <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
                                 <i class="fas fa-book-open text-4xl text-blue-300"></i>

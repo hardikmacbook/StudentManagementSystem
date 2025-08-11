@@ -52,7 +52,7 @@ if (!$year) {
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
     <!-- Back Button -->
-    <div class="mb-6">
+    <div class="mb-6 pt-10">
         <a href="course_years.php?id=<?= urlencode($courseId) ?>" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-all duration-300 ease-in-out transform hover:translate-x-[-5px]">
             <i class="fas fa-arrow-left mr-2"></i> Back to Years
         </a>

@@ -9,7 +9,7 @@ $courses = $coursesData['courses'] ?? [];
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
     <!-- Page Heading -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-12 pt-10">
         <h1 class="text-4xl font-bold mb-4 text-gray-800">Our Academic Programs</h1>
         <p class="text-gray-600 max-w-3xl mx-auto">Explore our comprehensive range of courses designed to provide you with the knowledge and skills needed for your future career.</p>
     </div>
