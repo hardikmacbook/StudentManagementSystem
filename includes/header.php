@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Course Management System</title>
+  <title>Open2Learn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
@@ -36,8 +36,7 @@
     <div class="glass flex justify-between items-center px-6 py-3">
       <!-- Logo -->
 <a href="/StudentManagementSystem/index.php" class="text-xl font-bold text-black tracking-tight flex items-center space-x-2">
-  <i class="fas fa-graduation-cap"></i> 
-  <p class="tracking-tight">Open<span>2</span>Learn</p>
+  <p class="tracking-tight text-lg">Open<span>2</span>Learn</p>
 </a>
 
       
