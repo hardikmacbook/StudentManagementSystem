@@ -1,12 +1,53 @@
 <?php include 'includes/header.php'; ?>
 
-<div class="bg-blue-50 py-12 px-4 rounded-lg shadow-sm mb-12">
-  <div class="max-w-4xl mx-auto text-center">
-    <h1 class="text-4xl font-bold text-blue-800 mb-4">Welcome to Course Portal</h1>
-    <p class="text-xl text-gray-700 mb-8">Access quality educational materials for your courses</p>
-    <a href="courses.php" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Browse Courses</a>
+<!-- Hero Slider -->
+<div class="relative w-full h-[500px] overflow-hidden">
+  <!-- Slides -->
+  <div class="slider-wrapper flex transition-transform duration-700 ease-in-out" id="slider">
+    <div class="flex-shrink-0 w-full h-[500px]">
+      <img src="https://source.unsplash.com/1600x900/?university" alt="University Campus" class="w-full h-full object-cover"/>
+    </div>
+    <div class="flex-shrink-0 w-full h-[500px]">
+      <img src="https://source.unsplash.com/1600x900/?library" alt="Library Interior" class="w-full h-full object-cover"/>
+    </div>
+    <div class="flex-shrink-0 w-full h-[500px]">
+      <img src="https://source.unsplash.com/1600x900/?students" alt="Students Studying" class="w-full h-full object-cover"/>
+    </div>
   </div>
+
+  <!-- Navigation Arrows -->
+  <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black" aria-label="Previous Slide">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black" aria-label="Next Slide">
+    <i class="fas fa-chevron-right"></i>
+  </button>
 </div>
+
+<script>
+  const slider = document.getElementById('slider');
+  const totalSlides = slider.children.length;
+  let index = 0;
+
+  document.getElementById('next').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  document.getElementById('prev').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  // Auto-play every 5 seconds
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }, 5000);
+</script>
+
+
+
 
 <div class="max-w-6xl mx-auto">
   <h2 class="text-3xl font-bold text-center mb-8">Featured Courses</h2>
