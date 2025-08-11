@@ -1,12 +1,23 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open2Learn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <?php include 'includes/header.php'; ?>
 
-<!-- Hero Section with Animated Slider -->
+<!-- Hero Section -->
 <div class="relative w-full h-[600px] overflow-hidden">
   <!-- Slides -->
   <div class="slider-wrapper flex transition-transform duration-700 ease-in-out" id="slider">
     <div class="flex-shrink-0 w-full h-[600px] relative">
-      <img src="https://source.unsplash.com/1600x900/?university" alt="University Campus" class="w-full h-full object-cover"/>
-      <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent flex items-center">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg" alt="University Campus" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
         <div class="text-white max-w-2xl ml-16">
           <h1 class="text-5xl font-bold mb-4">Welcome to Course Portal</h1>
           <p class="text-xl mb-8">Access quality education materials anytime, anywhere</p>
@@ -17,9 +28,10 @@
         </div>
       </div>
     </div>
+
     <div class="flex-shrink-0 w-full h-[600px] relative">
-      <img src="https://source.unsplash.com/1600x900/?library" alt="Library Interior" class="w-full h-full object-cover"/>
-      <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/70 to-transparent flex items-center">
+      <img src="https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg" alt="Library Interior" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
         <div class="text-white max-w-2xl ml-16">
           <h1 class="text-5xl font-bold mb-4">Comprehensive Learning</h1>
           <p class="text-xl mb-8">Structured courses with semester-wise organization</p>
@@ -30,9 +42,10 @@
         </div>
       </div>
     </div>
+
     <div class="flex-shrink-0 w-full h-[600px] relative">
-      <img src="https://source.unsplash.com/1600x900/?students" alt="Students Studying" class="w-full h-full object-cover"/>
-      <div class="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-transparent flex items-center">
+      <img src="https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg" alt="Students Studying" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
         <div class="text-white max-w-2xl ml-16">
           <h1 class="text-5xl font-bold mb-4">Learn at Your Pace</h1>
           <p class="text-xl mb-8">Download or view course materials online</p>
@@ -43,6 +56,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 
   <!-- Navigation Arrows -->
@@ -241,3 +255,5 @@
 </div>
 
 <?php include 'includes/footer.php'; ?>
+</body>
+</html>
