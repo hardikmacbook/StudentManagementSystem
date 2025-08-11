@@ -59,17 +59,17 @@
               "subjects": [
                 {
                   "id": "bca201",
-                  "title": "Business Law",
-                  "description": "Legal framework governing business operations.",
-                  "pdf": "assest/pdfs/bca/year2/sem3/business_law.pdf",
-                  "image": "assest/images/subjects/business_law.jpg"
+                  "title": "Data Structures",
+                  "description": "Introduction to data storage and algorithms.",
+                  "pdf": "assest/pdfs/bca/year2/sem3/data_structures.pdf",
+                  "image": "assest/images/subjects/data_structures.jpg"
                 },
                 {
                   "id": "bca202",
-                  "title": "Marketing Management",
-                  "description": "Principles and strategies of marketing in business.",
-                  "pdf": "assest/pdfs/bca/year2/sem3/marketing.pdf",
-                  "image": "assest/images/subjects/marketing.jpg"
+                  "title": "Operating Systems",
+                  "description": "Concepts and architecture of modern OS.",
+                  "pdf": "assest/pdfs/bca/year2/sem3/operating_systems.pdf",
+                  "image": "assest/images/subjects/os.jpg"
                 }
               ]
             },
@@ -78,17 +78,17 @@
               "subjects": [
                 {
                   "id": "bca203",
-                  "title": "Financial Management",
-                  "description": "Managing financial resources and investment decisions.",
-                  "pdf": "assest/pdfs/bca/year2/sem4/finance.pdf",
-                  "image": "assest/images/subjects/finance.jpg"
+                  "title": "Database Management Systems",
+                  "description": "Design and management of databases.",
+                  "pdf": "assest/pdfs/bca/year2/sem4/dbms.pdf",
+                  "image": "assest/images/subjects/dbms.jpg"
                 },
                 {
                   "id": "bca204",
-                  "title": "Human Resource Management",
-                  "description": "Managing human capital in organizations effectively.",
-                  "pdf": "assest/pdfs/bca/year2/sem4/hrm.pdf",
-                  "image": "assest/images/subjects/hrm.jpg"
+                  "title": "Computer Networks",
+                  "description": "Networking principles, protocols, and security.",
+                  "pdf": "assest/pdfs/bca/year2/sem4/networks.pdf",
+                  "image": "assest/images/subjects/networks.jpg"
                 }
               ]
             }
@@ -102,17 +102,17 @@
               "subjects": [
                 {
                   "id": "bca301",
-                  "title": "Strategic Management",
-                  "description": "Formulating and implementing business strategies.",
-                  "pdf": "assest/pdfs/bca/year3/sem5/strategy.pdf",
-                  "image": "assest/images/subjects/strategy.jpg"
+                  "title": "Web Technologies",
+                  "description": "Web development with HTML, CSS, JS, and backend frameworks.",
+                  "pdf": "assest/pdfs/bca/year3/sem5/web_technologies.pdf",
+                  "image": "assest/images/subjects/web.jpg"
                 },
                 {
                   "id": "bca302",
-                  "title": "International Business",
-                  "description": "Global business operations and cross-cultural management.",
-                  "pdf": "assest/pdfs/bca/year3/sem5/international.pdf",
-                  "image": "assest/images/subjects/international.jpg"
+                  "title": "Software Engineering",
+                  "description": "Principles of designing reliable and scalable software.",
+                  "pdf": "assest/pdfs/bca/year3/sem5/software_engineering.pdf",
+                  "image": "assest/images/subjects/se.jpg"
                 }
               ]
             },
@@ -121,23 +121,93 @@
               "subjects": [
                 {
                   "id": "bca303",
-                  "title": "Business Ethics",
-                  "description": "Ethical considerations in business decision-making.",
-                  "pdf": "assest/pdfs/bca/year3/sem6/ethics.pdf",
-                  "image": "assest/images/subjects/ethics.jpg"
+                  "title": "Artificial Intelligence",
+                  "description": "AI concepts and applications.",
+                  "pdf": "assest/pdfs/bca/year3/sem6/ai.pdf",
+                  "image": "assest/images/subjects/ai.jpg"
                 },
                 {
                   "id": "bca304",
-                  "title": "Entrepreneurship",
-                  "description": "Starting and managing new business ventures.",
-                  "pdf": "assest/pdfs/bca/year3/sem6/entrepreneurship.pdf",
-                  "image": "assest/images/subjects/entrepreneurship.jpg"
+                  "title": "Project Work",
+                  "description": "Capstone project to apply all learned skills.",
+                  "pdf": "assest/pdfs/bca/year3/sem6/project.pdf",
+                  "image": "assest/images/subjects/project.jpg"
                 }
               ]
             }
           ]
         }
       ]
+    },
+    {
+      "id": "mca",
+      "title": "Master of Computer Applications",
+      "code": "MCA",
+      "instructor": "Prof. Sunita Mehta",
+      "description": "Postgraduate program in software development, advanced programming, and research.",
+      "image": "assest/images/courses/mca.jpg",
+      "years": [
+        {
+          "year_number": 1,
+          "semesters": [
+            {
+              "semester_number": 1,
+              "subjects": [
+                {
+                  "id": "mca101",
+                  "title": "Advanced Programming with Java",
+                  "description": "Object-oriented programming and advanced Java concepts.",
+                  "pdf": "assest/pdfs/mca/year1/sem1/java.pdf",
+                  "image": "assest/images/subjects/java.jpg"
+                },
+                {
+                  "id": "mca102",
+                  "title": "Discrete Mathematics",
+                  "description": "Mathematical foundations for computer science.",
+                  "pdf": "assest/pdfs/mca/year1/sem1/discrete_math.pdf",
+                  "image": "assest/images/subjects/math.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bba",
+      "title": "Bachelor of Business Administration",
+      "code": "BBA",
+      "instructor": "Dr. Ramesh Shah",
+      "description": "Undergraduate program focusing on business management and administration.",
+      "image": "assest/images/courses/bba.jpg",
+      "years": []
+    },
+    {
+      "id": "mba",
+      "title": "Master of Business Administration",
+      "code": "MBA",
+      "instructor": "Prof. Kavita Joshi",
+      "description": "Postgraduate management program with specializations in finance, marketing, HR, and more.",
+      "image": "assest/images/courses/mba.jpg",
+      "years": []
+    },
+    {
+      "id": "bcom-gujarati",
+      "title": "Bachelor of Commerce - Gujarati Medium",
+      "code": "BCOM-GUJ",
+      "instructor": "Dr. Hitesh Patel",
+      "description": "Undergraduate commerce program taught in Gujarati.",
+      "image": "assest/images/courses/bcom_gujarati.jpg",
+      "years": []
+    },
+    {
+      "id": "bcom-english",
+      "title": "Bachelor of Commerce - English Medium",
+      "code": "BCOM-ENG",
+      "instructor": "Prof. Aarti Singh",
+      "description": "Undergraduate commerce program taught in English.",
+      "image": "assest/images/courses/bcom_english.jpg",
+      "years": []
     }
   ]
 }
