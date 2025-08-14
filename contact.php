@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+  <?php include 'includes/header.php'; ?>
 
 <div class="max-w-4xl mx-auto">
   <h1 class="text-3xl font-bold mb-8 text-blue-800">Contact Us</h1>

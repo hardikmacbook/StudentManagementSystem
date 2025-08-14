@@ -100,21 +100,21 @@ if (!$semester) {
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <?php foreach ($semester['subjects'] as $subject): ?>
                 <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col overflow-hidden border border-gray-100">
-                    
+
                     <!-- Subject Image -->
                     <div class="h-80 bg-gray-100 overflow-hidden">
                         <?php if (!empty($subject['image'])): ?>
-                            <img src="<?= htmlspecialchars($subject['image']) ?>" 
-                                 alt="<?= htmlspecialchars($subject['title']) ?>" 
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                 onerror="this.onerror=null;this.src='images/default-placeholder.png';">
+                            <img src="<?= htmlspecialchars($subject['image']) ?>"
+                                alt="<?= htmlspecialchars($subject['title']) ?>"
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                onerror="this.onerror=null;this.src='images/default-placeholder.png';">
                         <?php else: ?>
                             <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
                                 <i class="fas fa-book-open text-4xl text-blue-300"></i>
                             </div>
                         <?php endif; ?>
                     </div>
-                    
+
                     <!-- Subject Info -->
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-xl font-semibold mb-3 text-gray-800"><?= htmlspecialchars($subject['title']) ?></h3>
@@ -122,11 +122,7 @@ if (!$semester) {
                             <?= htmlspecialchars($subject['description']) ?>
                         </p>
                         <div class="mt-auto flex space-x-2">
-                            <a href="<?= htmlspecialchars($subject['pdf']) ?>" target="_blank"
-                               class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2.5 rounded-lg transition duration-300 flex items-center justify-center">
-                                <i class="far fa-eye mr-2"></i> View
-                            </a>
-                            <a href="<?= htmlspecialchars($subject['pdf']) ?>" download
+                            <a target="_blank" href="<?= htmlspecialchars($subject['pdf']) ?>" download
                                class="flex-1 bg-green-600 hover:bg-green-700 text-white text-center px-4 py-2.5 rounded-lg transition duration-300 flex items-center justify-center">
                                 <i class="fas fa-download mr-2"></i> Download
                             </a>
