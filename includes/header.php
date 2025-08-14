@@ -6,83 +6,73 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body class="min-h-screen bg-gray-50 flex flex-col">
-
-<!-- Stylish Fixed Header -->
-<header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<body class="min-h-screen bg-gray-50">
+  
+<header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
     
     <!-- Logo -->
-    <a href="/StudentManagementSystem/index.php" class="text-2xl font-extrabold tracking-tight flex items-center gap-2">
-      <i class="fas fa-book-open text-yellow-300"></i>
-      Open<span class="text-yellow-300">2</span>Learn
+    <a href="/StudentManagementSystem/index.php" class="text-xl font-semibold text-gray-800 flex items-center">
+      <i class="fas fa-book-open text-blue-600 pr-1"></i>
+      Open<span class="text-blue-600">2</span>Learn
     </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-8">
-      <a href="/StudentManagementSystem/index.php" class="relative group">
-        Home
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="/StudentManagementSystem/about.php" class="relative group">
-        About
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="/StudentManagementSystem/courses.php" class="relative group">
-        Courses
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="/StudentManagementSystem/faculty.php" class="relative group">
-        Faculty
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-      </a>
-      <a href="/StudentManagementSystem/contact.php" class="relative group">
-        Contact
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-      </a>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 text-gray-700">
+      <a href="/StudentManagementSystem/index.php" class="hover:text-blue-600">Home</a>
+      <a href="/StudentManagementSystem/about.php" class="hover:text-blue-600">About</a>
+      <a href="/StudentManagementSystem/courses.php" class="hover:text-blue-600">Courses</a>
+      <a href="/StudentManagementSystem/faculty.php" class="hover:text-blue-600">Faculty</a>
+      <a href="/StudentManagementSystem/contact.php" class="hover:text-blue-600">Contact</a>
     </nav>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+    <!-- Mobile Button -->
+    <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
       <i class="fas fa-bars"></i>
     </button>
   </div>
-
-  <!-- Mobile Navigation -->
-  <div id="mobile-menu" class="hidden flex-col space-y-4 bg-white text-gray-800 px-6 py-4 shadow-md rounded-b-lg backdrop-blur-md animate-slide-down">
-    <a href="/StudentManagementSystem/index.php" class="hover:text-blue-600 transition">Home</a>
-    <a href="/StudentManagementSystem/about.php" class="hover:text-blue-600 transition">About</a>
-    <a href="/StudentManagementSystem/courses.php" class="hover:text-blue-600 transition">Courses</a>
-    <a href="/StudentManagementSystem/faculty.php" class="hover:text-blue-600 transition">Faculty</a>
-    <a href="/StudentManagementSystem/contact.php" class="hover:text-blue-600 transition">Contact</a>
-  </div>
 </header>
 
-<!-- Adding smooth animation -->
-<style>
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-slide-down {
-    animation: slideDown 0.3s ease forwards;
-  }
-</style>
+<!-- SIDE MOBILE MENU -->
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-40">
+  <div class="p-5 border-b border-gray-200 flex justify-between items-center">
+    <h2 class="text-lg font-semibold text-gray-800">Menu</h2>
+    <button id="close-menu" class="text-gray-600 text-2xl">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <nav class="flex flex-col p-5 space-y-4">
+    <a href="/StudentManagementSystem/index.php" class="py-2 border-b border-gray-100 hover:text-blue-600">Home</a>
+    <a href="/StudentManagementSystem/about.php" class="py-2 border-b border-gray-100 hover:text-blue-600">About</a>
+    <a href="/StudentManagementSystem/courses.php" class="py-2 border-b border-gray-100 hover:text-blue-600">Courses</a>
+    <a href="/StudentManagementSystem/faculty.php" class="py-2 border-b border-gray-100 hover:text-blue-600">Faculty</a>
+    <a href="/StudentManagementSystem/contact.php" class="py-2 hover:text-blue-600">Contact</a>
+  </nav>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-30 z-30"></div>
 
 <script>
   const menuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
-  const icon = menuBtn.querySelector("i");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("close-menu");
 
   menuBtn.addEventListener("click", () => {
-    if (mobileMenu.classList.contains("hidden")) {
-      mobileMenu.classList.remove("hidden");
-      mobileMenu.classList.add("animate-slide-down");
-      icon.classList.replace("fa-bars", "fa-times");
-    } else {
-      mobileMenu.classList.add("hidden");
-      icon.classList.replace("fa-times", "fa-bars");
-    }
+    mobileMenu.classList.remove("translate-x-full");
+    overlay.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    overlay.classList.add("hidden");
+  });
+
+  overlay.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    overlay.classList.add("hidden");
   });
 </script>
 
