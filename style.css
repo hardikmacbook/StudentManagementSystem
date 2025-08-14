@@ -8,6 +8,11 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+::selection{
+    background-color: #1E3A8A;
+    color: #fff;
+}
+
 /* Custom styles that complement Tailwind */
 .pdf-container {
     position: relative;
