@@ -204,11 +204,11 @@
               // Count total years
               $totalYears = count($course['years'] ?? []);
               ?>
-              <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full">
+              <span class="bg-[#1E3A8A] text-white text-xs px-2 py-1 rounded-full">
                 <?= $totalYears ?> Years
               </span>
             </div>
-            <a href="course_years.php?id=<?php echo $course['id']; ?>" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            <a href="course_years.php?id=<?php echo $course['id']; ?>" class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium">
               View Details
               <i class="fas fa-arrow-right ml-1"></i>
             </a>
@@ -219,14 +219,14 @@
   </div>
   
   <div class="text-center mt-10">
-    <a href="courses.php" class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+    <a href="courses.php" class="inline-block bg-[#1E3A8A] hover:text-black hover:bg-[#BFA14A] text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
       View All Programs
     </a>
   </div>
 </div>
 
 <!-- Features Section -->
-<div class="bg-gradient-to-r from-blue-600 to-indigo-600 py-16 text-white">
+<div class="bg-[#1E3A8A] py-16 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl font-bold mb-4">Why Choose Our Course Portal</h2>

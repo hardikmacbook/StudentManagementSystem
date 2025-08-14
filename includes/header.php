@@ -13,17 +13,17 @@
     
     <!-- Logo -->
     <a href="/StudentManagementSystem/index.php" class="text-xl font-semibold text-gray-800 flex items-center">
-      <i class="fas fa-book-open text-blue-600 pr-1"></i>
-      Open<span class="text-blue-600">2</span>Learn
+      <i class="fas fa-book-open text-[#1E3A8A] pr-1"></i>
+      Open<span class="text-[#1E3A8A]">2</span>Learn
     </a>
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-gray-700">
-      <a href="/StudentManagementSystem/index.php" class="hover:text-blue-600">Home</a>
-      <a href="/StudentManagementSystem/about.php" class="hover:text-blue-600">About</a>
-      <a href="/StudentManagementSystem/courses.php" class="hover:text-blue-600">Courses</a>
-      <a href="/StudentManagementSystem/faculty.php" class="hover:text-blue-600">Faculty</a>
-      <a href="/StudentManagementSystem/contact.php" class="hover:text-blue-600">Contact</a>
+      <a href="/StudentManagementSystem/index.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Home</a>
+      <a href="/StudentManagementSystem/about.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">About</a>
+      <a href="/StudentManagementSystem/courses.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Courses</a>
+      <a href="/StudentManagementSystem/faculty.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Faculty</a>
+      <a href="/StudentManagementSystem/contact.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Contact</a>
     </nav>
 
     <!-- Mobile Button -->
@@ -43,11 +43,11 @@
   </div>
 
   <nav class="flex flex-col p-5 space-y-4">
-    <a href="/StudentManagementSystem/index.php" class="py-2 border-b border-gray-100 hover:text-blue-600">Home</a>
-    <a href="/StudentManagementSystem/about.php" class="py-2 border-b border-gray-100 hover:text-blue-600">About</a>
-    <a href="/StudentManagementSystem/courses.php" class="py-2 border-b border-gray-100 hover:text-blue-600">Courses</a>
-    <a href="/StudentManagementSystem/faculty.php" class="py-2 border-b border-gray-100 hover:text-blue-600">Faculty</a>
-    <a href="/StudentManagementSystem/contact.php" class="py-2 hover:text-blue-600">Contact</a>
+    <a href="/StudentManagementSystem/index.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">Home</a>
+    <a href="/StudentManagementSystem/about.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">About</a>
+    <a href="/StudentManagementSystem/courses.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">Courses</a>
+    <a href="/StudentManagementSystem/faculty.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">Faculty</a>
+    <a href="/StudentManagementSystem/contact.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">Contact</a>
   </nav>
 </div>
 
