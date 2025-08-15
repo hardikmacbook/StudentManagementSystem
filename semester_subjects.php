@@ -25,10 +25,7 @@ foreach ($courses as $c) {
     }
 }
 if (!$course) {
-    echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
-            <strong class="font-bold">Error!</strong> <span>Course not found.</span>
-          </div>';
-    include 'includes/footer.php';
+    include 'includes/error_state.php';
     exit;
 }
 
@@ -41,10 +38,7 @@ foreach ($course['years'] as $y) {
     }
 }
 if (!$year) {
-    echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
-            <strong class="font-bold">Error!</strong> <span>Year not found.</span>
-          </div>';
-    include 'includes/footer.php';
+    include 'includes/error_state.php';
     exit;
 }
 
@@ -57,92 +51,126 @@ foreach ($year['semesters'] as $s) {
     }
 }
 if (!$semester) {
-    echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
-            <strong class="font-bold">Error!</strong> <span>Semester not found.</span>
-          </div>';
-    include 'includes/footer.php';
+    include 'includes/error_state.php';
     exit;
 }
 ?>
 
-<!-- Page Container -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
-    <!-- Back Button -->
-    <div class="mb-6 pt-10">
-        <a href="year_semesters.php?course_id=<?= urlencode($courseId) ?>&year=<?= urlencode($yearNumber) ?>" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-all duration-300 ease-in-out transform hover:translate-x-[-5px]">
-            <i class="fas fa-arrow-left mr-2"></i> Back to Semesters
-        </a>
+<div class="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none select-none">
+        <div class="absolute inset-0"
+             style="background-image: radial-gradient(circle at 25% 25%, #1E3A8A 0%, transparent 50%),
+             radial-gradient(circle at 75% 75%, #6366F1 0%, transparent 50%);"></div>
     </div>
 
-    <!-- Course + Year + Semester Header Card -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 border border-gray-100">
-        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6 text-white">
-            <h1 class="text-2xl font-bold mb-2"><?= htmlspecialchars($course['title']) ?></h1>
-            <div class="flex flex-wrap items-center gap-3">
-                <span class="bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1 rounded-full">
-                    Year <?= htmlspecialchars($yearNumber) ?>
-                </span>
-                <span class="bg-white/20 backdrop-blur-sm text-white text-sm font-medium px-3 py-1 rounded-full">
-                    Semester <?= htmlspecialchars($semesterNumber) ?>
-                </span>
-                <span class="text-blue-100"><i class="fas fa-user-tie mr-1"></i> <?= htmlspecialchars($course['instructor']) ?></span>
-            </div>
+    <div class="relative max-w-7xl mx-auto px-6 py-10">
+        <!-- Navigation -->
+        <div class="mb-8">
+            <a href="year_semesters.php?course_id=<?= urlencode($courseId) ?>&year=<?= urlencode($yearNumber) ?>"
+               class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium transition-all duration-200 group mt-10">
+                <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Back to Semesters
+            </a>
         </div>
-    </div>
 
-    <!-- Subjects Section -->
-    <h2 class="text-2xl font-bold mb-8 text-gray-800 flex items-center">
-        <i class="fas fa-book mr-3 text-blue-600"></i> Subjects
-    </h2>
+        <!-- Course, Year, Semester Header -->
+        <div class="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-lg mb-12">
+            <div class="p-10">
+                <div class="flex flex-col lg:flex-row items-start gap-8">
+                    <div class="flex-1">
+                        <!-- Badges -->
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="px-4 py-2 bg-gradient-to-r from-indigo-100 to-blue-100 rounded-full text-indigo-700 font-semibold text-sm">
+                                Year <?= htmlspecialchars($yearNumber) ?>
+                            </span>
+                            <span class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 font-semibold text-sm">
+                                Semester <?= htmlspecialchars($semesterNumber) ?>
+                            </span>
+                        </div>
 
-    <?php if (!empty($semester['subjects'])): ?>
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <?php foreach ($semester['subjects'] as $subject): ?>
-                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 flex flex-col overflow-hidden border border-gray-100">
+                        <!-- Title -->
+                        <h1 class="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4">
+                            <?= htmlspecialchars($course['title']) ?>
+                        </h1>
 
-                    <!-- Subject Image -->
-                    <div class="h-80 bg-gray-100 overflow-hidden">
-                        <?php if (!empty($subject['image'])): ?>
-                            <img src="<?= htmlspecialchars($subject['image']) ?>"
-                                alt="<?= htmlspecialchars($subject['title']) ?>"
-                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                onerror="this.onerror=null;this.src='images/default-placeholder.png';">
-                        <?php else: ?>
-                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
-                                <i class="fas fa-book-open text-4xl text-blue-300"></i>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-
-                    <!-- Subject Info -->
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800"><?= htmlspecialchars($subject['title']) ?></h3>
-                        <p class="text-gray-700 flex-grow mb-5">
-                            <?= htmlspecialchars($subject['description']) ?>
-                        </p>
-                        <div class="mt-auto flex space-x-2">
-                            <a target="_blank" href="<?= htmlspecialchars($subject['pdf']) ?>" download
-                               class="flex-1 bg-green-600 hover:bg-green-700 text-white text-center px-4 py-2.5 rounded-lg transition duration-300 flex items-center justify-center">
-                                <i class="fas fa-download mr-2"></i> Download
-                            </a>
+                        <!-- Instructor -->
+                        <div class="flex items-center text-lg text-gray-700 mt-4">
+                            <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                            <?= htmlspecialchars($course['instructor']) ?>
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
-    <?php else: ?>
-        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
-            <div class="flex items-center">
-                <div class="text-yellow-500">
-                    <i class="fas fa-exclamation-circle text-2xl"></i>
-                </div>
-                <div class="ml-4">
-                    <p class="text-yellow-700 font-medium">No subjects available for this semester.</p>
-                </div>
             </div>
         </div>
-    <?php endif; ?>
+
+        <!-- Subjects Section -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Subjects</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Browse all available subjects for Semester <?= htmlspecialchars($semesterNumber) ?> in Year <?= htmlspecialchars($yearNumber) ?>
+            </p>
+        </div>
+
+        <?php if (!empty($semester['subjects'])): ?>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+                <?php foreach ($semester['subjects'] as $subject): ?>
+                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 p-6 transform transition-all duration-300 hover:-translate-y-2 select-text">
+                        <!-- Subject Image -->
+                        <div class="h-48 w-full rounded-xl overflow-hidden mb-6">
+                            <?php if (!empty($subject['image'])): ?>
+                                <img src="<?= htmlspecialchars($subject['image']) ?>" alt="<?= htmlspecialchars($subject['title']) ?>"
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                     onerror="this.onerror=null;this.src='images/default-placeholder.png';">
+                            <?php else: ?>
+                                <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
+                                    <svg class="w-10 h-10 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"/>
+                                    </svg>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <!-- Subject Info -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3"><?= htmlspecialchars($subject['title']) ?></h3>
+                        <p class="text-gray-600 flex-grow"><?= htmlspecialchars($subject['description']) ?></p>
+
+                       <!-- Download Button -->
+<a href="<?= htmlspecialchars($subject['pdf']) ?>" download
+   class="mt-auto inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg">
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+    </svg>
+    Download PDF
+</a>
+
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <!-- Empty State -->
+            <div class="text-center py-20">
+                <div class="w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">No Subjects Available</h3>
+                <p class="text-xl text-gray-600 max-w-md mx-auto mb-8">This semester does not have subjects configured yet.</p>
+                <a href="year_semesters.php?course_id=<?= urlencode($courseId) ?>&year=<?= urlencode($yearNumber) ?>"
+                   class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold rounded-xl hover:from-gray-800 hover:to-black shadow-lg">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Back to Semesters
+                </a>
+            </div>
+        <?php endif; ?>
+    </div>
 </div>
 
 <?php include 'includes/footer.php'; ?>
