@@ -127,63 +127,17 @@
     }, 6000);
   </script>
 
-  <!-- Stats Section -->
-  <div class="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-      <!-- Heading -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight">
-          Our Academic Excellence
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Providing quality education through our comprehensive and curated course offerings.
-        </p>
-      </div>
-
-      <!-- Stats Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-
-        <!-- Card -->
-        <div class="bg-white group p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-          <div class="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent mb-3">
-            7+
-          </div>
-          <div class="text-gray-700 font-medium">Academic Programs</div>
-        </div>
-
-        <div class="bg-white group p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-          <div class="text-5xl font-extrabold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent mb-3">
-            50+
-          </div>
-          <div class="text-gray-700 font-medium">Subjects</div>
-        </div>
-
-        <div class="bg-white group p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-          <div class="text-5xl font-extrabold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
-            15+
-          </div>
-          <div class="text-gray-700 font-medium">Expert Faculty</div>
-        </div>
-
-        <div class="bg-white group p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-          <div class="text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent mb-3">
-            3+
-          </div>
-          <div class="text-gray-700 font-medium">Years of Excellence</div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
 
   <!-- Featured Courses -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">Featured Programs</h2>
-      <p class="text-gray-600 max-w-3xl mx-auto">Explore our most popular academic programs</p>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Explore the <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> Library
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Study-ready PDFs of every course, one click away
+      </p>
+
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -252,7 +206,7 @@
   </div>
 
   <!-- Features Section -->
-  <div class="bg-white py-20">
+  <div class="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Heading -->
@@ -270,7 +224,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Feature 1 -->
-        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
+        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
           <div class="text-4xl mb-4">
             <i class="fas fa-graduation-cap text-[#1E3A8A]"></i>
           </div>
@@ -281,7 +235,7 @@
         </div>
 
         <!-- Feature 2 -->
-        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
+        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
           <div class="text-4xl mb-4">
             <i class="fas fa-file-pdf text-[#1E3A8A]"></i>
           </div>
@@ -292,7 +246,7 @@
         </div>
 
         <!-- Feature 3 -->
-        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
+        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
           <div class="text-4xl mb-4">
             <i class="fas fa-chalkboard-teacher text-[#1E3A8A]"></i>
           </div>
@@ -310,84 +264,122 @@
 
 
   <?php
-  // Enhanced JSON data with detailed reviews and dates
-  $jsonData = '[
+$jsonData = '[
   {
-    "name": "John Doe",
-    "review": "Absolutely loved it! The product quality exceeded my expectations, and the delivery was super fast. Highly recommend to everyone.",
-    "rating": 5,
-    "date": "2025-07-15"
+    "name": "Ravi Patel",
+    "review": "Open2Learn is a lifesaver during exams! All my university PDFs are well-organized and easy to access. I love the clean design — it’s fast and simple to use",
+    "rating": 5
   },
   {
-    "name": "Jane Smith",
-    "review": "Good value for the price. The item arrived on time and works as described. Customer service was very helpful.",
-    "rating": 4,
-    "date": "2025-08-01"
+    "name": "Priya Shah",
+    "review": "Very helpful for finding my semester books. I wish there were more previous year papers, but the overall experience is great!",
+    "rating": 4
   },
   {
-    "name": "Alex Johnson",
-    "review": "Decent product but packaging could be improved. Overall satisfied with the purchase experience.",
-    "rating": 3,
-    "date": "2025-06-20"
+    "name": "Amit Verma",
+    "review": "This site has saved me so much time. No more searching in WhatsApp groups or asking friends for notes — everything is here!",
+    "rating": 3
   },
   {
-    "name": "Emily Davis",
-    "review": "Exceeded expectations with excellent build quality and features. Will definitely buy again.",
-    "rating": 5,
-    "date": "2025-08-10"
+    "name": "Neha Joshi",
+    "review": "The library is well-structured and the PDFs are good quality. It would be perfect if more subjects were added.",
+    "rating": 5
+  },
+  {
+    "name": "Harsh Mehta",
+    "review": "Honestly, the best platform for university study material I’ve seen. Fast download speed and mobile-friendly design make it perfect for students like me",
+    "rating": 5
+  },
+  {
+    "name": "Kiran Solanki",
+    "review": "Good resource, but sometimes a few links don’t work. Still, it’s very helpful overall for my course PDFs",
+    "rating": 5
   }
 ]';
 
-  $reviews = json_decode($jsonData, true);
-  $valid_reviews = array_filter($reviews, function ($r) {
+$reviews = json_decode($jsonData, true);
+$valid_reviews = array_filter($reviews, function ($r) {
     return isset($r['name'], $r['review'], $r['rating']);
-  });
-  ?>
+});
+?>
 
-  <div class="max-w-6xl mx-auto my-12 px-6">
-    <div class="mb-12 text-center">
-      <h2 class="text-5xl font-extrabold text-blue-900 mb-3">What People Are Saying</h2>
-      <p class="text-blue-700 text-xl">Real reviews from real customers</p>
-    </div>
-    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<div class="max-w-6xl mx-auto my-12 px-6">
+  <div class="mb-12 text-center">
+    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+      What Learners Say About <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span>
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      Clear, effective, and shaped by the voices of our successful learners
+    </p>
+  </div>
+
+  <!-- Swiper Slider -->
+  <div class="swiper mySwiper px-4 pb-10">
+    <div class="swiper-wrapper">
       <?php foreach ($valid_reviews as $review): ?>
-        <div class="flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 border border-blue-200">
-          <!-- Avatar -->
-          <div class="flex items-center justify-center h-28 w-28 bg-blue-900 rounded-t-2xl text-white font-extrabold text-6xl tracking-tight drop-shadow-lg mx-auto mt-8 mb-6">
+        <div class="swiper-slide flex flex-col bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 p-8 relative">
+          
+          <!-- Quote Icon -->
+          <div class="absolute -top-6 left-6 bg-[#1E3A8A] text-white p-3 rounded-full shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+              <path d="M6.854 1.146a.5.5 0 0 0-.708 0L1.5 5.793l-.354-.353a.5.5 0 0 0-.708.707l1 1a.5.5 0 0 0 .708 0L6.5 1.854a.5.5 0 0 0 0-.708zM14.646.146a.5.5 0 0 0-.708 0L9.5 4.293l-.354-.353a.5.5 0 1 0-.708.707l1 1a.5.5 0 0 0 .708 0l4.5-4.5a.5.5 0 0 0 0-.708z"/>
+            </svg>
+          </div>
+
+          <!-- Avatar Circle -->
+          <div class="flex items-center justify-center h-20 w-20 bg-[#BFA14A] rounded-full text-white font-extrabold text-3xl tracking-tight mx-auto mb-6 shadow-lg">
             <?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?>
           </div>
-          <!-- Content -->
-          <div class="px-8 pb-10 flex flex-col flex-grow">
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-xl font-semibold text-blue-900"><?= htmlspecialchars($review['name']) ?></h3>
-              <?php if (!empty($review['date'])): ?>
-                <time datetime="<?= htmlspecialchars($review['date']) ?>" class="text-sm text-gray-400 italic">
-                  <?= htmlspecialchars(date("M j, Y", strtotime($review['date']))) ?>
-                </time>
+          
+          <!-- Name -->
+          <h3 class="text-2xl font-semibold text-blue-900 text-center"><?= htmlspecialchars($review['name']) ?></h3>
+
+          <!-- Rating -->
+          <div class="flex justify-center items-center my-3 space-x-1">
+            <?php for ($i = 0; $i < 5; $i++): ?>
+              <?php if ($i < $review['rating']): ?>
+                <svg aria-hidden="true" class="w-6 h-6 text-[#BFA14A]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
+                </svg>
+              <?php else: ?>
+                <svg aria-hidden="true" class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
+                </svg>
               <?php endif; ?>
-            </div>
-            <div class="flex items-center mb-4 space-x-1">
-              <?php for ($i = 0; $i < 5; $i++): ?>
-                <?php if ($i < $review['rating']): ?>
-                  <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <title>Star</title>
-                    <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
-                  </svg>
-                <?php else: ?>
-                  <svg aria-hidden="true" class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                    <title>Star empty</title>
-                    <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
-                  </svg>
-                <?php endif; ?>
-              <?php endfor; ?>
-              <span class="ml-2 text-blue-900 font-semibold"><?= $review['rating'] ?>/5</span>
-            </div>
-            <p class="text-gray-800 text-lg leading-relaxed flex-grow"><?= htmlspecialchars($review['review']) ?></p>
+            <?php endfor; ?>
           </div>
+
+          <!-- Review -->
+          <p class="text-gray-700 text-lg text-center leading-relaxed"><?= htmlspecialchars($review['review']) ?></p>
         </div>
       <?php endforeach; ?>
     </div>
+
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination mt-6"></div>
   </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: { delay: 3500, disableOnInteraction: false },
+  pagination: { el: ".swiper-pagination", clickable: true },
+  breakpoints: {
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 }
+  }
+});
+</script>
+
 
 
   <?php include 'includes/footer.php'; ?>
