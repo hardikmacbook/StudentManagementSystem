@@ -298,80 +298,73 @@ $jsonData = '[
 ]';
 
 $reviews = json_decode($jsonData, true);
-$valid_reviews = array_filter($reviews, function ($r) {
-    return isset($r['name'], $r['review'], $r['rating']);
-});
+$valid_reviews = array_filter($reviews, fn($r) => isset($r['name'], $r['review'], $r['rating']));
 ?>
 
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <div class="max-w-6xl mx-auto my-12 px-6">
-  <div class="mb-12 text-center">
-    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+  <div class="mb-8 text-center">
+    <h2 class="text-4xl font-bold text-gray-900 mb-3">
       What Learners Say About <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span>
     </h2>
-    <p class="text-gray-600 max-w-2xl mx-auto">
-      Clear, effective, and shaped by the voices of our successful learners
+    <p class="text-gray-500 max-w-xl mx-auto">
+      Real experiences from students who’ve used Open2Learn for their studies.
     </p>
   </div>
 
   <!-- Swiper Slider -->
-  <div class="swiper mySwiper px-4 pb-10">
+  <div class="swiper reviewSwiper">
     <div class="swiper-wrapper">
       <?php foreach ($valid_reviews as $review): ?>
-        <div class="swiper-slide flex flex-col bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 p-8 relative">
-          
-          <!-- Quote Icon -->
-          <div class="absolute -top-6 left-6 bg-[#1E3A8A] text-white p-3 rounded-full shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-              <path d="M6.854 1.146a.5.5 0 0 0-.708 0L1.5 5.793l-.354-.353a.5.5 0 0 0-.708.707l1 1a.5.5 0 0 0 .708 0L6.5 1.854a.5.5 0 0 0 0-.708zM14.646.146a.5.5 0 0 0-.708 0L9.5 4.293l-.354-.353a.5.5 0 1 0-.708.707l1 1a.5.5 0 0 0 .708 0l4.5-4.5a.5.5 0 0 0 0-.708z"/>
-            </svg>
-          </div>
+        <div class="swiper-slide">
+          <div class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-6 flex flex-col h-full">
+            
+            <!-- Avatar -->
+            <div class="h-14 w-14 flex items-center justify-center rounded-full bg-[#1E3A8A] text-white font-bold text-xl mx-auto mb-4">
+              <?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?>
+            </div>
+            
+            <!-- Name -->
+            <h3 class="text-lg font-semibold text-gray-900 text-center"><?= htmlspecialchars($review['name']) ?></h3>
 
-          <!-- Avatar Circle -->
-          <div class="flex items-center justify-center h-20 w-20 bg-[#BFA14A] rounded-full text-white font-extrabold text-3xl tracking-tight mx-auto mb-6 shadow-lg">
-            <?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?>
-          </div>
-          
-          <!-- Name -->
-          <h3 class="text-2xl font-semibold text-blue-900 text-center"><?= htmlspecialchars($review['name']) ?></h3>
-
-          <!-- Rating -->
-          <div class="flex justify-center items-center my-3 space-x-1">
-            <?php for ($i = 0; $i < 5; $i++): ?>
-              <?php if ($i < $review['rating']): ?>
-                <svg aria-hidden="true" class="w-6 h-6 text-[#BFA14A]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
+            <!-- Rating -->
+            <div class="flex justify-center items-center mt-2 mb-4 space-x-1">
+              <?php for ($i = 0; $i < 5; $i++): ?>
+                <svg class="w-5 h-5 <?= $i < $review['rating'] ? 'text-[#BFA14A]' : 'text-gray-300' ?>" 
+                     fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 
+                           1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 
+                           1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236
+                           -1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627
+                           -1.838L7.08 7.53 9.049 2.927z" />
                 </svg>
-              <?php else: ?>
-                <svg aria-hidden="true" class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
-                </svg>
-              <?php endif; ?>
-            <?php endfor; ?>
-          </div>
+              <?php endfor; ?>
+            </div>
 
-          <!-- Review -->
-          <p class="text-gray-700 text-lg text-center leading-relaxed"><?= htmlspecialchars($review['review']) ?></p>
+            <!-- Review -->
+            <p class="text-gray-600 text-center leading-relaxed">
+              <?= htmlspecialchars($review['review']) ?>
+            </p>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>
 
-    <!-- Swiper Pagination -->
+    <!-- Pagination -->
     <div class="swiper-pagination mt-6"></div>
   </div>
 </div>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".reviewSwiper", {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 24,
   loop: true,
-  autoplay: { delay: 3500, disableOnInteraction: false },
+  autoplay: { delay: 4000, disableOnInteraction: false },
   pagination: { el: ".swiper-pagination", clickable: true },
   breakpoints: {
     768: { slidesPerView: 2 },
