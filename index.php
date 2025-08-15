@@ -264,7 +264,7 @@
 
 
   <?php
-$jsonData = '[
+  $jsonData = '[
   {
     "name": "Ravi Patel",
     "review": "Open2Learn is a lifesaver during exams! All my university PDFs are well-organized and easy to access. I love the clean design — it’s fast and simple to use",
@@ -297,81 +297,101 @@ $jsonData = '[
   }
 ]';
 
-$reviews = json_decode($jsonData, true);
-$valid_reviews = array_filter($reviews, fn($r) => isset($r['name'], $r['review'], $r['rating']));
-?>
+  $reviews = json_decode($jsonData, true);
+  $valid_reviews = array_filter($reviews, fn($r) => isset($r['name'], $r['review'], $r['rating']));
+  ?>
 
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<div class="max-w-6xl mx-auto my-12 px-6">
-  <div class="mb-8 text-center">
-    <h2 class="text-4xl font-bold text-gray-900 mb-3">
-      What Learners Say About <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span>
-    </h2>
-    <p class="text-gray-500 max-w-xl mx-auto">
-      Real experiences from students who’ve used Open2Learn for their studies.
-    </p>
-  </div>
+  <style>
+    .swiper-pagination {
+      width: 100%;
+      text-align: center;
+      padding-top: 12px;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      position: static !important;
+    }
 
-  <!-- Swiper Slider -->
-  <div class="swiper reviewSwiper">
-    <div class="swiper-wrapper">
-      <?php foreach ($valid_reviews as $review): ?>
-        <div class="swiper-slide">
-          <div class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 p-6 flex flex-col h-full">
-            
-            <!-- Avatar -->
-            <div class="h-14 w-14 flex items-center justify-center rounded-full bg-[#1E3A8A] text-white font-bold text-xl mx-auto mb-4">
-              <?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?>
-            </div>
-            
-            <!-- Name -->
-            <h3 class="text-lg font-semibold text-gray-900 text-center"><?= htmlspecialchars($review['name']) ?></h3>
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #1E3A8A;
+      opacity: 0.4;
+      margin: 0 6px !important;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
-            <!-- Rating -->
-            <div class="flex justify-center items-center mt-2 mb-4 space-x-1">
-              <?php for ($i = 0; $i < 5; $i++): ?>
-                <svg class="w-5 h-5 <?= $i < $review['rating'] ? 'text-[#BFA14A]' : 'text-gray-300' ?>" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 
-                           1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 
-                           1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236
-                           -1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627
-                           -1.838L7.08 7.53 9.049 2.927z" />
-                </svg>
-              <?php endfor; ?>
-            </div>
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  </style>
 
-            <!-- Review -->
-            <p class="text-gray-600 text-center leading-relaxed">
-              <?= htmlspecialchars($review['review']) ?>
-            </p>
-          </div>
-        </div>
-      <?php endforeach; ?>
+  <div class="max-w-6xl mx-auto my-16 px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-semibold text-gray-900 mb-2">
+        What Learners Say About <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span>
+      </h2>
+      <p class="text-gray-500 max-w-xl mx-auto text-base">
+        Genuine reviews from students who trust Open2Learn.
+      </p>
     </div>
 
-    <!-- Pagination -->
-    <div class="swiper-pagination mt-6"></div>
-  </div>
-</div>
+    <div class="swiper reviewSwiper">
+      <div class="swiper-wrapper">
+        <?php foreach ($valid_reviews as $review): ?>
+          <div class="swiper-slide flex">
+            <article class="review-card p-6 w-full border border-gray-200 hover:border-[#1E3A8A] h-[320px] rounded-3xl">
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-var swiper = new Swiper(".reviewSwiper", {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  loop: true,
-  autoplay: { delay: 4000, disableOnInteraction: false },
-  pagination: { el: ".swiper-pagination", clickable: true },
-  breakpoints: {
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 }
-  }
-});
-</script>
+              <div class="avatar bg-[#1E3A8A] text-white font-bold h-14 w-14 [clip-path:circle(35%)] flex items-center justify-center text-2xl mx-auto mb-4"><?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?></div>
+
+              <h3 class="font-semibold text-xl text-center text-gray-900 mb-2"><?= htmlspecialchars($review['name']) ?></h3>
+
+              <div class="flex justify-center mb-4 space-x-1">
+                <?php for ($i = 0; $i < 5; $i++): ?>
+                  <svg class="w-5 h-5 <?= $i < $review['rating'] ? 'text-[#BFA14A]' : 'text-gray-300' ?>" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
+                  </svg>
+                <?php endfor; ?>
+              </div>
+              
+              <p class="review-text text-center text-gray-700 leading-relaxed flex-grow"><?= htmlspecialchars($review['review']) ?></p>
+            </article>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <!-- Pagination is now outside, visually at the bottom -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.reviewSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        },
+      }
+    });
+  </script>
 
 
 
