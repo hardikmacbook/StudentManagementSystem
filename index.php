@@ -270,9 +270,9 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Feature 1 -->
-        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition duration-300">
-          <div class="text-4xl mb-4 text-blue-600">
-            <i class="fas fa-graduation-cap"></i>
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
+          <div class="text-4xl mb-4">
+            <i class="fas fa-graduation-cap text-[#1E3A8A]"></i>
           </div>
           <h3 class="text-xl font-semibold mb-2 text-gray-900">Structured Learning</h3>
           <p class="text-gray-600">
@@ -281,9 +281,9 @@
         </div>
 
         <!-- Feature 2 -->
-        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition duration-300">
-          <div class="text-4xl mb-4 text-blue-600">
-            <i class="fas fa-file-pdf"></i>
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
+          <div class="text-4xl mb-4">
+            <i class="fas fa-file-pdf text-[#1E3A8A]"></i>
           </div>
           <h3 class="text-xl font-semibold mb-2 text-gray-900">Accessible Materials</h3>
           <p class="text-gray-600">
@@ -292,9 +292,9 @@
         </div>
 
         <!-- Feature 3 -->
-        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition duration-300">
-          <div class="text-4xl mb-4 text-blue-600">
-            <i class="fas fa-chalkboard-teacher"></i>
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
+          <div class="text-4xl mb-4">
+            <i class="fas fa-chalkboard-teacher text-[#1E3A8A]"></i>
           </div>
           <h3 class="text-xl font-semibold mb-2 text-gray-900">Expert Faculty</h3>
           <p class="text-gray-600">
