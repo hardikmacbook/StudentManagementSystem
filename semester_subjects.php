@@ -153,14 +153,12 @@ if (!$semester) {
                             <!-- Unit-wise PDF Downloads (if available) -->
                             <?php if (!empty($subject['units'])): ?>
                                 <div class="mt-4">
-                                    
-                                    
                                     <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 space-y-2 bg-gray-50 p-4 rounded-xl">
                                         <?php foreach ($subject['units'] as $unit): ?>
                                             <a target="_blank" href="<?= htmlspecialchars($unit['pdf']) ?>" download
-                                               class="flex items-center justify-between w-full px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-indigo-300 transition-all duration-200">
+                                               class="flex items-center justify-between w-full px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-[#BFA14A]/50 hover:border-[#BFA14A]/50- transition-all duration-200">
                                                 <span class="font-medium text-gray-800">Unit <?= htmlspecialchars($unit['unit_number']) ?>: <?= htmlspecialchars($unit['title']) ?></span>
-                                                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg class="w-5 h-5 text-[#1E3A8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                                 </svg>
                                             </a>
