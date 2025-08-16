@@ -343,7 +343,7 @@
       <div class="swiper-wrapper">
         <?php foreach ($valid_reviews as $review): ?>
           <div class="swiper-slide flex">
-            <article class="review-card p-6 w-full border border-gray-200 hover:border-[#1E3A8A] h-[320px] rounded-3xl">
+            <article class="review-card p-6 w-[300px] border border-gray-200 hover:border-[#1E3A8A] h-[320px] rounded-3xl">
 
               <div class="avatar bg-[#1E3A8A] text-white font-bold h-14 w-14 [clip-path:circle(35%)] flex items-center justify-center text-2xl mx-auto mb-4"><?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?></div>
 
