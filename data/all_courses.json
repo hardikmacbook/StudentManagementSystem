@@ -58,7 +58,7 @@
                     {
                       "unit_number": 1,
                       "title": "All Chapter",
-                      "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
+                      "pdf": "https://drive.google.com/file/d/1LtAQfIws0tO1oB3uyI3NTJEZ5IY0v634/view?usp=sharing"
                     }
                   ]
                 },
@@ -100,47 +100,74 @@
                   "id": "bca104",
                   "title": "Computer Programming & Programming Methodology",
                   "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
-                  "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
+                  "pdf": "https://drive.google.com/drive/folders/1fQuodfsFikGFOQuxKoVktBXqK1IjTwP0?usp=sharing",
                   "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085792.jpeg",
                   "units": [
                     {
                       "unit_number": 1,
-                      "title": "Introduction to Computers",
-                      "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
+                      "title": "Introduction",
+                      "pdf": "https://drive.google.com/file/d/1JaYWDf3rj4c4lWWREST3HEWp2ZqjJadz/view?usp=sharing"
                     },
                     {
                       "unit_number": 2,
-                      "title": "Basic Computer Architecture",
-                      "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
+                      "title": "Input/Output Statements and Operators ",
+                      "pdf": "https://drive.google.com/file/d/1RZfGcxC3kDhHtNZAj1XPncIEXMyE5g27/view?usp=sharing"
                     },
                     {
                       "unit_number": 3,
-                      "title": "Number System",
-                      "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
+                      "title": "Decision Making statements ",
+                      "pdf": "https://drive.google.com/file/d/19cVyD_ZeW1vN4mwRloNsZRQGoMaagjdz/view?usp=sharing"
                     },
                     {
                       "unit_number": 4,
-                      "title": "Input and Output devices",
-                      "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
+                      "title": "Iterative statements ",
+                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
                     },
                     {
                       "unit_number": 5,
-                      "title": "Concepts of Internet",
-                      "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
+                      "title": "Concepts of Arrays and Pointer ",
+                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
                     }
                   ]
                 },
-                {
+                 {
                   "id": "bca105",
                   "title": "Data Processing and Analysis",
                   "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
-                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085755.jpeg"
+                  "pdf": "https://drive.google.com/drive/folders/1TQQjhZ4MTplgj0fZUTK-x2Z0kVVqEEpd?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085755.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Concepts of worksheet ",
+                      "pdf": "https://drive.google.com/file/d/1RE78ZnlPw7XJ-8Gi8jJosakTNeHavyRb/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Formulas, Chart and Data",
+                      "pdf": "https://drive.google.com/file/d/1i6zkdAfFk0fVfRsNp9JGnEYkUq47XAQG/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Concept of Database",
+                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Normalization and Concepts of SQL",
+                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Queries-Single Table Only",
+                      "pdf": "https://drive.google.com/file/d/1Gt29x5FTEgv_8s-tGrFrSflLjX97RKCn/view?usp=sharing"
+                    }
+                  ]
                 },
                  {
                   "id": "bca106",
                   "title": "Practical",
-                  "description": "The objective of this course is to introduce the essentials of computer programming language, introduction of compiler - based programming language, concepts of data and representation of data, use of query languages, and storing and accessing data using query languages.",
+                  "description": "",
                   "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
                   "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085952.jpeg"
                 },
