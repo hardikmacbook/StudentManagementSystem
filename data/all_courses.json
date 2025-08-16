@@ -18,8 +18,35 @@
                   "id": "bca101",
                   "title": "Communication Skills",
                   "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
-                  "pdf": "https://drive.google.com/file/d/1m6NsP66Be6UxWeFQCsRH2IUXLf-Faa9U/view?usp=drive_link",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085856.jpeg"
+                  "pdf": "https://drive.google.com/drive/folders/1TK9gtj7ZvbDDx3ig7d-yqdphbDP_v6HN?usp=drive_link",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085856.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Fundamentals of Communication",
+                      "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=drive_link"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Developing Listening Skills",
+                      "pdf": "https://drive.google.com/file/d/1_pDMmLYSBzJNPBxd2c70rCQHJ7SEz51U/view?usp=drive_link"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Speaking Skills",
+                      "pdf": "https://drive.google.com/file/d/1raCijbfCFqMf2eHxt0wiUfWQXaV3xFhG/view?usp=drive_link"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Uni 4",
+                      "pdf": "https://drive.google.com/file/d/1dQFXb9Ys8Y_-ChCr_CAQIAEVHvNLMq80/view?usp=drive_link"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Writing Skills",
+                      "pdf": "https://drive.google.com/file/d/1tuAmzuBJG0RfQiy_SQjH7UUKaqhzgv2x/view?usp=drive_link"
+                    }
+                  ]
                 },
                 {
                   "id": "bca102",

@@ -139,15 +139,36 @@ if (!$semester) {
                         <h3 class="text-2xl font-bold text-gray-900 mb-3"><?= htmlspecialchars($subject['title']) ?></h3>
                         <p class="text-gray-600 flex-grow"><?= htmlspecialchars($subject['description']) ?></p>
 
-                       <!-- Download Button -->
-<a href="<?= htmlspecialchars($subject['pdf']) ?>" download
-   class="mt-auto inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg">
-    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-    </svg>
-    Download PDF
-</a>
-
+                        <!-- Download Buttons -->
+                        <div class="mt-6 space-y-3">
+                            <!-- Complete Subject PDF Download -->
+                            <a target="_blank" href="<?= htmlspecialchars($subject['pdf']) ?>" download
+                               class="inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg transition-colors duration-200">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                                Google Drive
+                            </a>
+                            
+                            <!-- Unit-wise PDF Downloads (if available) -->
+                            <?php if (!empty($subject['units'])): ?>
+                                <div class="mt-4">
+                                    
+                                    
+                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 space-y-2 bg-gray-50 p-4 rounded-xl">
+                                        <?php foreach ($subject['units'] as $unit): ?>
+                                            <a target="_blank" href="<?= htmlspecialchars($unit['pdf']) ?>" download
+                                               class="flex items-center justify-between w-full px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-indigo-300 transition-all duration-200">
+                                                <span class="font-medium text-gray-800">Unit <?= htmlspecialchars($unit['unit_number']) ?>: <?= htmlspecialchars($unit['title']) ?></span>
+                                                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                                </svg>
+                                            </a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
