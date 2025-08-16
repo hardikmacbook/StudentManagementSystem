@@ -131,7 +131,7 @@ $subjectCount = count($semester['subjects'] ?? []);
                 }
             ?>">
                 <?php foreach ($semester['subjects'] as $subject): ?>
-                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 p-6 transform transition-all duration-300 hover:-translate-y-2 select-text <?php 
+                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 p-6 transform transition-all duration-300 hover:-translate-y-2 select-text h-fit <?php 
                         if ($subjectCount == 1) echo 'max-w-md w-full';
                         elseif ($subjectCount == 2) echo 'w-full';
                         else echo '';
@@ -187,16 +187,18 @@ $subjectCount = count($semester['subjects'] ?? []);
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                         </svg>
                                     </button>
-                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 space-y-2 bg-gray-50 p-4 rounded-xl hidden">
-                                        <?php foreach ($subject['units'] as $unit): ?>
-                                            <a target="_blank" href="<?= htmlspecialchars($unit['pdf']) ?>" download
-                                               class="flex items-center justify-between w-full px-4 py-3 bg-white border border-gray-200 rounded-lg hover:bg-[#BFA14A]/10 hover:border-[#BFA14A]/30 transition-all duration-200 group">
-                                                <span class="font-medium text-gray-800 text-sm">Unit <?= htmlspecialchars($unit['unit_number']) ?>: <?= htmlspecialchars($unit['title']) ?></span>
-                                                <svg class="w-4 h-4 text-[#1E3A8A] group-hover:text-[#BFA14A] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                                                </svg>
-                                            </a>
-                                        <?php endforeach; ?>
+                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 overflow-hidden transition-all duration-300 max-h-0">
+                                        <div class="space-y-2 bg-gray-50 p-4 rounded-xl">
+                                            <?php foreach ($subject['units'] as $unit): ?>
+                                                <a target="_blank" href="<?= htmlspecialchars($unit['pdf']) ?>" download
+                                                   class="flex items-center justify-between w-full px-4 py-3 bg-white border border-gray-200 rounded-lg hover:bg-[#BFA14A]/10 hover:border-[#BFA14A]/30 transition-all duration-200 group">
+                                                    <span class="font-medium text-gray-800 text-sm">Unit <?= htmlspecialchars($unit['unit_number']) ?>: <?= htmlspecialchars($unit['title']) ?></span>
+                                                    <svg class="w-4 h-4 text-[#1E3A8A] group-hover:text-[#BFA14A] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                                    </svg>
+                                                </a>
+                                            <?php endforeach; ?>
+                                        </div>
                                     </div>
                                 </div>
                             <?php endif; ?>
@@ -211,11 +213,13 @@ $subjectCount = count($semester['subjects'] ?? []);
                     const unitsDiv = document.getElementById('units-' + subjectId);
                     const arrow = document.getElementById('arrow-' + subjectId);
                     
-                    if (unitsDiv.classList.contains('hidden')) {
-                        unitsDiv.classList.remove('hidden');
+                    if (unitsDiv.style.maxHeight === '0px' || unitsDiv.style.maxHeight === '') {
+                        // Open: Set max-height to scrollHeight for smooth animation
+                        unitsDiv.style.maxHeight = unitsDiv.scrollHeight + 'px';
                         arrow.style.transform = 'rotate(180deg)';
                     } else {
-                        unitsDiv.classList.add('hidden');
+                        // Close: Set max-height to 0
+                        unitsDiv.style.maxHeight = '0px';
                         arrow.style.transform = 'rotate(0deg)';
                     }
                 }
