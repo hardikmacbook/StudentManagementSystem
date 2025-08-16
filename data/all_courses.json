@@ -48,26 +48,87 @@
                     }
                   ]
                 },
-                {
+                   {
                   "id": "bca102",
                   "title": "Mathematics",
                   "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
-                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085714.jpeg"
+                  "pdf": "https://drive.google.com/drive/folders/1GeyN0WSb0WK1dvA4CxmSRnVMklTS9l-1?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085714.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "All Chapter",
+                      "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
+                    }
+                  ]
                 },
                 {
                   "id": "bca103",
-                  "title": "Introduction to Computers",
-                  "description": "The objective is to provide knowledge of functional units, number System, Devices and memory & its storage.",
-                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085826.jpeg"
+                  "title": "Communication Skills",
+                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                  "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085826.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Introduction to Computers",
+                      "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Basic Computer Architecture",
+                      "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Number System",
+                      "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Input and Output devices",
+                      "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Concepts of Internet",
+                      "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
+                    }
+                  ]
                 },
                 {
                   "id": "bca104",
                   "title": "Computer Programming & Programming Methodology",
-                  "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
-                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085792.jpeg"
+                  "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
+                  "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085792.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Introduction to Computers",
+                      "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Basic Computer Architecture",
+                      "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Number System",
+                      "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Input and Output devices",
+                      "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Concepts of Internet",
+                      "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
+                    }
+                  ]
                 },
                 {
                   "id": "bca105",
