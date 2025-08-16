@@ -125,19 +125,28 @@ $subjectCount = count($semester['subjects'] ?? []);
                 if ($subjectCount == 1) {
                     echo 'flex justify-center';
                 } elseif ($subjectCount == 2) {
-                    echo 'grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto';
+                    echo 'grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-start';
                 } else {
-                    echo 'grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+                    echo 'grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start';
                 }
-            ?>">
+            ?>"><?php 
+                // Calculate the minimum height needed for consistency
+                $hasUnits = false;
+                foreach ($semester['subjects'] as $subject) {
+                    if (!empty($subject['units'])) {
+                        $hasUnits = true;
+                        break;
+                    }
+                }
+            ?>
                 <?php foreach ($semester['subjects'] as $subject): ?>
-                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 p-6 transform transition-all duration-300 hover:-translate-y-2 select-text h-fit <?php 
-                        if ($subjectCount == 1) echo 'max-w-md w-full';
-                        elseif ($subjectCount == 2) echo 'w-full';
-                        else echo '';
+                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 select-text <?php 
+                        if ($subjectCount == 1) echo 'max-w-md w-full h-[600px]';
+                        elseif ($subjectCount == 2) echo 'w-full h-[600px]';
+                        else echo 'h-[600px]';
                     ?>">
                         <!-- Subject Image -->
-                        <div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative">
+                        <div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative mx-6 mt-6">
                             <?php if (!empty($subject['image'])): ?>
                                 <img src="<?= htmlspecialchars($subject['image']) ?>" alt="<?= htmlspecialchars($subject['title']) ?>"
                                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -161,13 +170,13 @@ $subjectCount = count($semester['subjects'] ?? []);
                         </div>
 
                         <!-- Subject Info -->
-                        <div class="flex-grow">
+                        <div class="flex-grow px-6">
                             <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight"><?= htmlspecialchars($subject['title']) ?></h3>
-                            <p class="text-gray-600 leading-relaxed"><?= htmlspecialchars($subject['description']) ?></p>
+                            <p class="text-gray-600 leading-relaxed line-clamp-3"><?= htmlspecialchars($subject['description']) ?></p>
                         </div>
 
                         <!-- Download Buttons -->
-                        <div class="mt-6 space-y-3">
+                        <div class="mt-auto px-6 pb-6 space-y-3">
                             <!-- Complete Subject PDF Download -->
                             <a target="_blank" href="<?= htmlspecialchars($subject['pdf']) ?>" download
                                class="inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg transition-all duration-200 group">
@@ -187,8 +196,8 @@ $subjectCount = count($semester['subjects'] ?? []);
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                                         </svg>
                                     </button>
-                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 overflow-hidden transition-all duration-300 max-h-0">
-                                        <div class="space-y-2 bg-gray-50 p-4 rounded-xl">
+                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="overflow-hidden transition-all duration-300 max-h-0">
+                                        <div class="space-y-2 bg-gray-50 p-4 rounded-xl mt-3 max-h-40 overflow-y-auto custom-scrollbar">
                                             <?php foreach ($subject['units'] as $unit): ?>
                                                 <a target="_blank" href="<?= htmlspecialchars($unit['pdf']) ?>" download
                                                    class="flex items-center justify-between w-full px-4 py-3 bg-white border border-gray-200 rounded-lg hover:bg-[#BFA14A]/10 hover:border-[#BFA14A]/30 transition-all duration-200 group">
@@ -214,8 +223,8 @@ $subjectCount = count($semester['subjects'] ?? []);
                     const arrow = document.getElementById('arrow-' + subjectId);
                     
                     if (unitsDiv.style.maxHeight === '0px' || unitsDiv.style.maxHeight === '') {
-                        // Open: Set max-height to scrollHeight for smooth animation
-                        unitsDiv.style.maxHeight = unitsDiv.scrollHeight + 'px';
+                        // Open: Set max-height to a fixed reasonable height (160px for max-h-40)
+                        unitsDiv.style.maxHeight = '160px';
                         arrow.style.transform = 'rotate(180deg)';
                     } else {
                         // Close: Set max-height to 0
@@ -224,6 +233,30 @@ $subjectCount = count($semester['subjects'] ?? []);
                     }
                 }
             </script>
+
+            <!-- Custom scrollbar styles -->
+            <style>
+                .custom-scrollbar::-webkit-scrollbar {
+                    width: 6px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-track {
+                    background: #f1f5f9;
+                    border-radius: 3px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-thumb {
+                    background: #cbd5e1;
+                    border-radius: 3px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                    background: #94a3b8;
+                }
+                .line-clamp-3 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            </style>
 
         <?php else: ?>
             <!-- Empty State -->
