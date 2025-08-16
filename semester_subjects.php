@@ -54,6 +54,9 @@ if (!$semester) {
     include 'includes/error_state.php';
     exit;
 }
+
+// Count subjects for dynamic grid
+$subjectCount = count($semester['subjects'] ?? []);
 ?>
 
 <div class="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
@@ -117,34 +120,58 @@ if (!$semester) {
         </div>
 
         <?php if (!empty($semester['subjects'])): ?>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+            <!-- Dynamic Grid Layout based on subject count -->
+            <div class="<?php 
+                if ($subjectCount == 1) {
+                    echo 'flex justify-center';
+                } elseif ($subjectCount == 2) {
+                    echo 'grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto';
+                } else {
+                    echo 'grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+                }
+            ?>">
                 <?php foreach ($semester['subjects'] as $subject): ?>
-                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 p-6 transform transition-all duration-300 hover:-translate-y-2 select-text">
+                    <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 p-6 transform transition-all duration-300 hover:-translate-y-2 select-text <?php 
+                        if ($subjectCount == 1) echo 'max-w-md w-full';
+                        elseif ($subjectCount == 2) echo 'w-full';
+                        else echo '';
+                    ?>">
                         <!-- Subject Image -->
-                        <div class="h-48 w-full rounded-xl overflow-hidden mb-6">
+                        <div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative">
                             <?php if (!empty($subject['image'])): ?>
                                 <img src="<?= htmlspecialchars($subject['image']) ?>" alt="<?= htmlspecialchars($subject['title']) ?>"
                                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                      onerror="this.onerror=null;this.src='images/default-placeholder.png';">
                             <?php else: ?>
-                                <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
-                                    <svg class="w-10 h-10 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"/>
-                                    </svg>
+                                <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 relative">
+                                    <!-- Decorative pattern -->
+                                    <div class="absolute inset-0 opacity-20">
+                                        <div class="absolute top-4 left-4 w-8 h-8 border-2 border-blue-300 rounded-full"></div>
+                                        <div class="absolute bottom-4 right-4 w-6 h-6 border-2 border-purple-300 rounded-full"></div>
+                                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 border-2 border-indigo-300 rounded-lg rotate-45"></div>
+                                    </div>
+                                    <div class="relative z-10 text-center">
+                                        <svg class="w-12 h-12 text-blue-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                        </svg>
+                                        <span class="text-blue-600 font-medium text-sm">Subject Material</span>
+                                    </div>
                                 </div>
                             <?php endif; ?>
                         </div>
 
                         <!-- Subject Info -->
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3"><?= htmlspecialchars($subject['title']) ?></h3>
-                        <p class="text-gray-600 flex-grow"><?= htmlspecialchars($subject['description']) ?></p>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight"><?= htmlspecialchars($subject['title']) ?></h3>
+                            <p class="text-gray-600 leading-relaxed"><?= htmlspecialchars($subject['description']) ?></p>
+                        </div>
 
                         <!-- Download Buttons -->
                         <div class="mt-6 space-y-3">
                             <!-- Complete Subject PDF Download -->
                             <a target="_blank" href="<?= htmlspecialchars($subject['pdf']) ?>" download
-                               class="inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg transition-colors duration-200">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               class="inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg transition-all duration-200 group">
+                                <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                 </svg>
                                 Google Drive
@@ -153,12 +180,19 @@ if (!$semester) {
                             <!-- Unit-wise PDF Downloads (if available) -->
                             <?php if (!empty($subject['units'])): ?>
                                 <div class="mt-4">
-                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 space-y-2 bg-gray-50 p-4 rounded-xl">
+                                    <button onclick="toggleUnits('<?= htmlspecialchars($subject['id']) ?>')" 
+                                            class="w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors duration-200 flex items-center justify-between">
+                                        <span>View Units (<?= count($subject['units']) ?>)</span>
+                                        <svg id="arrow-<?= htmlspecialchars($subject['id']) ?>" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div id="units-<?= htmlspecialchars($subject['id']) ?>" class="mt-3 space-y-2 bg-gray-50 p-4 rounded-xl hidden">
                                         <?php foreach ($subject['units'] as $unit): ?>
                                             <a target="_blank" href="<?= htmlspecialchars($unit['pdf']) ?>" download
-                                               class="flex items-center justify-between w-full px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-[#BFA14A]/50 hover:border-[#BFA14A]/50- transition-all duration-200">
-                                                <span class="font-medium text-gray-800">Unit <?= htmlspecialchars($unit['unit_number']) ?>: <?= htmlspecialchars($unit['title']) ?></span>
-                                                <svg class="w-5 h-5 text-[#1E3A8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                               class="flex items-center justify-between w-full px-4 py-3 bg-white border border-gray-200 rounded-lg hover:bg-[#BFA14A]/10 hover:border-[#BFA14A]/30 transition-all duration-200 group">
+                                                <span class="font-medium text-gray-800 text-sm">Unit <?= htmlspecialchars($unit['unit_number']) ?>: <?= htmlspecialchars($unit['title']) ?></span>
+                                                <svg class="w-4 h-4 text-[#1E3A8A] group-hover:text-[#BFA14A] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                                 </svg>
                                             </a>
@@ -170,10 +204,30 @@ if (!$semester) {
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            <!-- JavaScript for collapsible units -->
+            <script>
+                function toggleUnits(subjectId) {
+                    const unitsDiv = document.getElementById('units-' + subjectId);
+                    const arrow = document.getElementById('arrow-' + subjectId);
+                    
+                    if (unitsDiv.classList.contains('hidden')) {
+                        unitsDiv.classList.remove('hidden');
+                        arrow.style.transform = 'rotate(180deg)';
+                    } else {
+                        unitsDiv.classList.add('hidden');
+                        arrow.style.transform = 'rotate(0deg)';
+                    }
+                }
+            </script>
+
         <?php else: ?>
             <!-- Empty State -->
             <div class="text-center py-20">
-                <div class="w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto mb-8">
+                <div class="w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mx-auto mb-8 relative">
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-200 rounded-full"></div>
+                    <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-200 rounded-full"></div>
                     <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
@@ -181,7 +235,7 @@ if (!$semester) {
                 <h3 class="text-3xl font-bold text-gray-900 mb-4">No Subjects Available</h3>
                 <p class="text-xl text-gray-600 max-w-md mx-auto mb-8">This semester does not have subjects configured yet.</p>
                 <a href="year_semesters.php?course_id=<?= urlencode($courseId) ?>&year=<?= urlencode($yearNumber) ?>"
-                   class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold rounded-xl hover:from-gray-800 hover:to-black shadow-lg">
+                   class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold rounded-xl hover:from-gray-800 hover:to-black shadow-lg transform hover:scale-105 transition-all duration-200">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                     </svg>
