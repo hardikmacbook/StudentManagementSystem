@@ -131,7 +131,6 @@ $subjectCount = count($semester['subjects'] ?? []);
                 }
             ?>">
                 <?php 
-                    // Calculate the minimum height needed for consistency
                     $hasUnits = false;
                     foreach ($semester['subjects'] as $subject) {
                         if (!empty($subject['units'])) {
@@ -177,7 +176,7 @@ $subjectCount = count($semester['subjects'] ?? []);
                         </div>
 
                         <!-- Download Buttons -->
-                        <div class="mt-auto px-6 pb-6 space-y-3">
+                        <div class="mt-auto px-6 pb-6 space-y-3 pt-2">
                             <!-- Complete Subject PDF Download -->
                             <a target="_blank" href="<?= htmlspecialchars($subject['pdf']) ?>" download
                                class="inline-flex items-center justify-center w-full px-5 py-3 bg-[#1E3A8A] text-white font-semibold rounded-xl hover:bg-[#BFA14A] shadow-lg transition-all duration-200 group">
@@ -187,11 +186,10 @@ $subjectCount = count($semester['subjects'] ?? []);
                                 Google Drive
                             </a>
                             
-                            <!-- Unit-wise PDF Downloads (if available) -->
                             <?php if (!empty($subject['units'])): ?>
                                 <div class="mt-4">
                                     <button onclick="toggleUnits('<?= htmlspecialchars($subject['id']) ?>')" 
-                                                class="w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors duration-200 flex items-center justify-between">
+                                                class="w-full px-4 py-2 bg-gray-100 hover:bg-[#BFA14A]/20 text-gray-700 font-medium rounded-lg transition-colors duration-200 flex items-center justify-between">
                                         <span>View Units (<?= count($subject['units']) ?>)</span>
                                         <svg id="arrow-<?= htmlspecialchars($subject['id']) ?>" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -241,15 +239,15 @@ $subjectCount = count($semester['subjects'] ?? []);
                     width: 6px;
                 }
                 .custom-scrollbar::-webkit-scrollbar-track {
-                    background: #f1f5f9;
+                    background: #1E3A8A;
                     border-radius: 3px;
                 }
                 .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background: #cbd5e1;
+                    background: #1E3A8A;
                     border-radius: 3px;
                 }
                 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                    background: #94a3b8;
+                    background: #1E3A8A;
                 }
                 .line-clamp-3 {
                     display: -webkit-box;
