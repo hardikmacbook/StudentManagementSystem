@@ -129,27 +129,28 @@ $subjectCount = count($semester['subjects'] ?? []);
                 } else {
                     echo 'grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start';
                 }
-            ?>"><?php 
-                // Calculate the minimum height needed for consistency
-                $hasUnits = false;
-                foreach ($semester['subjects'] as $subject) {
-                    if (!empty($subject['units'])) {
-                        $hasUnits = true;
-                        break;
+            ?>">
+                <?php 
+                    // Calculate the minimum height needed for consistency
+                    $hasUnits = false;
+                    foreach ($semester['subjects'] as $subject) {
+                        if (!empty($subject['units'])) {
+                            $hasUnits = true;
+                            break;
+                        }
                     }
-                }
-            ?>
+                ?>
                 <?php foreach ($semester['subjects'] as $subject): ?>
                     <div class="group relative flex flex-col bg-white rounded-3xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 select-text <?php 
                         if ($subjectCount == 1) echo 'max-w-md w-full h-[600px]';
                         elseif ($subjectCount == 2) echo 'w-full h-[600px]';
                         else echo 'h-[600px]';
                     ?>">
-                        <!-- Subject Image -->
-                        <div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative mx-6 mt-6">
+                        <!-- Subject Image (FIXED) -->
+                        <div class="h-full w-full rounded-xl overflow-hidden mb-6 relative">
                             <?php if (!empty($subject['image'])): ?>
                                 <img src="<?= htmlspecialchars($subject['image']) ?>" alt="<?= htmlspecialchars($subject['title']) ?>"
-                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                     class="w-[400px] h-full object-cover hover:scale-105 transition-transform duration-500"
                                      onerror="this.onerror=null;this.src='images/default-placeholder.png';">
                             <?php else: ?>
                                 <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 relative">
@@ -169,8 +170,8 @@ $subjectCount = count($semester['subjects'] ?? []);
                             <?php endif; ?>
                         </div>
 
-                        <!-- Subject Info -->
-                        <div class="flex-grow px-6">
+                        <!-- Subject Info (optionally, add pt-6 here for spacing) -->
+                        <div class="flex-grow px-6 pt-0">
                             <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight"><?= htmlspecialchars($subject['title']) ?></h3>
                             <p class="text-gray-600 leading-relaxed line-clamp-3"><?= htmlspecialchars($subject['description']) ?></p>
                         </div>
@@ -190,7 +191,7 @@ $subjectCount = count($semester['subjects'] ?? []);
                             <?php if (!empty($subject['units'])): ?>
                                 <div class="mt-4">
                                     <button onclick="toggleUnits('<?= htmlspecialchars($subject['id']) ?>')" 
-                                            class="w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors duration-200 flex items-center justify-between">
+                                                class="w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-colors duration-200 flex items-center justify-between">
                                         <span>View Units (<?= count($subject['units']) ?>)</span>
                                         <svg id="arrow-<?= htmlspecialchars($subject['id']) ?>" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -221,7 +222,7 @@ $subjectCount = count($semester['subjects'] ?? []);
                 function toggleUnits(subjectId) {
                     const unitsDiv = document.getElementById('units-' + subjectId);
                     const arrow = document.getElementById('arrow-' + subjectId);
-                    
+
                     if (unitsDiv.style.maxHeight === '0px' || unitsDiv.style.maxHeight === '') {
                         // Open: Set max-height to a fixed reasonable height (160px for max-h-40)
                         unitsDiv.style.maxHeight = '160px';
