@@ -10,11 +10,13 @@
   
 <header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
   <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    
     <!-- Logo -->
     <a href="index.php" class="text-xl font-semibold text-gray-800 flex items-center">
       <i class="fas fa-book-open text-[#1E3A8A] pr-1"></i>
       <p class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</p>
     </a>
+
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-gray-700">
       <a href="index.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Home</a>
@@ -23,6 +25,7 @@
       <a href="faculty.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Faculty</a>
       <a href="contact.php" class="text-[#1E3A8A] hover:text-[#BFA14A]">Contact</a>
     </nav>
+
     <!-- Mobile Button -->
     <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl focus:outline-none">
       <i class="fas fa-bars"></i>
@@ -38,6 +41,7 @@
       <i class="fas fa-times"></i>
     </button>
   </div>
+
   <nav class="flex flex-col p-5 space-y-4">
     <a href="index.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">Home</a>
     <a href="about.php" class="py-2 border-b border-gray-200 text-[#1E3A8A] hover:text-[#BFA14A]">About</a>
@@ -55,14 +59,17 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("close-menu");
+
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("translate-x-full");
     overlay.classList.remove("hidden");
   });
+
   closeBtn.addEventListener("click", () => {
     mobileMenu.classList.add("translate-x-full");
     overlay.classList.add("hidden");
   });
+
   overlay.addEventListener("click", () => {
     mobileMenu.classList.add("translate-x-full");
     overlay.classList.add("hidden");
