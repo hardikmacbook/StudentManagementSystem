@@ -180,22 +180,158 @@
                 }
               ]
             },
-            {
+             {
               "semester_number": 2,
               "subjects": [
                 {
-                  "id": "bca103",
-                  "title": "Business Economics",
-                  "description": "Economic principles applied to business decision-making.",
-                  "pdf": "assest/pdfs/bca/year1/sem2/economics.pdf",
-                  "image": "assest/images/subjects/economics.jpg"
+                  "id": "bca202",
+                  "title": "Computerized Financial Accounting",
+                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                  "pdf": "https://drive.google.com/drive/folders/1TK9gtj7ZvbDDx3ig7d-yqdphbDP_v6HN?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052090.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Fundamentals of Communication",
+                      "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Developing Listening Skills",
+                      "pdf": "https://drive.google.com/file/d/1_pDMmLYSBzJNPBxd2c70rCQHJ7SEz51U/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Speaking Skills",
+                      "pdf": "https://drive.google.com/file/d/1raCijbfCFqMf2eHxt0wiUfWQXaV3xFhG/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Uni 4",
+                      "pdf": "https://drive.google.com/file/d/1dQFXb9Ys8Y_-ChCr_CAQIAEVHvNLMq80/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Writing Skills",
+                      "pdf": "https://drive.google.com/file/d/1tuAmzuBJG0RfQiy_SQjH7UUKaqhzgv2x/view?usp=sharing"
+                    }
+                  ]
+                },
+                   {
+                  "id": "bca203",
+                  "title": "Operating System - I",
+                  "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
+                  "pdf": "https://drive.google.com/drive/folders/1GeyN0WSb0WK1dvA4CxmSRnVMklTS9l-1?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052285.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "All Chapter",
+                      "pdf": "https://drive.google.com/file/d/1LtAQfIws0tO1oB3uyI3NTJEZ5IY0v634/view?usp=sharing"
+                    }
+                  ]
                 },
                 {
-                  "id": "bca104",
-                  "title": "Business Communication",
-                  "description": "Effective communication strategies in business contexts.",
-                  "pdf": "assest/pdfs/bca/year1/sem2/communication.pdf",
-                  "image": "assest/images/subjects/communication.jpg"
+                  "id": "bca204",
+                  "title": "Programming Skills",
+                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                  "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052357.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Introduction to Computers",
+                      "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Basic Computer Architecture",
+                      "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Number System",
+                      "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Input and Output devices",
+                      "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Concepts of Internet",
+                      "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
+                    }
+                  ]
+                },
+                {
+                  "id": "bca205",
+                  "title": "Concepts of Relational Database Management System",
+                  "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
+                  "pdf": "https://drive.google.com/drive/folders/1fQuodfsFikGFOQuxKoVktBXqK1IjTwP0?usp=sharing",
+                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052390.jpeg",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Introduction",
+                      "pdf": "https://drive.google.com/file/d/1JaYWDf3rj4c4lWWREST3HEWp2ZqjJadz/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Input/Output Statements and Operators ",
+                      "pdf": "https://drive.google.com/file/d/1RZfGcxC3kDhHtNZAj1XPncIEXMyE5g27/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Decision Making statements ",
+                      "pdf": "https://drive.google.com/file/d/19cVyD_ZeW1vN4mwRloNsZRQGoMaagjdz/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Iterative statements ",
+                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Concepts of Arrays and Pointer ",
+                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
+                    }
+                  ]
+                },
+                 {
+                  "id": "bca105",
+                  "title": "Data Processing and Analysis",
+                  "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
+                  "pdf": "https://drive.google.com/drive/folders/1TQQjhZ4MTplgj0fZUTK-x2Z0kVVqEEpd?usp=sharing",
+                  "image": "",
+                  "units": [
+                    {
+                      "unit_number": 1,
+                      "title": "Concepts of worksheet ",
+                      "pdf": "https://drive.google.com/file/d/1RE78ZnlPw7XJ-8Gi8jJosakTNeHavyRb/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 2,
+                      "title": "Formulas, Chart and Data",
+                      "pdf": "https://drive.google.com/file/d/1i6zkdAfFk0fVfRsNp9JGnEYkUq47XAQG/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 3,
+                      "title": "Concept of Database",
+                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 4,
+                      "title": "Normalization and Concepts of SQL",
+                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                    },
+                    {
+                      "unit_number": 5,
+                      "title": "Queries-Single Table Only",
+                      "pdf": "https://drive.google.com/file/d/1Gt29x5FTEgv_8s-tGrFrSflLjX97RKCn/view?usp=sharing"
+                    }
+                  ]
                 }
               ]
             }
