@@ -27,7 +27,8 @@ $courses = $coursesData['courses'] ?? [];
                             <img src="<?= htmlspecialchars($course['image']) ?>" 
                                  alt="<?= htmlspecialchars($course['title']) ?>" 
                                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
+
+                            <div class="absolute top-4 right-4 bg-[#1E3A8A] text-white text-xs font-bold px-2 py-1 rounded">
                                 <?= htmlspecialchars($course['code']) ?>
                             </div>
                         <?php else: ?>
