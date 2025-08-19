@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body class="min-h-screen bg-gray-50">
@@ -13,7 +14,8 @@
     
     <!-- Logo -->
     <a href="index.php" class="text-xl font-semibold text-gray-800 flex items-center">
-      <img src="/assest/images/Open2learn-removebg-preview.png" alt="">
+      <i class="fas fa-book-open text-[#1E3A8A] pr-1"></i>
+      <p class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</p>
     </a>
 
     <!-- Desktop Menu -->
