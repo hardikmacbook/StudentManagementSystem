@@ -13,8 +13,7 @@
     
     <!-- Logo -->
     <a href="index.php" class="text-xl font-semibold text-gray-800 flex items-center">
-      <i class="fas fa-book-open text-[#1E3A8A] pr-1"></i>
-      <p class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</p>
+      <img src="/assest/images/Open2learn-removebg-preview.png" alt="">
     </a>
 
     <!-- Desktop Menu -->

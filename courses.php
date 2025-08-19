@@ -65,12 +65,12 @@ $courses = $coursesData['courses'] ?? [];
                         <div class="flex justify-between items-center">
                             <div>
                                 <?php $totalYears = count($course['years'] ?? []); ?>
-                                <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full">
+                                <span class="bg-[#1E3A8A] text-white text-xs px-2 py-1 rounded-full">
                                     <?= $totalYears ?> Years
                                 </span>
                             </div>
                             <a href="course_years.php?id=<?= urlencode($course['id']) ?>" 
-                               class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                               class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium">
                                 View Details
                                 <i class="fas fa-arrow-right ml-1"></i>
                             </a>
