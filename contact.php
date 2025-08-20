@@ -9,42 +9,46 @@
 
   <!-- Contact Form -->
   <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
-    <form action="#" method="post" class="space-y-6">
+    <form action="https://formspree.io/f/xeozbrdo"
+  method="POST" class="space-y-6">
       
       <div>
         <label for="name" class="block text-gray-700 mb-1">Your Name</label>
         <input type="text" id="name" name="name" 
-               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]" 
                placeholder="Enter your name" required>
       </div>
       
       <div>
         <label for="email" class="block text-gray-700 mb-1">Your Email</label>
         <input type="email" id="email" name="email" 
-               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]" 
                placeholder="Enter your email" required>
       </div>
       
       <div>
         <label for="subject" class="block text-gray-700 mb-1">Subject</label>
         <input type="text" id="subject" name="subject" 
-               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]" 
                placeholder="Write subject" required>
       </div>
       
       <div>
         <label for="message" class="block text-gray-700 mb-1">Message</label>
         <textarea id="message" name="message" rows="5" 
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]" 
                   placeholder="Write your message..." required></textarea>
       </div>
 
       <button type="submit" 
-              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">
+              class="w-full bg-[#1E3A8A] hover:bg-[#BFA14A] text-white hover:text-black font-semibold py-3 rounded-lg transition">
         Send Message
       </button>
     </form>
   </div>
 </div>
+
+
+
 
 <?php include 'includes/footer.php'; ?>
