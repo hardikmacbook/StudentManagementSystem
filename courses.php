@@ -1,8 +1,9 @@
 <?php
 include 'includes/header.php';
+include 'includes/api_helper.php';
 
-// Load courses data
-$coursesData = json_decode(file_get_contents('data/all_courses.json'), true);
+// Load courses data from API
+$coursesData = fetchCoursesData();
 $courses = $coursesData['courses'] ?? [];
 ?>
 

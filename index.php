@@ -12,6 +12,7 @@
 
 <body>
   <?php include 'includes/header.php'; ?>
+  <?php include 'includes/api_helper.php'; ?>
 
   <!-- Hero Section -->
   <div class="relative w-full h-[600px] overflow-hidden">
@@ -141,62 +142,65 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <?php
-      $allCoursesJson = file_get_contents('data/all_courses.json');
-      $allCourses = json_decode($allCoursesJson, true);
-      $courses = $allCourses['courses'];
+    <?php
+    // Use API helper function to fetch courses data
+    require_once './includes/api_helper.php'; // Include your API helper functions file if needed
 
-      // Display only the first 3 courses
-      $featuredCourses = array_slice($courses, 0, 3);
+    $allCoursesData = fetchCoursesData();  // Fetch data from API
+    $courses = $allCoursesData['courses'];
 
-      foreach ($featuredCourses as $course) {
-      ?>
+    // Display only the first 3 courses
+    $featuredCourses = array_slice($courses, 0, 3);
+
+    foreach ($featuredCourses as $course) {
+    ?>
         <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-gray-100">
-          <div class="h-52 bg-gray-200 relative overflow-hidden">
-            <?php if (isset($course['image'])): ?>
-              <img src="<?php echo $course['image']; ?>" alt="<?php echo $course['title']; ?>" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-              <div class="absolute top-4 right-4 bg-[#1E3A8A] text-white text-xs font-bold px-2 py-1 rounded">
-                <?php echo $course['code']; ?>
-              </div>
-            <?php else: ?>
-              <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-500">
-                <span class="text-white text-3xl font-bold"><?php echo $course['code']; ?></span>
-              </div>
-            <?php endif; ?>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800"><?php echo $course['title']; ?></h3>
-
-            <div class="flex items-center mb-4">
-              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                <i class="fas fa-user-tie text-blue-600 text-sm"></i>
-              </div>
-              <p class="text-gray-600 text-sm">
-                <?php echo $course['instructor']; ?>
-              </p>
+            <div class="h-52 bg-gray-200 relative overflow-hidden">
+                <?php if (isset($course['image'])): ?>
+                    <img src="<?php echo $course['image']; ?>" alt="<?php echo $course['title']; ?>" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    <div class="absolute top-4 right-4 bg-[#1E3A8A] text-white text-xs font-bold px-2 py-1 rounded">
+                        <?php echo $course['code']; ?>
+                    </div>
+                <?php else: ?>
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-500">
+                        <span class="text-white text-3xl font-bold"><?php echo $course['code']; ?></span>
+                    </div>
+                <?php endif; ?>
             </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-3 text-gray-800"><?php echo $course['title']; ?></h3>
 
-            <p class="text-gray-700 mb-6"><?php echo substr($course['description'], 0, 100); ?>...</p>
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
+                        <i class="fas fa-user-tie text-blue-600 text-sm"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">
+                        <?php echo $course['instructor']; ?>
+                    </p>
+                </div>
 
-            <div class="flex justify-between items-center">
-              <div>
-                <?php
-                // Count total years
-                $totalYears = count($course['years'] ?? []);
-                ?>
-                <span class="bg-[#1E3A8A] text-white text-xs px-2 py-1 rounded-full">
-                  <?= $totalYears ?> Years
-                </span>
-              </div>
-              <a href="course_years.php?id=<?php echo $course['id']; ?>" class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium">
-                View Details
-                <i class="fas fa-arrow-right ml-1"></i>
-              </a>
+                <p class="text-gray-700 mb-6"><?php echo substr($course['description'], 0, 100); ?>...</p>
+
+                <div class="flex justify-between items-center">
+                    <div>
+                        <?php
+                        // Count total years
+                        $totalYears = count($course['years'] ?? []);
+                        ?>
+                        <span class="bg-[#1E3A8A] text-white text-xs px-2 py-1 rounded-full">
+                            <?= $totalYears ?> Years
+                        </span>
+                    </div>
+                    <a href="course_years.php?id=<?php echo $course['id']; ?>" class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium">
+                        View Details
+                        <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
-      <?php } ?>
-    </div>
+    <?php } ?>
+</div>
+
 
     <div class="text-center mt-10">
       <a href="courses.php" class="inline-block bg-[#1E3A8A] hover:text-black hover:bg-[#BFA14A] text-white font-semibold py-3 px-8 rounded-lg transition duration-300">

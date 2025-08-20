@@ -1,5 +1,7 @@
 <?php
 include 'includes/header.php';
+include 'includes/api_helper.php';
+
 
 // --- Get Course ---
 $courseId = $_GET['id'] ?? '';
@@ -8,7 +10,8 @@ if (empty($courseId)) {
     exit;
 }
 
-$data = json_decode(file_get_contents('data/all_courses.json'), true);
+// Load courses data from API
+$data = fetchCoursesData();
 $course = null;
 foreach ($data['courses'] ?? [] as $c) {
     if ($c['id'] === $courseId) {

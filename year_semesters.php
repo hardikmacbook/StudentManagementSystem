@@ -1,5 +1,6 @@
 <?php
 include 'includes/header.php';
+include 'includes/api_helper.php';
 
 // === Get URL Parameters ===
 $courseId = $_GET['course_id'] ?? '';
@@ -11,18 +12,8 @@ if (empty($courseId) || $yearNumber === 0) {
     exit;
 }
 
-// === Load all courses ===
-$data = json_decode(file_get_contents('data/all_courses.json'), true);
-$courses = $data['courses'] ?? [];
-
-// Find course
-$course = null;
-foreach ($courses as $c) {
-    if ($c['id'] === $courseId) {
-        $course = $c;
-        break;
-    }
-}
+// Get course data from API
+$course = findCourseById($courseId);
 if (!$course) {
     include 'includes/error_state.php';
     exit;

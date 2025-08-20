@@ -1,5 +1,6 @@
 <?php
 include 'includes/header.php';
+include 'includes/api_helper.php';
 
 // === Get URL Parameters ===
 $courseId   = $_GET['course_id'] ?? '';
@@ -11,18 +12,8 @@ if (empty($courseId) || $yearNumber === 0) {
     exit;
 }
 
-// === Load all courses ===
-$data   = json_decode(file_get_contents('data/all_courses.json'), true);
-$courses = $data['courses'] ?? [];
-
-// Find course
-$course = null;
-foreach ($courses as $c) {
-    if ($c['id'] === $courseId) {
-        $course = $c;
-        break;
-    }
-}
+// Get course data from API
+$course = findCourseById($courseId);
 if (!$course) {
     echo '<div class="alert alert-error">Course not found.</div>';
     include 'includes/footer.php';
@@ -50,7 +41,7 @@ if (!$year) {
     <!-- Back Button -->
     <div class="mb-6">
         <a href="course_years.php?id=<?= urlencode($courseId) ?>" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-            <i class="fas fa-arrow-left mr-2"></i> Back to Years
+            <i class="fas fa-arrow-left mr-2"></i> Back to demo
         </a>
     </div>
 
