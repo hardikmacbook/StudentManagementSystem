@@ -139,7 +139,7 @@
       </p>
 
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <?php
       $allCoursesJson = file_get_contents('data/all_courses.json');
