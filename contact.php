@@ -9,8 +9,12 @@
 
   <!-- Contact Form -->
   <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
-    <form action="https://formspree.io/f/xeozbrdo"
+    <form action="https://api.web3forms.com/submit"
   method="POST" class="space-y-6">
+
+
+      <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="1f630424-1e67-4fff-a6f4-3e9ece6b2772">
       
       <div>
         <label for="name" class="block text-gray-700 mb-1">Your Name</label>
