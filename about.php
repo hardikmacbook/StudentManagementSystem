@@ -1,6 +1,6 @@
 <?php include 'includes/header.php'; ?>
 
-<div class="max-w-4xl mx-auto">
+<div class="max-w-4xl mx-auto pt-28">
   <h1 class="text-3xl font-bold mb-6 text-blue-800">About Us</h1>
   
   <div class="bg-white p-6 rounded-lg shadow-md mb-8">

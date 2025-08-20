@@ -1,6 +1,9 @@
 <?php include 'includes/header.php'; ?>
 
-<h1 class="text-4xl font-extrabold mb-12 text-blue-900 text-center">Our Faculty</h1>
+
+<div class="title-container mt-28">
+<h2 class="text-4xl font-extrabold mb-12 text-blue-900 text-center">Our Faculty</h2>
+
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -102,7 +105,7 @@
         <a href="#" class="hover:text-blue-700" aria-label="Website Linda Garcia"><i class="fas fa-globe fa-lg"></i></a>
       </div>
     </div>
-
+</div>
   </div>
 </div>
 

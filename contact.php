@@ -1,6 +1,6 @@
   <?php include 'includes/header.php'; ?>
 
-<div class="max-w-4xl mx-auto">
+<div class="max-w-4xl mx-auto pt-28">
   <h1 class="text-3xl font-bold mb-8 text-blue-800">Contact Us</h1>
   
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -6,7 +6,7 @@ $coursesData = json_decode(file_get_contents('data/all_courses.json'), true);
 $courses = $coursesData['courses'] ?? [];
 ?>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-28">
     
     <!-- Page Title -->
     <div class="text-center mb-12">
