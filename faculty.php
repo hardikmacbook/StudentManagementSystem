@@ -11,15 +11,26 @@
   </div>
 
   <?php
-    // API se data fetch karo
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://68a3f814c123272fb9b0e42d.mockapi.io/Faculties");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $response = curl_exec($ch);
-    curl_close($ch);
+$servername = "localhost";
+$username = "root";
+$password = ""; // your MySQL root password
+$dbname = "open2learn"; // your database name
 
-    $facultyData = json_decode($response, true);
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
+// Fetch faculty data from database
+$sql = "SELECT * FROM faculty";
+$result = $conn->query($sql);
+
+$facultyData = [];
+if ($result && $result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $facultyData[] = $row;
+    }
+}
+
+$conn->close();
     // Departments ki list
     $departments = ["ALL", "BCA", "BBA", "LAB", "LIBRARY"];
   ?>
