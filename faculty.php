@@ -28,7 +28,7 @@
   <div class="flex justify-center space-x-4 mb-10">
     <?php foreach ($departments as $dept) { ?>
       <button 
-        class="tab-btn px-6 py-2 rounded-lg border font-semibold text-gray-700 hover:bg-[#1E3A8A] hover:text-white transition"
+        class="tab-btn px-6 py-2 rounded-lg border font-semibold text-gray-700 transition"
         data-dept="<?= $dept ?>">
         <?= $dept ?>
       </button>
@@ -45,7 +45,7 @@
       ?>
       <!-- Faculty Card -->
       <div 
-        class="faculty-card bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:border-blue-400 transition-all duration-300"
+        class="faculty-card bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl hover:border-[#1E3A8A] transition-all duration-300"
         data-dept="<?= strtoupper($faculty['department']) ?>">
         
         <!-- Icon -->
@@ -81,13 +81,6 @@
               <?= htmlspecialchars($faculty['email']) ?>
             </a>
           </p>
-
-          <!-- Social Links -->
-          <div class="flex justify-center space-x-5 text-gray-500">
-            <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="hover:text-blue-700"><i class="far fa-envelope fa-lg"></i></a>
-            <a href="<?= htmlspecialchars($faculty['linkedin']) ?>" target="_blank" class="hover:text-blue-700"><i class="fab fa-linkedin fa-lg"></i></a>
-            <a href="<?= htmlspecialchars($faculty['website']) ?>" target="_blank" class="hover:text-blue-700"><i class="fas fa-globe fa-lg"></i></a>
-          </div>
         </div>
       </div>
       <?php 
