@@ -8,7 +8,7 @@
     padding-right: 8px; /* space for scrollbar */
   }
   .faculty-image {
-    height: 250px;
+    height: 300px;
     width: 350px;
     border-radius: 10px; /* 10px border-radius as requested */
     object-fit: cover;
