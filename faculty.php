@@ -1,5 +1,13 @@
 <?php include 'includes/header.php'; ?>
 
+<style>
+  .specialization-scroll {
+    max-height: 100px; /* Adjust as needed */
+    overflow-y: auto;
+    padding-right: 8px; /* space for scrollbar */
+  }
+</style>
+
 <div class="title-container mt-28 mb-16">
   <div class="text-center pb-5">
     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -11,28 +19,28 @@
   </div>
 
   <?php
-$servername = "localhost";
-$username = "root";
-$password = ""; // your MySQL root password
-$dbname = "open2learn"; // your database name
+  $servername = "localhost";
+  $username = "root";
+  $password = ""; // your MySQL root password
+  $dbname = "open2learn"; // your database name
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
-// Fetch faculty data from database
-$sql = "SELECT * FROM faculty";
-$result = $conn->query($sql);
+  // Fetch faculty data from database
+  $sql = "SELECT * FROM faculty";
+  $result = $conn->query($sql);
 
-$facultyData = [];
-if ($result && $result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $facultyData[] = $row;
-    }
-}
+  $facultyData = [];
+  if ($result && $result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+          $facultyData[] = $row;
+      }
+  }
+  $conn->close();
 
-$conn->close();
-    // Departments ki list
-    $departments = ["ALL", "BCA", "BBA", "LAB", "LIBRARY"];
+  // Departments list
+  $departments = ["ALL", "BCA", "BBA", "LAB", "LIBRARY"];
   ?>
 
   <!-- Tabs Section -->
@@ -77,7 +85,7 @@ $conn->close();
         <!-- Info Section -->
         <div class="space-y-2 text-gray-700 text-sm">
           <p><span class="font-semibold text-gray-900">Qualification:</span> <?= htmlspecialchars($faculty['degree']) ?></p>
-          <p><span class="font-semibold text-gray-900">Specialization:</span> <?= htmlspecialchars($faculty['specialization']) ?></p>
+          <p class="specialization-scroll"><span class="font-semibold text-gray-900">Specialization:</span> <?= htmlspecialchars($faculty['specialization']) ?></p>
           <p><span class="font-semibold text-gray-900">Experience:</span> <?= htmlspecialchars($faculty['experience']) ?></p>
         </div>
 
@@ -119,7 +127,7 @@ $conn->close();
         }
       });
 
-      // All buttons classes reset
+      // Reset all button classes
       buttons.forEach(b => b.classList.remove("bg-blue-600", "text-white"));
     }
 
@@ -134,13 +142,12 @@ $conn->close();
       });
     });
 
-    // 👇 Default show ALL
+    // Default show ALL
     const defaultBtn = document.querySelector('[data-dept="ALL"]');
     if (defaultBtn) {
-      defaultBtn.click(); // simulate click
+      defaultBtn.click();
     }
   });
 </script>
-
 
 <?php include 'includes/footer.php'; ?>
