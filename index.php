@@ -138,7 +138,6 @@
       <p class="text-gray-600 max-w-2xl mx-auto">
         Study-ready PDFs of every course, one click away
       </p>
-
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -281,13 +280,13 @@
   },
   {
     "name": "Amit Verma",
-    "review": "This site has saved me so much time. No more searching in WhatsApp groups or asking friends for notes — everything is here!",
+    "review": "Good resource, but sometimes a few links don’t work. Still, it’s very helpful overall for my course PDFs",
     "rating": 3
   },
   {
     "name": "Neha Joshi",
     "review": "The library is well-structured and the PDFs are good quality. It would be perfect if more subjects were added.",
-    "rating": 5
+    "rating": 4
   },
   {
     "name": "Harsh Mehta",
@@ -296,7 +295,7 @@
   },
   {
     "name": "Kiran Solanki",
-    "review": "Good resource, but sometimes a few links don’t work. Still, it’s very helpful overall for my course PDFs",
+    "review": "This site has saved me so much time. No more searching in WhatsApp groups or asking friends for notes — everything is here!",
     "rating": 5
   }
 ]';

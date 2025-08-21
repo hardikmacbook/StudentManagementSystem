@@ -10,11 +10,13 @@ $courses = $coursesData['courses'] ?? [];
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-28">
     
     <!-- Page Title -->
-    <div class="text-center mb-12">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4">Our Academic Programs</h1>
-        <p class="text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive academic programs and find the right path for your future.
-        </p>
+   <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Explore the <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> Library
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Study-ready PDFs of every course, one click away
+      </p>
     </div>
 
     <?php if (!empty($courses)): ?>

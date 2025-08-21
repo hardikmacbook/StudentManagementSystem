@@ -1,8 +1,15 @@
 <?php include 'includes/header.php'; ?>
 
 
-<div class="title-container mt-28">
-<h2 class="text-4xl font-extrabold mb-12 text-blue-900 text-center">Our Faculty</h2>
+<div class="title-container mt-28 mb-10">
+<div class="text-center pb-5">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Explore <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> faculty
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+       Top-class teachers, bringing quality learning to every student.
+      </p>
+    </div>
 
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

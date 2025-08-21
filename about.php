@@ -2,11 +2,14 @@
 
 <div class="max-w-4xl mx-auto pt-28 text-center">
   <!-- Title + Short Intro -->
-  <h1 class="text-3xl font-bold mb-4 text-blue-800">About Us</h1>
-  <p class="text-gray-600 text-lg mb-10">
-    Welcome to <span class="font-semibold text-blue-700">Open2Learn</span>, your trusted learning partner. 
-    We are committed to making quality education simple, accessible, and engaging for every student.
-  </p>
+ <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        About  <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Open2Learn makes studying easier with ready-to-use course PDFs, giving learners quick and reliable access to the resources they need.
+      </p>
+    </div>
 </div>
 
 <div class="max-w-4xl mx-auto">
@@ -42,7 +45,9 @@
     
     <!-- Key Features -->
     <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-      <h3 class="text-xl font-semibold mb-2 text-blue-800">Why Choose Open2Learn?</h3>
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">
+        Why Choose <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> ?
+      </h2>
       <ul class="list-disc pl-6 text-gray-700 space-y-2 text-left">
         <li>Well-structured study resources for easy navigation</li>
         <li>Access to downloadable PDFs for offline learning</li>

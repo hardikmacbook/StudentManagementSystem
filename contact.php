@@ -2,10 +2,14 @@
 
 <div class="max-w-3xl mx-auto pt-28 px-4">
   <!-- Page Title -->
-  <div class="text-center mb-10">
-    <h1 class="text-4xl font-bold text-blue-700 mb-3">Contact</h1>
-    <p class="text-gray-600 text-lg">We’d love to hear from you. Send us a message below.</p>
-  </div>
+  <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Get in <span class="text-[#1E3A8A]">Touch</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Your feedback and queries make us better—don’t hesitate to contact us!
+      </p>
+    </div>
 
   <!-- Contact Form -->
   <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
