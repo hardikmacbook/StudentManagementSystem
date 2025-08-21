@@ -14,8 +14,14 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
     <?php
-      // JSON data load
-      $facultyData = json_decode(file_get_contents("faculty.json"), true);
+      // API se data fetch karo
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, "https://68a3f814c123272fb9b0e42d.mockapi.io/Faculties");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      $response = curl_exec($ch);
+      curl_close($ch);
+
+      $facultyData = json_decode($response, true);
 
       foreach ($facultyData as $faculty) {
     ?>
@@ -23,15 +29,15 @@
       <div class="h-64 bg-blue-50 flex items-center justify-center rounded-md mb-6">
         <i class="fas fa-user-tie text-7xl text-blue-400"></i>
       </div>
-      <h3 class="text-2xl font-semibold mb-2 text-blue-800"><?= $faculty['name'] ?></h3>
-      <p class="text-blue-600 font-medium mb-2"><?= $faculty['designation'] ?></p>
+      <h3 class="text-2xl font-semibold mb-2 text-blue-800"><?= htmlspecialchars($faculty['name']) ?></h3>
+      <p class="text-blue-600 font-medium mb-2"><?= htmlspecialchars($faculty['designation']) ?></p>
       <p class="text-gray-700 mb-4 leading-relaxed">
-        <?= $faculty['degree'] ?>. <?= $faculty['specialization'] ?>
+        <?= htmlspecialchars($faculty['degree']) ?>. <?= htmlspecialchars($faculty['specialization']) ?>
       </p>
       <div class="flex space-x-5 text-gray-600">
-        <a href="mailto:<?= $faculty['email'] ?>" class="hover:text-blue-700"><i class="far fa-envelope fa-lg"></i></a>
-        <a href="<?= $faculty['linkedin'] ?>" class="hover:text-blue-700"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="<?= $faculty['website'] ?>" class="hover:text-blue-700"><i class="fas fa-globe fa-lg"></i></a>
+        <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="hover:text-blue-700"><i class="far fa-envelope fa-lg"></i></a>
+        <a href="<?= htmlspecialchars($faculty['linkedin']) ?>" class="hover:text-blue-700"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="<?= htmlspecialchars($faculty['website']) ?>" class="hover:text-blue-700"><i class="fas fa-globe fa-lg"></i></a>
       </div>
     </div>
     <?php } ?>
