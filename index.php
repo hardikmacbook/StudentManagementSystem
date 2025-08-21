@@ -141,64 +141,64 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <?php
-    // Use API helper function to fetch courses data
-    require_once './includes/api_helper.php'; // Include your API helper functions file if needed
+      <?php
+      // Use API helper function to fetch courses data
+      require_once './includes/api_helper.php'; // Include your API helper functions file if needed
 
-    $allCoursesData = fetchCoursesData();  // Fetch data from API
-    $courses = $allCoursesData['courses'];
+      $allCoursesData = fetchCoursesData();  // Fetch data from API
+      $courses = $allCoursesData['courses'];
 
-    // Display only the first 3 courses
-    $featuredCourses = array_slice($courses, 0, 3);
+      // Display only the first 3 courses
+      $featuredCourses = array_slice($courses, 0, 3);
 
-    foreach ($featuredCourses as $course) {
-    ?>
+      foreach ($featuredCourses as $course) {
+      ?>
         <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2 border border-gray-100">
-            <div class="h-52 bg-gray-200 relative overflow-hidden">
-                <?php if (isset($course['image'])): ?>
-                    <img src="<?php echo $course['image']; ?>" alt="<?php echo $course['title']; ?>" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                    <div class="absolute top-4 right-4 bg-[#1E3A8A] text-white text-xs font-bold px-2 py-1 rounded">
-                        <?php echo $course['code']; ?>
-                    </div>
-                <?php else: ?>
-                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-500">
-                        <span class="text-white text-3xl font-bold"><?php echo $course['code']; ?></span>
-                    </div>
-                <?php endif; ?>
+          <div class="h-52 bg-gray-200 relative overflow-hidden">
+            <?php if (isset($course['image'])): ?>
+              <img src="<?php echo $course['image']; ?>" alt="<?php echo $course['title']; ?>" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <div class="absolute top-4 right-4 bg-[#1E3A8A] text-white text-xs font-bold px-2 py-1 rounded">
+                <?php echo $course['code']; ?>
+              </div>
+            <?php else: ?>
+              <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-500">
+                <span class="text-white text-3xl font-bold"><?php echo $course['code']; ?></span>
+              </div>
+            <?php endif; ?>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800"><?php echo $course['title']; ?></h3>
+
+            <div class="flex items-center mb-4">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
+                <i class="fas fa-user-tie text-blue-600 text-sm"></i>
+              </div>
+              <p class="text-gray-600 text-sm">
+                <?php echo $course['instructor']; ?>
+              </p>
             </div>
-            <div class="p-6">
-                <h3 class="text-xl font-bold mb-3 text-gray-800"><?php echo $course['title']; ?></h3>
 
-                <div class="flex items-center mb-4">
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                        <i class="fas fa-user-tie text-blue-600 text-sm"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm">
-                        <?php echo $course['instructor']; ?>
-                    </p>
-                </div>
+            <p class="text-gray-700 mb-6"><?php echo substr($course['description'], 0, 100); ?>...</p>
 
-                <p class="text-gray-700 mb-6"><?php echo substr($course['description'], 0, 100); ?>...</p>
-
-                <div class="flex justify-between items-center">
-                    <div>
-                        <?php
-                        // Count total years
-                        $totalYears = count($course['years'] ?? []);
-                        ?>
-                        <span class="bg-[#1E3A8A] text-white text-xs px-2 py-1 rounded-full">
-                            <?= $totalYears ?> Years
-                        </span>
-                    </div>
-                    <a href="course_years.php?id=<?php echo $course['id']; ?>" class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium">
-                        View Details
-                        <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <?php
+                // Count total years
+                $totalYears = count($course['years'] ?? []);
+                ?>
+                <span class="bg-[#1E3A8A] text-white text-xs px-2 py-1 rounded-full">
+                  <?= $totalYears ?> Years
+                </span>
+              </div>
+              <a href="course_years.php?id=<?php echo $course['id']; ?>" class="inline-flex items-center text-[#1E3A8A] hover:text-[#BFA14A] font-medium">
+                View Details
+                <i class="fas fa-arrow-right ml-1"></i>
+              </a>
             </div>
+          </div>
         </div>
-    <?php } ?>
-</div>
+      <?php } ?>
+    </div>
 
 
     <div class="text-center mt-10">
@@ -225,80 +225,77 @@
 
       <!-- Features -->
       <?php
-$servername = "localhost"; // usually localhost
-$username = "root"; // your db username
-$password = ""; // your db password
-$dbname = "open2learn"; // your db name
+      $servername = "localhost"; // usually localhost
+      $username = "root"; // your db username
+      $password = ""; // your db password
+      $dbname = "open2learn"; // your db name
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
 
-// Fetch features data
-$sql = "SELECT * FROM features";
-$result = $conn->query($sql);
+      // Fetch features data
+      $sql = "SELECT * FROM features";
+      $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    echo '<div class="grid grid-cols-1 md:grid-cols-3 gap-8">';
-    while($row = $result->fetch_assoc()) {
-        echo '<div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">';
-        echo '<div class="text-4xl mb-4"><i class="' . htmlspecialchars($row["icon_class"]) . ' text-[#1E3A8A]"></i></div>';
-        echo '<h3 class="text-xl font-semibold mb-2 text-gray-900">' . htmlspecialchars($row["title"]) . '</h3>';
-        echo '<p class="text-gray-600">' . htmlspecialchars($row["description"]) . '</p>';
+      if ($result->num_rows > 0) {
+        echo '<div class="grid grid-cols-1 md:grid-cols-3 gap-8">';
+        while ($row = $result->fetch_assoc()) {
+          echo '<div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">';
+          echo '<div class="text-4xl mb-4"><i class="' . htmlspecialchars($row["icon_class"]) . ' text-[#1E3A8A]"></i></div>';
+          echo '<h3 class="text-xl font-semibold mb-2 text-gray-900">' . htmlspecialchars($row["title"]) . '</h3>';
+          echo '<p class="text-gray-600">' . htmlspecialchars($row["description"]) . '</p>';
+          echo '</div>';
+        }
         echo '</div>';
-    }
-    echo '</div>';
-} else {
-    echo "No features available.";
-}
+      } else {
+        echo "No features available.";
+      }
 
-$conn->close();
-?>
-
-
-      
+      $conn->close();
+      ?>
     </div>
   </div>
 
-
+  <!-- Reviews Section -->
 
 
   <?php
-$servername = "localhost"; 
-$username = "root"; 
-$password = ""; 
-$dbname = "open2learn";
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "open2learn";
 
-// कनेक्शन बनाएं
-$conn = new mysqli($servername, $username, $password, $dbname);
+  // कनेक्शन बनाएं
+  $conn = new mysqli($servername, $username, $password, $dbname);
 
-// कनेक्शन चेक करें
-if ($conn->connect_error) {
+  // कनेक्शन चेक करें
+  if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+  }
 
-// अपनी टेबल का नाम मान लेते हैं "reviews"
-$sql = "SELECT name, review, rating FROM reviews";
-$result = $conn->query($sql);
+  // अपनी टेबल का नाम मान लेते हैं "reviews"
+  $sql = "SELECT name, review, rating FROM reviews";
+  $result = $conn->query($sql);
 
-$valid_reviews = [];
-if ($result->num_rows > 0) {
+  $valid_reviews = [];
+  if ($result->num_rows > 0) {
     // हर एक रो को ऐरे में डालें
     while ($row = $result->fetch_assoc()) {
-        // वैलिड होने पर ही ऐरे में जोड़ें, जैसे JSON में था
-        if (isset($row['name'], $row['review'], $row['rating'])) {
-            $valid_reviews[] = $row;
-        }
+      // वैलिड होने पर ही ऐरे में जोड़ें, जैसे JSON में था
+      if (isset($row['name'], $row['review'], $row['rating'])) {
+        $valid_reviews[] = $row;
+      }
     }
-}
+  }
 
-// कनेक्शन बंद करें
-$conn->close();
-?>
+  // कनेक्शन बंद करें
+  $conn->close();
+  ?>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -355,7 +352,7 @@ $conn->close();
                   </svg>
                 <?php endfor; ?>
               </div>
-              
+
               <p class="review-text text-center text-gray-700 leading-relaxed flex-grow"><?= htmlspecialchars($review['review']) ?></p>
             </article>
           </div>
