@@ -1,499 +1,570 @@
-{
-  "courses": [
-    {
-      "id": "bca",
-      "title": "Bachelor of Computer Applications",
-      "code": "BCA",
-      "instructor": "Dr. Anil Kumar",
-      "description": " It Will Prepare Aspiring Students To Become A Computer Programmers Who Can Work In Companies At Entry-level And Can Also, Work Independently.",
-      "image": "https://iulonline.in/images/bac-text.png",
-      "years": [
-        {
-          "year_number": 1,
-          "semesters": [
-            {
-              "semester_number": 1,
-              "subjects": [
-                {
-                  "id": "bca101",
-                  "title": "Communication Skills",
-                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
-                  "pdf": "https://drive.google.com/drive/folders/1TK9gtj7ZvbDDx3ig7d-yqdphbDP_v6HN?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085856.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Fundamentals of Communication",
-                      "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Developing Listening Skills",
-                      "pdf": "https://drive.google.com/file/d/1_pDMmLYSBzJNPBxd2c70rCQHJ7SEz51U/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Speaking Skills",
-                      "pdf": "https://drive.google.com/file/d/1raCijbfCFqMf2eHxt0wiUfWQXaV3xFhG/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Uni 4",
-                      "pdf": "https://drive.google.com/file/d/1dQFXb9Ys8Y_-ChCr_CAQIAEVHvNLMq80/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Writing Skills",
-                      "pdf": "https://drive.google.com/file/d/1tuAmzuBJG0RfQiy_SQjH7UUKaqhzgv2x/view?usp=sharing"
-                    }
-                  ]
-                },
-                   {
-                  "id": "bca102",
-                  "title": "Mathematics",
-                  "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
-                  "pdf": "https://drive.google.com/drive/folders/1GeyN0WSb0WK1dvA4CxmSRnVMklTS9l-1?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085714.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "All Chapter",
-                      "pdf": "https://drive.google.com/file/d/1LtAQfIws0tO1oB3uyI3NTJEZ5IY0v634/view?usp=sharing"
-                    }
-                  ]
-                },
-                {
-                  "id": "bca103",
-                  "title": "Communication Skills",
-                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
-                  "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085826.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Introduction to Computers",
-                      "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Basic Computer Architecture",
-                      "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Number System",
-                      "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Input and Output devices",
-                      "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Concepts of Internet",
-                      "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
-                    }
-                  ]
-                },
-                {
-                  "id": "bca104",
-                  "title": "Computer Programming & Programming Methodology",
-                  "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
-                  "pdf": "https://drive.google.com/drive/folders/1fQuodfsFikGFOQuxKoVktBXqK1IjTwP0?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085792.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Introduction",
-                      "pdf": "https://drive.google.com/file/d/1JaYWDf3rj4c4lWWREST3HEWp2ZqjJadz/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Input/Output Statements and Operators ",
-                      "pdf": "https://drive.google.com/file/d/1RZfGcxC3kDhHtNZAj1XPncIEXMyE5g27/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Decision Making statements ",
-                      "pdf": "https://drive.google.com/file/d/19cVyD_ZeW1vN4mwRloNsZRQGoMaagjdz/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Iterative statements ",
-                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Concepts of Arrays and Pointer ",
-                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
-                    }
-                  ]
-                },
-                 {
-                  "id": "bca105",
-                  "title": "Data Processing and Analysis",
-                  "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
-                  "pdf": "https://drive.google.com/drive/folders/1TQQjhZ4MTplgj0fZUTK-x2Z0kVVqEEpd?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085755.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Concepts of worksheet ",
-                      "pdf": "https://drive.google.com/file/d/1RE78ZnlPw7XJ-8Gi8jJosakTNeHavyRb/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Formulas, Chart and Data",
-                      "pdf": "https://drive.google.com/file/d/1i6zkdAfFk0fVfRsNp9JGnEYkUq47XAQG/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Concept of Database",
-                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Normalization and Concepts of SQL",
-                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Queries-Single Table Only",
-                      "pdf": "https://drive.google.com/file/d/1Gt29x5FTEgv_8s-tGrFrSflLjX97RKCn/view?usp=sharing"
-                    }
-                  ]
-                },
-                 {
-                  "id": "bca106",
-                  "title": "Practical",
-                  "description": "",
-                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085952.jpeg"
-                },
-                 {
-                  "id": "bca107",
-                  "title": "Introduction to Cybersecurity and Information Security",
-                  "description": "",
-                  "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1727799936.jpeg"
-                }
-              ]
-            },
-             {
-              "semester_number": 2,
-              "subjects": [
-                {
-                  "id": "bca202",
-                  "title": "Computerized Financial Accounting",
-                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
-                  "pdf": "https://drive.google.com/drive/folders/1TK9gtj7ZvbDDx3ig7d-yqdphbDP_v6HN?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052090.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Fundamentals of Communication",
-                      "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Developing Listening Skills",
-                      "pdf": "https://drive.google.com/file/d/1_pDMmLYSBzJNPBxd2c70rCQHJ7SEz51U/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Speaking Skills",
-                      "pdf": "https://drive.google.com/file/d/1raCijbfCFqMf2eHxt0wiUfWQXaV3xFhG/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Uni 4",
-                      "pdf": "https://drive.google.com/file/d/1dQFXb9Ys8Y_-ChCr_CAQIAEVHvNLMq80/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Writing Skills",
-                      "pdf": "https://drive.google.com/file/d/1tuAmzuBJG0RfQiy_SQjH7UUKaqhzgv2x/view?usp=sharing"
-                    }
-                  ]
-                },
-                   {
-                  "id": "bca203",
-                  "title": "Operating System - I",
-                  "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
-                  "pdf": "https://drive.google.com/drive/folders/1GeyN0WSb0WK1dvA4CxmSRnVMklTS9l-1?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052285.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "All Chapter",
-                      "pdf": "https://drive.google.com/file/d/1LtAQfIws0tO1oB3uyI3NTJEZ5IY0v634/view?usp=sharing"
-                    }
-                  ]
-                },
-                {
-                  "id": "bca204",
-                  "title": "Programming Skills",
-                  "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
-                  "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052357.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Introduction to Computers",
-                      "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Basic Computer Architecture",
-                      "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Number System",
-                      "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Input and Output devices",
-                      "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Concepts of Internet",
-                      "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
-                    }
-                  ]
-                },
-                {
-                  "id": "bca205",
-                  "title": "Concepts of Relational Database Management System",
-                  "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
-                  "pdf": "https://drive.google.com/drive/folders/1fQuodfsFikGFOQuxKoVktBXqK1IjTwP0?usp=sharing",
-                  "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052390.jpeg",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Introduction",
-                      "pdf": "https://drive.google.com/file/d/1JaYWDf3rj4c4lWWREST3HEWp2ZqjJadz/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Input/Output Statements and Operators ",
-                      "pdf": "https://drive.google.com/file/d/1RZfGcxC3kDhHtNZAj1XPncIEXMyE5g27/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Decision Making statements ",
-                      "pdf": "https://drive.google.com/file/d/19cVyD_ZeW1vN4mwRloNsZRQGoMaagjdz/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Iterative statements ",
-                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Concepts of Arrays and Pointer ",
-                      "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
-                    }
-                  ]
-                },
-                 {
-                  "id": "bca105",
-                  "title": "Data Processing and Analysis",
-                  "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
-                  "pdf": "https://drive.google.com/drive/folders/1TQQjhZ4MTplgj0fZUTK-x2Z0kVVqEEpd?usp=sharing",
-                  "image": "",
-                  "units": [
-                    {
-                      "unit_number": 1,
-                      "title": "Concepts of worksheet ",
-                      "pdf": "https://drive.google.com/file/d/1RE78ZnlPw7XJ-8Gi8jJosakTNeHavyRb/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 2,
-                      "title": "Formulas, Chart and Data",
-                      "pdf": "https://drive.google.com/file/d/1i6zkdAfFk0fVfRsNp9JGnEYkUq47XAQG/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 3,
-                      "title": "Concept of Database",
-                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 4,
-                      "title": "Normalization and Concepts of SQL",
-                      "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
-                    },
-                    {
-                      "unit_number": 5,
-                      "title": "Queries-Single Table Only",
-                      "pdf": "https://drive.google.com/file/d/1Gt29x5FTEgv_8s-tGrFrSflLjX97RKCn/view?usp=sharing"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year_number": 2,
-          "semesters": [
-            {
-              "semester_number": 3,
-              "subjects": [
-                {
-                  "id": "bca201",
-                  "title": "Data Structures",
-                  "description": "Introduction to data storage and algorithms.",
-                  "pdf": "assest/pdfs/bca/year2/sem3/data_structures.pdf",
-                  "image": "assest/images/subjects/data_structures.jpg"
-                },
-                {
-                  "id": "bca202",
-                  "title": "Operating Systems",
-                  "description": "Concepts and architecture of modern OS.",
-                  "pdf": "assest/pdfs/bca/year2/sem3/operating_systems.pdf",
-                  "image": "assest/images/subjects/os.jpg"
-                }
-              ]
-            },
-            {
-              "semester_number": 4,
-              "subjects": [
-                {
-                  "id": "bca203",
-                  "title": "Database Management Systems",
-                  "description": "Design and management of databases.",
-                  "pdf": "assest/pdfs/bca/year2/sem4/dbms.pdf",
-                  "image": "assest/images/subjects/dbms.jpg"
-                },
-                {
-                  "id": "bca204",
-                  "title": "Computer Networks",
-                  "description": "Networking principles, protocols, and security.",
-                  "pdf": "assest/pdfs/bca/year2/sem4/networks.pdf",
-                  "image": "assest/images/subjects/networks.jpg"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year_number": 3,
-          "semesters": [
-            {
-              "semester_number": 5,
-              "subjects": [
-                {
-                  "id": "bca301",
-                  "title": "Web Technologies",
-                  "description": "Web development with HTML, CSS, JS, and backend frameworks.",
-                  "pdf": "assest/pdfs/bca/year3/sem5/web_technologies.pdf",
-                  "image": "assest/images/subjects/web.jpg"
-                },
-                {
-                  "id": "bca302",
-                  "title": "Software Engineering",
-                  "description": "Principles of designing reliable and scalable software.",
-                  "pdf": "assest/pdfs/bca/year3/sem5/software_engineering.pdf",
-                  "image": "assest/images/subjects/se.jpg"
-                }
-              ]
-            },
-            {
-              "semester_number": 6,
-              "subjects": [
-                {
-                  "id": "bca303",
-                  "title": "Artificial Intelligence",
-                  "description": "AI concepts and applications.",
-                  "pdf": "assest/pdfs/bca/year3/sem6/ai.pdf",
-                  "image": "assest/images/subjects/ai.jpg"
-                },
-                {
-                  "id": "bca304",
-                  "title": "Project Work",
-                  "description": "Capstone project to apply all learned skills.",
-                  "pdf": "assest/pdfs/bca/year3/sem6/project.pdf",
-                  "image": "assest/images/subjects/project.jpg"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mca",
-      "title": "Master of Computer Applications",
-      "code": "MCA",
-      "instructor": "Prof. Sunita Mehta",
-      "description": "Postgraduate program in software development, advanced programming, and research.",
-      "image": "https://th.bing.com/th/id/R.ef8abb95137dfdf4e263cfd2a8066cfc?rik=1XQkzMmMrUigWA&riu=http%3a%2f%2fstudyriserr.com%2fimages%2fcourse%2f1710150808MCA.jpg&ehk=UbMb6Tfa4QM5AWhdeLWU0YBnlCMkA4YQdmstW28P5w4%3d&risl=&pid=ImgRaw&r=0",
-      "years": [
-        {
-          "year_number": 1,
-          "semesters": [
-            {
-              "semester_number": 1,
-              "subjects": [
-                {
-                  "id": "mca101",
-                  "title": "Advanced Programming with Java",
-                  "description": "Object-oriented programming and advanced Java concepts.",
-                  "pdf": "assest/pdfs/mca/year1/sem1/java.pdf",
-                  "image": "assest/images/subjects/java.jpg"
-                },
-                {
-                  "id": "mca102",
-                  "title": "Discrete Mathematics",
-                  "description": "Mathematical foundations for computer science.",
-                  "pdf": "assest/pdfs/mca/year1/sem1/discrete_math.pdf",
-                  "image": "assest/images/subjects/math.jpg"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "bba",
-      "title": "Bachelor of Business Administration",
-      "code": "BBA",
-      "instructor": "Dr. Ramesh Shah",
-      "description": "Undergraduate program focusing on business management and administration.",
-      "image": "assest/images/courses/bba.jpg",
-      "years": []
-    },
-    {
-      "id": "mba",
-      "title": "Master of Business Administration",
-      "code": "MBA",
-      "instructor": "Prof. Kavita Joshi",
-      "description": "Postgraduate management program with specializations in finance, marketing, HR, and more.",
-      "image": "assest/images/courses/mba.jpg",
-      "years": []
-    },
-    {
-      "id": "bcom-gujarati",
-      "title": "Bachelor of Commerce - Gujarati Medium",
-      "code": "BCOM-GUJ",
-      "instructor": "Dr. Hitesh Patel",
-      "description": "Undergraduate commerce program taught in Gujarati.",
-      "image": "assest/images/courses/bcom_gujarati.jpg",
-      "years": []
-    },
-    {
-      "id": "bcom-english",
-      "title": "Bachelor of Commerce - English Medium",
-      "code": "BCOM-ENG",
-      "instructor": "Prof. Aarti Singh",
-      "description": "Undergraduate commerce program taught in English.",
-      "image": "assest/images/courses/bcom_english.jpg",
-      "years": []
-    }
-  ]
-}
+[
+  {
+    "id": "bca",
+    "title": "Bachelor of Computer Applications",
+    "code": "BCA",
+    "instructor": "Dr. Anil Kumar",
+    "description": "It Will Prepare Aspiring Students To Become A Computer Programmers Who Can Work In Companies At Entry-level And Can Also, Work Independently.",
+    "image": "https://iulonline.in/images/bac-text.png",
+    "years": [
+      {
+        "year_number": 1,
+        "semesters": [
+          {
+            "semester_number": 1,
+            "subjects": [
+              {
+                "id": "bca101",
+                "title": "Communication Skills",
+                "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                "pdf": "https://drive.google.com/drive/folders/1TK9gtj7ZvbDDx3ig7d-yqdphbDP_v6HN?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085856.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Fundamentals of Communication",
+                    "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Developing Listening Skills",
+                    "pdf": "https://drive.google.com/file/d/1_pDMmLYSBzJNPBxd2c70rCQHJ7SEz51U/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Speaking Skills",
+                    "pdf": "https://drive.google.com/file/d/1raCijbfCFqMf2eHxt0wiUfWQXaV3xFhG/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Uni 4",
+                    "pdf": "https://drive.google.com/file/d/1dQFXb9Ys8Y_-ChCr_CAQIAEVHvNLMq80/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Writing Skills",
+                    "pdf": "https://drive.google.com/file/d/1tuAmzuBJG0RfQiy_SQjH7UUKaqhzgv2x/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca102",
+                "title": "Mathematics",
+                "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
+                "pdf": "https://drive.google.com/drive/folders/1GeyN0WSb0WK1dvA4CxmSRnVMklTS9l-1?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085714.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "All Chapter",
+                    "pdf": "https://drive.google.com/file/d/1LtAQfIws0tO1oB3uyI3NTJEZ5IY0v634/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca103",
+                "title": "Communication Skills",
+                "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085826.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction to Computers",
+                    "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Basic Computer Architecture",
+                    "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Number System",
+                    "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Input and Output devices",
+                    "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Concepts of Internet",
+                    "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca104",
+                "title": "Computer Programming & Programming Methodology",
+                "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
+                "pdf": "https://drive.google.com/drive/folders/1fQuodfsFikGFOQuxKoVktBXqK1IjTwP0?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085792.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction",
+                    "pdf": "https://drive.google.com/file/d/1JaYWDf3rj4c4lWWREST3HEWp2ZqjJadz/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Input/Output Statements and Operators ",
+                    "pdf": "https://drive.google.com/file/d/1RZfGcxC3kDhHtNZAj1XPncIEXMyE5g27/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Decision Making statements ",
+                    "pdf": "https://drive.google.com/file/d/19cVyD_ZeW1vN4mwRloNsZRQGoMaagjdz/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Iterative statements ",
+                    "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Concepts of Arrays and Pointer ",
+                    "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca105",
+                "title": "Data Processing and Analysis",
+                "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
+                "pdf": "https://drive.google.com/drive/folders/1TQQjhZ4MTplgj0fZUTK-x2Z0kVVqEEpd?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085755.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Concepts of worksheet ",
+                    "pdf": "https://drive.google.com/file/d/1RE78ZnlPw7XJ-8Gi8jJosakTNeHavyRb/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Formulas, Chart and Data",
+                    "pdf": "https://drive.google.com/file/d/1i6zkdAfFk0fVfRsNp9JGnEYkUq47XAQG/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Concept of Database",
+                    "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Normalization and Concepts of SQL",
+                    "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Queries-Single Table Only",
+                    "pdf": "https://drive.google.com/file/d/1Gt29x5FTEgv_8s-tGrFrSflLjX97RKCn/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca106",
+                "title": "Practical",
+                "description": "",
+                "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085952.jpeg"
+              },
+              {
+                "id": "bca107",
+                "title": "Introduction to Cybersecurity and Information Security",
+                "description": "",
+                "pdf": "assest/pdfs/bca/year1/sem1/accounting.pdf",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1727799936.jpeg"
+              }
+            ]
+          },
+          {
+            "semester_number": 2,
+            "subjects": [
+              {
+                "id": "bca202",
+                "title": "Computerized Financial Accounting",
+                "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                "pdf": "https://drive.google.com/drive/folders/1TK9gtj7ZvbDDx3ig7d-yqdphbDP_v6HN?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052090.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Fundamentals of Communication",
+                    "pdf": "https://drive.google.com/file/d/1_cB4WoTwcxqW8osa4zbiVxpWqnRvK11p/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Developing Listening Skills",
+                    "pdf": "https://drive.google.com/file/d/1_pDMmLYSBzJNPBxd2c70rCQHJ7SEz51U/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Speaking Skills",
+                    "pdf": "https://drive.google.com/file/d/1raCijbfCFqMf2eHxt0wiUfWQXaV3xFhG/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Uni 4",
+                    "pdf": "https://drive.google.com/file/d/1dQFXb9Ys8Y_-ChCr_CAQIAEVHvNLMq80/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Writing Skills",
+                    "pdf": "https://drive.google.com/file/d/1tuAmzuBJG0RfQiy_SQjH7UUKaqhzgv2x/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca203",
+                "title": "Operating System - I",
+                "description": "The objective of this course is to guide/help students in developing Mathematical Abilities are relevant to Computer Science.",
+                "pdf": "https://drive.google.com/drive/folders/1GeyN0WSb0WK1dvA4CxmSRnVMklTS9l-1?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052285.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "All Chapter",
+                    "pdf": "https://drive.google.com/file/d/1LtAQfIws0tO1oB3uyI3NTJEZ5IY0v634/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca204",
+                "title": "Programming Skills",
+                "description": "Effective communication is vital for success in various situations. This course will help students develop and improve their English communication skills.",
+                "pdf": "https://drive.google.com/drive/folders/1HorbjGW12CwtRf6brm0_VtEI9HPOsIgs?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052357.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction to Computers",
+                    "pdf": "https://drive.google.com/file/d/1TV11ogICu93ZDzmtYxr1KCc-2w6nQYgg/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Basic Computer Architecture",
+                    "pdf": "https://drive.google.com/file/d/1VfbLn3rXoGwMJfY05uXmy2nVA4Y_u1de/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Number System",
+                    "pdf": "https://drive.google.com/file/d/1fU8pUQbANvDyd1esxQ9GW36LfT_Ls8V5/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Input and Output devices",
+                    "pdf": "https://drive.google.com/file/d/1htrJqGvyHmFWBjZzoTINsGk_ssPssWEV/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Concepts of Internet",
+                    "pdf": "https://drive.google.com/file/d/1rp7AxOSld41iPdsq8ziHlRLY4o7wobdO/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca205",
+                "title": "Concepts of Relational Database Management System",
+                "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
+                "pdf": "https://drive.google.com/drive/folders/1fQuodfsFikGFOQuxKoVktBXqK1IjTwP0?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052390.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction",
+                    "pdf": "https://drive.google.com/file/d/1JaYWDf3rj4c4lWWREST3HEWp2ZqjJadz/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Input/Output Statements and Operators ",
+                    "pdf": "https://drive.google.com/file/d/1RZfGcxC3kDhHtNZAj1XPncIEXMyE5g27/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Decision Making statements ",
+                    "pdf": "https://drive.google.com/file/d/19cVyD_ZeW1vN4mwRloNsZRQGoMaagjdz/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Iterative statements ",
+                    "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Concepts of Arrays and Pointer ",
+                    "pdf": "https://drive.google.com/file/d/1znkL57O_qDoPZ8QQVf9J6NI_dzcWsXgL/view?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "bca105",
+                "title": "Data Processing and Analysis",
+                "description": "Understand concepts of Data and storage of data. This course is aimed to impart knowledge about storing data, concepts of database, retrieval of data, and manipulation of data. It is aimed to cover the effective storage of data, statistical analysis of data, and graphical presentation of data.",
+                "pdf": "https://drive.google.com/drive/folders/1TQQjhZ4MTplgj0fZUTK-x2Z0kVVqEEpd?usp=sharing",
+                "image": "",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Concepts of worksheet ",
+                    "pdf": "https://drive.google.com/file/d/1RE78ZnlPw7XJ-8Gi8jJosakTNeHavyRb/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Formulas, Chart and Data",
+                    "pdf": "https://drive.google.com/file/d/1i6zkdAfFk0fVfRsNp9JGnEYkUq47XAQG/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Concept of Database",
+                    "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Normalization and Concepts of SQL",
+                    "pdf": "https://drive.google.com/file/d/1NjflqC4T6IrgFVthp34z6STOdAUTjv3A/view?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Queries-Single Table Only",
+                    "pdf": "https://drive.google.com/file/d/1Gt29x5FTEgv_8s-tGrFrSflLjX97RKCn/view?usp=sharing"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year_number": 2,
+        "semesters": [
+          {
+            "semester_number": 3,
+            "subjects": [
+              {
+                "id": "bca201",
+                "title": "Data Structures",
+                "description": "Introduction to data storage and algorithms.",
+                "pdf": "assest/pdfs/bca/year2/sem3/data_structures.pdf",
+                "image": "assest/images/subjects/data_structures.jpg"
+              },
+              {
+                "id": "bca202",
+                "title": "Operating Systems",
+                "description": "Concepts and architecture of modern OS.",
+                "pdf": "assest/pdfs/bca/year2/sem3/operating_systems.pdf",
+                "image": "assest/images/subjects/os.jpg"
+              }
+            ]
+          },
+          {
+            "semester_number": 4,
+            "subjects": [
+              {
+                "id": "bca203",
+                "title": "Database Management Systems",
+                "description": "Design and management of databases.",
+                "pdf": "assest/pdfs/bca/year2/sem4/dbms.pdf",
+                "image": "assest/images/subjects/dbms.jpg"
+              },
+              {
+                "id": "bca204",
+                "title": "Computer Networks",
+                "description": "Networking principles, protocols, and security.",
+                "pdf": "assest/pdfs/bca/year2/sem4/networks.pdf",
+                "image": "assest/images/subjects/networks.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year_number": 3,
+        "semesters": [
+          {
+            "semester_number": 5,
+            "subjects": [
+              {
+                "id": "bca301",
+                "title": "Web Technologies",
+                "description": "Web development with HTML, CSS, JS, and backend frameworks.",
+                "pdf": "assest/pdfs/bca/year3/sem5/web_technologies.pdf",
+                "image": "assest/images/subjects/web.jpg"
+              },
+              {
+                "id": "bca302",
+                "title": "Software Engineering",
+                "description": "Principles of designing reliable and scalable software.",
+                "pdf": "assest/pdfs/bca/year3/sem5/software_engineering.pdf",
+                "image": "assest/images/subjects/se.jpg"
+              }
+            ]
+          },
+          {
+            "semester_number": 6,
+            "subjects": [
+              {
+                "id": "bca303",
+                "title": "Artificial Intelligence",
+                "description": "AI concepts and applications.",
+                "pdf": "assest/pdfs/bca/year3/sem6/ai.pdf",
+                "image": "assest/images/subjects/ai.jpg"
+              },
+              {
+                "id": "bca304",
+                "title": "Project Work",
+                "description": "Capstone project to apply all learned skills.",
+                "pdf": "assest/pdfs/bca/year3/sem6/project.pdf",
+                "image": "assest/images/subjects/project.jpg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "bba",
+    "title": "Bachelor of Business Administration",
+    "code": "BBA",
+    "instructor": "Dr. Priya Saxena",
+    "description": "Equips students with foundational managerial skills for the business world, covering management, economics, accounting, HR, and marketing.",
+    "image": "https://iulonline.in/images/bba-text.png",
+    "years": [
+      {
+        "year_number": 1,
+        "semesters": [
+          {
+            "semester_number": 1,
+            "subjects": [
+              {
+                "id": "bba101",
+                "title": "Principles of Management",
+                "description": "Introduction to the fundamental principles and functions of management.",
+                "pdf": "https://drive.google.com/drive/folders/bba101-management",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085900.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Management Concepts",
+                    "pdf": "https://drive.google.com/file/d/bba101-unit1"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Functions of Management",
+                    "pdf": "https://drive.google.com/file/d/bba101-unit2"
+                  }
+                ]
+              },
+              {
+                "id": "bba102",
+                "title": "Business Economics",
+                "description": "Covers micro and macro-economic concepts relevant to business management.",
+                "pdf": "https://drive.google.com/drive/folders/bba102-economics",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085951.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction to Economics",
+                    "pdf": "https://drive.google.com/file/d/bba102-unit1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "semester_number": 2,
+            "subjects": [
+              {
+                "id": "bba201",
+                "title": "Financial Accounting",
+                "description": "Introduces the concepts and practices of financial accounting.",
+                "pdf": "https://drive.google.com/drive/folders/bba201-accounting",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085990.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Accounting Principles",
+                    "pdf": "https://drive.google.com/file/d/bba201-unit1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "bcom-guj",
+    "title": "Bachelor of Commerce (Gujarati Medium)",
+    "code": "BCOM-GUJ",
+    "instructor": "Prof. Mahesh Patel",
+    "description": "Commerce degree focusing on accounting, business and law in Gujarati medium.",
+    "image": "https://iulonline.in/images/bcom-text.png",
+    "years": [
+      {
+        "year_number": 1,
+        "semesters": [
+          {
+            "semester_number": 1,
+            "subjects": [
+              {
+                "id": "bcomguj101",
+                "title": "Principles of Accountancy",
+                "description": "Basic accounting principles and standards (Gujarati).",
+                "pdf": "https://drive.google.com/drive/folders/bcomguj101-accountancy",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085830.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "મૂલભૂત હિસાબીઓ",
+                    "pdf": "https://drive.google.com/file/d/bcomguj101-unit1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "bcom-eng",
+    "title": "Bachelor of Commerce (English Medium)",
+    "code": "BCOM-ENG",
+    "instructor": "Prof. Anjali Verma",
+    "description": "Comprehensive program in commerce, finance, and business in English medium.",
+    "image": "https://iulonline.in/images/bcomeng-text.png",
+    "years": [
+      {
+        "year_number": 1,
+        "semesters": [
+          {
+            "semester_number": 1,
+            "subjects": [
+              {
+                "id": "bcomeng101",
+                "title": "Business Communication",
+                "description": "Develops effective business communication skills in English.",
+                "pdf": "https://drive.google.com/drive/folders/bcomeng101-communication",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638085840.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Communication Concepts",
+                    "pdf": "https://drive.google.com/file/d/bcomeng101-unit1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
