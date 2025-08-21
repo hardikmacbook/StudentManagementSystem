@@ -267,42 +267,37 @@
 
 
   <?php
-  $jsonData = '[
-  {
-    "name": "Ravi Patel",
-    "review": "Open2Learn is a lifesaver during exams! All my university PDFs are well-organized and easy to access. I love the clean design — it’s fast and simple to use",
-    "rating": 5
-  },
-  {
-    "name": "Priya Shah",
-    "review": "Very helpful for finding my semester books. I wish there were more previous year papers, but the overall experience is great!",
-    "rating": 4
-  },
-  {
-    "name": "Amit Verma",
-    "review": "Good resource, but sometimes a few links don’t work. Still, it’s very helpful overall for my course PDFs",
-    "rating": 3
-  },
-  {
-    "name": "Neha Joshi",
-    "review": "The library is well-structured and the PDFs are good quality. It would be perfect if more subjects were added.",
-    "rating": 4
-  },
-  {
-    "name": "Harsh Mehta",
-    "review": "Honestly, the best platform for university study material I’ve seen. Fast download speed and mobile-friendly design make it perfect for students like me",
-    "rating": 5
-  },
-  {
-    "name": "Kiran Solanki",
-    "review": "This site has saved me so much time. No more searching in WhatsApp groups or asking friends for notes — everything is here!",
-    "rating": 5
-  }
-]';
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "open2learn";
 
-  $reviews = json_decode($jsonData, true);
-  $valid_reviews = array_filter($reviews, fn($r) => isset($r['name'], $r['review'], $r['rating']));
-  ?>
+// कनेक्शन बनाएं
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// कनेक्शन चेक करें
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// अपनी टेबल का नाम मान लेते हैं "reviews"
+$sql = "SELECT name, review, rating FROM reviews";
+$result = $conn->query($sql);
+
+$valid_reviews = [];
+if ($result->num_rows > 0) {
+    // हर एक रो को ऐरे में डालें
+    while ($row = $result->fetch_assoc()) {
+        // वैलिड होने पर ही ऐरे में जोड़ें, जैसे JSON में था
+        if (isset($row['name'], $row['review'], $row['rating'])) {
+            $valid_reviews[] = $row;
+        }
+    }
+}
+
+// कनेक्शन बंद करें
+$conn->close();
+?>
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
