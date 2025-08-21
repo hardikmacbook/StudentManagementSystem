@@ -1,12 +1,37 @@
 <?php include 'includes/header.php'; ?>
 
+
 <style>
   .specialization-scroll {
     max-height: 100px; /* Adjust as needed */
     overflow-y: auto;
     padding-right: 8px; /* space for scrollbar */
   }
+  .faculty-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px; /* 10px border-radius as requested */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.5rem auto; /* center and space below */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  }
+  .image-placeholder {
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    background-color: #bfdbfe; /* light blue bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+  }
+  .image-placeholder i {
+    font-size: 48px;
+    color: #3b82f6; /* blue */
+  }
 </style>
+
 
 <div class="title-container mt-28 mb-16">
   <div class="text-center pb-5">
@@ -43,6 +68,7 @@
   $departments = ["ALL", "BCA", "BBA", "LAB", "LIBRARY"];
   ?>
 
+
   <!-- Tabs Section -->
   <div class="flex justify-center space-x-4 mb-10">
     <?php foreach ($departments as $dept) { ?>
@@ -67,10 +93,14 @@
         class="faculty-card bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl hover:border-[#1E3A8A] transition-all duration-300"
         data-dept="<?= strtoupper($faculty['department']) ?>">
         
-        <!-- Icon -->
-        <div class="h-40 w-40 mx-auto bg-blue-100 flex items-center justify-center rounded-full mb-6 shadow-inner">
-          <i class="fas fa-user-tie text-6xl text-blue-500"></i>
-        </div>
+        <!-- Image -->
+        <?php if (!empty($faculty['image'])): ?>
+          <img src="<?= htmlspecialchars($faculty['image']) ?>" alt="<?= htmlspecialchars($faculty['name']) ?>" class="faculty-image">
+        <?php else: ?>
+          <div class="image-placeholder">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        <?php endif; ?>
 
         <!-- Name -->
         <h3 class="text-2xl font-bold text-gray-800 text-center mb-2">
