@@ -10,18 +10,45 @@
     </p>
   </div>
 
+  <?php
+    // API se data fetch karo
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://68a3f814c123272fb9b0e42d.mockapi.io/Faculties");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    $facultyData = json_decode($response, true);
+
+    // Departments ki list
+    $departments = ["ALL", "BCA", "BBA", "LAB", "LIBRARY"];
+  ?>
+
+  <!-- Tabs Section -->
+  <div class="flex justify-center space-x-4 mb-10">
+    <?php foreach ($departments as $dept) { ?>
+      <button 
+        class="tab-btn px-6 py-2 rounded-lg border font-semibold text-gray-700 hover:bg-[#1E3A8A] hover:text-white transition"
+        data-dept="<?= $dept ?>">
+        <?= $dept ?>
+      </button>
+    <?php } ?>
+  </div>
+
+  <!-- Faculty Cards List -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div id="faculty-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
       <?php
-        // Local JSON load
-        $facultyData = json_decode(file_get_contents("faculty.json"), true);
-
-        foreach ($facultyData as $faculty) {
+        if ($facultyData) {
+          foreach ($facultyData as $faculty) {
       ?>
       <!-- Faculty Card -->
-      <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:border-blue-400 transition-all duration-300">
-        <!-- Image/Icon -->
+      <div 
+        class="faculty-card bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:border-blue-400 transition-all duration-300"
+        data-dept="<?= strtoupper($faculty['department']) ?>">
+        
+        <!-- Icon -->
         <div class="h-40 w-40 mx-auto bg-blue-100 flex items-center justify-center rounded-full mb-6 shadow-inner">
           <i class="fas fa-user-tie text-6xl text-blue-500"></i>
         </div>
@@ -63,10 +90,53 @@
           </div>
         </div>
       </div>
-      <?php } ?>
-
+      <?php 
+          }
+        } else {
+          echo '<p class="text-center text-red-500">No data found or API error.</p>';
+        }
+      ?>
     </div>
   </div>
 </div>
+
+<!-- Tabs JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".tab-btn");
+    const cards = document.querySelectorAll(".faculty-card");
+
+    function filterData(dept) {
+      cards.forEach(card => {
+        if (dept === "ALL" || card.getAttribute("data-dept") === dept) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      // All buttons classes reset
+      buttons.forEach(b => b.classList.remove("bg-blue-600", "text-white"));
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const dept = btn.getAttribute("data-dept");
+
+        filterData(dept);
+
+        // Active tab styling
+        btn.classList.add("bg-blue-600", "text-white");
+      });
+    });
+
+    // 👇 Default show ALL
+    const defaultBtn = document.querySelector('[data-dept="ALL"]');
+    if (defaultBtn) {
+      defaultBtn.click(); // simulate click
+    }
+  });
+</script>
+
 
 <?php include 'includes/footer.php'; ?>
