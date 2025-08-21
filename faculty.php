@@ -1,11 +1,11 @@
 <?php include 'includes/header.php'; ?>
 
-<div class="title-container mt-28 mb-10">
+<div class="title-container mt-28 mb-16">
   <div class="text-center pb-5">
-    <h2 class="text-4xl font-bold text-gray-900 mb-4">
-      Explore <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> faculty
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      Explore <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> Faculty
     </h2>
-    <p class="text-gray-600 max-w-2xl mx-auto">
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
       Top-class teachers, bringing quality learning to every student.
     </p>
   </div>
@@ -14,63 +14,53 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
       <?php
-        // API se data fetch karo
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://68a3f814c123272fb9b0e42d.mockapi.io/Faculties");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $response = curl_exec($ch);
-        curl_close($ch);
-
-        $facultyData = json_decode($response, true);
+        // Local JSON load
+        $facultyData = json_decode(file_get_contents("faculty.json"), true);
 
         foreach ($facultyData as $faculty) {
       ?>
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 p-6">
-        <div class="h-64 bg-blue-50 flex items-center justify-center rounded-md mb-6">
-          <i class="fas fa-user-tie text-7xl text-blue-400"></i>
+      <!-- Faculty Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:border-blue-400 transition-all duration-300">
+        <!-- Image/Icon -->
+        <div class="h-40 w-40 mx-auto bg-blue-100 flex items-center justify-center rounded-full mb-6 shadow-inner">
+          <i class="fas fa-user-tie text-6xl text-blue-500"></i>
         </div>
 
-        <!-- Faculty Name -->
-        <h3 class="text-2xl font-semibold mb-2 text-blue-800">
+        <!-- Name -->
+        <h3 class="text-2xl font-bold text-gray-800 text-center mb-2">
           <?= htmlspecialchars($faculty['name']) ?>
         </h3>
 
         <!-- Designation -->
-        <p class="text-blue-600 font-medium mb-2">
+        <p class="text-blue-700 text-center font-medium mb-4">
           <?= htmlspecialchars($faculty['designation']) ?>
         </p>
 
-        <!-- Qualification (Degree + Specialization) -->
-        <p class="text-gray-700 mb-2 leading-relaxed">
-          <span class="font-semibold">Qualification:</span> 
-          <?= htmlspecialchars($faculty['degree']) ?> in <?= htmlspecialchars($faculty['specialization']) ?>
-        </p>
+        <!-- Info Section -->
+        <div class="space-y-2 text-gray-700 text-sm">
+          <p><span class="font-semibold text-gray-900">Qualification:</span> <?= htmlspecialchars($faculty['degree']) ?></p>
+          <p><span class="font-semibold text-gray-900">Specialization:</span> <?= htmlspecialchars($faculty['specialization']) ?></p>
+          <p><span class="font-semibold text-gray-900">Experience:</span> <?= htmlspecialchars($faculty['experience']) ?></p>
+        </div>
 
-        <!-- Experience -->
-        <p class="text-gray-700 mb-2">
-          <span class="font-semibold">Experience:</span> 
-          <?= htmlspecialchars($faculty['experience'] ?? 'N/A') ?> years
-        </p>
+        <!-- Divider -->
+        <div class="border-t my-4"></div>
 
-        <!-- Contact Info -->
-        <p class="text-gray-700 mb-4">
-          <span class="font-semibold">Email:</span> 
-          <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="text-blue-600 hover:underline">
-            <?= htmlspecialchars($faculty['email']) ?>
-          </a>
-        </p>
+        <!-- Contact -->
+        <div class="text-sm text-center">
+          <p class="mb-3">
+            <span class="font-semibold">Email: </span>
+            <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="text-blue-600 hover:underline">
+              <?= htmlspecialchars($faculty['email']) ?>
+            </a>
+          </p>
 
-        <!-- Social & Website -->
-        <div class="flex space-x-5 text-gray-600">
-          <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="hover:text-blue-700">
-            <i class="far fa-envelope fa-lg"></i>
-          </a>
-          <a href="<?= htmlspecialchars($faculty['linkedin']) ?>" class="hover:text-blue-700">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-          <a href="<?= htmlspecialchars($faculty['website']) ?>" class="hover:text-blue-700">
-            <i class="fas fa-globe fa-lg"></i>
-          </a>
+          <!-- Social Links -->
+          <div class="flex justify-center space-x-5 text-gray-500">
+            <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="hover:text-blue-700"><i class="far fa-envelope fa-lg"></i></a>
+            <a href="<?= htmlspecialchars($faculty['linkedin']) ?>" target="_blank" class="hover:text-blue-700"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="<?= htmlspecialchars($faculty['website']) ?>" target="_blank" class="hover:text-blue-700"><i class="fas fa-globe fa-lg"></i></a>
+          </div>
         </div>
       </div>
       <?php } ?>
