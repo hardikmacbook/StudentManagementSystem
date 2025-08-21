@@ -224,42 +224,43 @@
       </div>
 
       <!-- Features -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <?php
+$servername = "localhost"; // usually localhost
+$username = "root"; // your db username
+$password = ""; // your db password
+$dbname = "open2learn"; // your db name
 
-        <!-- Feature 1 -->
-        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
-          <div class="text-4xl mb-4">
-            <i class="fas fa-graduation-cap text-[#1E3A8A]"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-900">Structured Learning</h3>
-          <p class="text-gray-600">
-            Courses are neatly organized by years and semesters for a clear learning path.
-          </p>
-        </div>
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-        <!-- Feature 2 -->
-        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
-          <div class="text-4xl mb-4">
-            <i class="fas fa-file-pdf text-[#1E3A8A]"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-900">Accessible Materials</h3>
-          <p class="text-gray-600">
-            Access or download materials anytime for seamless, flexible learning.
-          </p>
-        </div>
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-        <!-- Feature 3 -->
-        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">
-          <div class="text-4xl mb-4">
-            <i class="fas fa-chalkboard-teacher text-[#1E3A8A]"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2 text-gray-900">Expert Faculty</h3>
-          <p class="text-gray-600">
-            Learn from experienced subject experts dedicated to your growth.
-          </p>
-        </div>
+// Fetch features data
+$sql = "SELECT * FROM features";
+$result = $conn->query($sql);
 
-      </div>
+if ($result->num_rows > 0) {
+    echo '<div class="grid grid-cols-1 md:grid-cols-3 gap-8">';
+    while($row = $result->fetch_assoc()) {
+        echo '<div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#1E3A8A] transition duration-300">';
+        echo '<div class="text-4xl mb-4"><i class="' . htmlspecialchars($row["icon_class"]) . ' text-[#1E3A8A]"></i></div>';
+        echo '<h3 class="text-xl font-semibold mb-2 text-gray-900">' . htmlspecialchars($row["title"]) . '</h3>';
+        echo '<p class="text-gray-600">' . htmlspecialchars($row["description"]) . '</p>';
+        echo '</div>';
+    }
+    echo '</div>';
+} else {
+    echo "No features available.";
+}
+
+$conn->close();
+?>
+
+
+      
     </div>
   </div>
 
