@@ -11,8 +11,8 @@
 <body class="min-h-screen bg-gray-100">
 
 <!-- Floating Glass Header -->
-<header class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[40%] max-w-6xl z-50">
-  <div class="backdrop-blur-xl bg-white/40 border border-white/20 shadow-lg rounded-2xl px-6 py-3 flex justify-between items-center">
+<header class="fixed top-4 left-1/2 transform -translate-x-1/2 lg:w-[40%] max-w-6xl z-50">
+  <div class="backdrop-blur-xl bg-white/40 border border-white/20 shadow-lg rounded-2xl px-6 py-3 flex justify-between items-center gap-3">
     
     <!-- Logo -->
     <a href="index.php" class="text-xl font-bold text-gray-900 flex items-center">
@@ -40,7 +40,10 @@
 <!-- SIDE MOBILE MENU (Glass Effect) -->
 <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 backdrop-blur-lg bg-white/50 border-l border-white/20 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
   <div class="p-5 border-b border-gray-200 flex justify-between items-center">
-    <h2 class="text-lg font-semibold text-gray-800">Menu</h2>
+     <a href="index.php" class="text-xl font-bold text-gray-900 flex items-center">
+       <i class="fas fa-book-open text-[#1E3A8A] pr-2"></i>
+      <p class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</p>
+    </a>
     <button id="close-menu" class="text-gray-700 text-2xl hover:text-red-500 transition">
       <i class="fas fa-times"></i>
     </button>
