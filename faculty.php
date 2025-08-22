@@ -84,10 +84,10 @@
       </div>
 
   <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "open2learn";
+  $servername = "localhost"; // you can change it to your server name
+  $username = "root"; // enter you MySQL User Name
+  $password = ""; // enter your hosting panel password
+  $dbname = "open2learn"; // your database name
 
   $conn = new mysqli($servername, $username, $password, $dbname);
   if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }

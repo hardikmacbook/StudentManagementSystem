@@ -225,10 +225,10 @@
 
       <!-- Features -->
       <?php
-      $servername = "localhost"; // usually localhost
-      $username = "root"; // your db username
-      $password = ""; // your db password
-      $dbname = "open2learn"; // your db name
+      $servername = "localhost"; // you can change it to your server name
+      $username = "root"; // enter you MySQL User Name
+      $password = ""; // enter your hosting panel password
+      $dbname = "open2learn"; // your database name
 
       // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
@@ -265,10 +265,10 @@
 
 
   <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "open2learn";
+  $servername = "localhost"; // you can change it to your server name
+  $username = "root"; // enter you MySQL User Name
+  $password = ""; // enter your hosting panel password
+  $dbname = "open2learn"; // your database name
 
   // कनेक्शन बनाएं
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -336,30 +336,30 @@
     </div>
 
     <div class="swiper reviewSwiper">
-  <div class="swiper-wrapper">
-    <?php foreach ($valid_reviews as $review): ?>
-      <div class="swiper-slide flex">
-        <article class="review-card p-6 w-[300px] border border-gray-200 hover:border-[#1E3A8A] h-[320px] rounded-3xl mx-auto">
-          <div class="avatar bg-[#1E3A8A] text-white font-bold h-14 w-14 [clip-path:circle(35%)] flex items-center justify-center text-2xl mx-auto mb-4">
-            <?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?>
+      <div class="swiper-wrapper">
+        <?php foreach ($valid_reviews as $review): ?>
+          <div class="swiper-slide flex">
+            <article class="review-card p-6 w-[300px] border border-gray-200 hover:border-[#1E3A8A] h-[320px] rounded-3xl mx-auto">
+              <div class="avatar bg-[#1E3A8A] text-white font-bold h-14 w-14 [clip-path:circle(35%)] flex items-center justify-center text-2xl mx-auto mb-4">
+                <?= htmlspecialchars(mb_substr($review['name'], 0, 1)) ?>
+              </div>
+              <h3 class="font-semibold text-xl text-center text-gray-900 mb-2"><?= htmlspecialchars($review['name']) ?></h3>
+              <div class="flex justify-center mb-4 space-x-1">
+                <?php for ($i = 0; $i < 5; $i++): ?>
+                  <svg class="w-5 h-5 <?= $i < $review['rating'] ? 'text-[#BFA14A]' : 'text-gray-300' ?>" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
+                  </svg>
+                <?php endfor; ?>
+              </div>
+              <p class="review-text text-center text-gray-700 leading-relaxed flex-grow"><?= htmlspecialchars($review['review']) ?></p>
+            </article>
           </div>
-          <h3 class="font-semibold text-xl text-center text-gray-900 mb-2"><?= htmlspecialchars($review['name']) ?></h3>
-          <div class="flex justify-center mb-4 space-x-1">
-            <?php for ($i = 0; $i < 5; $i++): ?>
-              <svg class="w-5 h-5 <?= $i < $review['rating'] ? 'text-[#BFA14A]' : 'text-gray-300' ?>" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927C9.432 2.036 10.568 2.036 10.951 2.927L12.92 7.53l4.996.157c.964.027 1.357 1.254.627 1.838l-4.169 3.562 1.239 4.977c.22.935-.84 1.671-1.633 1.181L10 16.858 5.941 19.245c-.793.49-1.854-.236-1.633-1.181l1.239-4.977-4.169-3.562c-.73-.584-.337-1.811.627-1.838L7.08 7.53 9.049 2.927z" />
-              </svg>
-            <?php endfor; ?>
-          </div>
-          <p class="review-text text-center text-gray-700 leading-relaxed flex-grow"><?= htmlspecialchars($review['review']) ?></p>
-        </article>
+        <?php endforeach; ?>
       </div>
-    <?php endforeach; ?>
-  </div>
-</div>
+    </div>
 
-<!-- Swiper pagination -->
-<div class="swiper-pagination"></div>
+    <!-- Swiper pagination -->
+    <div class="swiper-pagination"></div>
   </div>
 
   <!-- Swiper JS -->
