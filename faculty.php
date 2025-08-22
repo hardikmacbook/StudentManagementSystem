@@ -1,43 +1,97 @@
 <?php include 'includes/header.php'; ?>
 
 <style>
-  /* Keep specialization scrollable if long */
+  /* Custom Scrollbar for specialization */
   .specialization-scroll {
     max-height: 100px;
     overflow-y: auto;
-    padding-right: 6px;
+    padding-right: 8px;
   }
-
-  /* Tabs scroll if too many on smaller screens */
-  .tabs-container {
+  /* Responsive image: fill width, max height, rounded */
+  .faculty-image {
+    width: 100%;
+    height: 16rem;           /* 256px (h-64 in Tailwind) */
+    max-height: 20rem;       /* 320px (h-80 in Tailwind) */
+    object-fit: cover;
+    border-radius: 0.75rem;  /* Rounded-xl */
+    display: block;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.07) inset;
+    transition: transform 0.3s;
+  }
+  .faculty-image:hover {
+    transform: scale(1.04);
+  }
+  .image-placeholder {
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    background-color: #bfdbfe;
     display: flex;
-    overflow-x: auto;
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
-    scrollbar-width: thin;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
   }
+  .image-placeholder i {
+    font-size: 48px;
+    color: #3b82f6;
+  }
+  .tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;          /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  white-space: nowrap;       /* Keep buttons in single line */
+  scrollbar-width: none;     /* Firefox: hide scrollbar */
+}
+.tabs-container::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari & Opera: hide scrollbar */
+}
+.tab-btn {
+  min-width: 60px;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1.5px solid #e5e7eb;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background .2s, color .2s, border .2s;
+  color: #1e293b;
+  white-space: nowrap;
+  flex-shrink: 0;           /* Prevent shrinking to keep width */
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+.tab-btn.active, .tab-btn:focus, .tab-btn:active {
+  background: #1E3A8A;
+  color: #fff;
+  border-color: #1E3A8A;
+  outline: none;
+}
 </style>
 
 <div class="title-container mt-28 mb-16">
-  <div class="text-center pb-5">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-      Explore <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> Faculty
-    </h2>
-    <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
-      Top-class teachers, bringing quality learning to every student.
-    </p>
-  </div>
+
+  <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Explore <span class="text-[#1E3A8A]">Open<span class="text-[#BFA14A]">2</span>Learn</span> Faculty
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Top-class teachers, bringing quality learning to every student.
+        </p>
+      </div>
 
   <?php
   $servername = "localhost";
-  $username   = "root";
-  $password   = ""; // your MySQL root password
-  $dbname     = "open2learn"; // your database name
+  $username = "root";
+  $password = "";
+  $dbname = "open2learn";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
   if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
-  // Fetch faculty data from database
   $sql = "SELECT * FROM faculty";
   $result = $conn->query($sql);
 
@@ -49,15 +103,14 @@
   }
   $conn->close();
 
-  // Departments list
   $departments = ["ALL", "BCA", "BBA", "LAB", "LIBRARY"];
   ?>
 
   <!-- Tabs Section -->
-  <div class="tabs-container justify-center mb-10">
+  <div class="tabs-container mb-10">
     <?php foreach ($departments as $dept) { ?>
       <button 
-        class="tab-btn flex-shrink-0 px-4 sm:px-6 py-2 rounded-lg border font-semibold text-gray-700 transition"
+        class="tab-btn"
         data-dept="<?= $dept ?>">
         <?= $dept ?>
       </button>
@@ -65,49 +118,50 @@
   </div>
 
   <!-- Faculty Cards List -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div id="faculty-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div id="faculty-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
 
-      <?php if ($facultyData) { foreach ($facultyData as $faculty) { ?>
+      <?php
+        if ($facultyData) {
+          foreach ($facultyData as $faculty) {
+      ?>
       <!-- Faculty Card -->
       <div 
-        class="faculty-card bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl hover:border-[#1E3A8A] transition-all duration-300"
+        class="faculty-card bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl hover:border-[#1E3A8A] transition-all duration-300 flex flex-col"
         data-dept="<?= strtoupper($faculty['department']) ?>">
 
         <!-- Image -->
         <?php if (!empty($faculty['image'])): ?>
-          <img src="<?= htmlspecialchars($faculty['image']) ?>" 
-               alt="<?= htmlspecialchars($faculty['name']) ?>" 
-               class="w-full max-w-sm mx-auto h-auto rounded-md object-cover mb-6 shadow-sm">
+          <img src="<?= htmlspecialchars($faculty['image']) ?>" alt="<?= htmlspecialchars($faculty['name']) ?>" class="faculty-image">
         <?php else: ?>
-          <div class="h-40 w-40 mx-auto mb-6 flex items-center justify-center bg-blue-200 text-blue-600 rounded-md">
-            <i class="fas fa-user-tie text-4xl"></i>
+          <div class="image-placeholder">
+            <i class="fas fa-user-tie"></i>
           </div>
         <?php endif; ?>
 
         <!-- Name -->
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-2">
+        <h3 class="text-2xl font-bold text-gray-800 text-center mb-2">
           <?= htmlspecialchars($faculty['name']) ?>
         </h3>
 
         <!-- Designation -->
-        <p class="text-blue-700 text-center font-medium mb-4">
+        <p class="text-blue-700 text-center font-medium mb-3">
           <?= htmlspecialchars($faculty['designation']) ?>
         </p>
 
         <!-- Info Section -->
-        <div class="space-y-2 text-gray-700 text-sm sm:text-base">
+        <div class="space-y-2 text-gray-700 text-sm mb-3">
           <p><span class="font-semibold text-gray-900">Qualification:</span> <?= htmlspecialchars($faculty['degree']) ?></p>
           <p class="specialization-scroll"><span class="font-semibold text-gray-900">Specialization:</span> <?= htmlspecialchars($faculty['specialization']) ?></p>
           <p><span class="font-semibold text-gray-900">Experience:</span> <?= htmlspecialchars($faculty['experience']) ?></p>
         </div>
 
         <!-- Divider -->
-        <div class="border-t my-4"></div>
+        <div class="border-t my-2"></div>
 
         <!-- Contact -->
         <div class="text-sm text-center">
-          <p class="mb-2">
+          <p>
             <span class="font-semibold">Email: </span>
             <a href="mailto:<?= htmlspecialchars($faculty['email']) ?>" class="text-blue-600 hover:underline">
               <?= htmlspecialchars($faculty['email']) ?>
@@ -115,10 +169,12 @@
           </p>
         </div>
       </div>
-      <?php } } else { ?>
-        <p class="text-center text-red-500">No data found.</p>
-      <?php } ?>
-
+      <?php 
+          }
+        } else {
+          echo '<p class="text-center text-red-500">No data found or API error.</p>';
+        }
+      ?>
     </div>
   </div>
 </div>
@@ -128,25 +184,30 @@
   document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".tab-btn");
     const cards = document.querySelectorAll(".faculty-card");
+    let prevActiveBtn = null;
 
     function filterData(dept) {
       cards.forEach(card => {
         if (dept === "ALL" || card.getAttribute("data-dept") === dept) {
-          card.style.display = "block";
+          card.style.display = "flex";
         } else {
           card.style.display = "none";
         }
       });
 
-      // Reset and set active styles
-      buttons.forEach(b => b.classList.remove("bg-blue-600", "text-white"));
+      // Remove active from all buttons
+      buttons.forEach(b => b.classList.remove("active"));
     }
 
     buttons.forEach(btn => {
       btn.addEventListener("click", () => {
         const dept = btn.getAttribute("data-dept");
         filterData(dept);
-        btn.classList.add("bg-blue-600", "text-white");
+
+        // Set active state
+        if (prevActiveBtn) prevActiveBtn.classList.remove("active");
+        btn.classList.add("active");
+        prevActiveBtn = btn;
       });
     });
 
