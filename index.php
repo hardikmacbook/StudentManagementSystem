@@ -14,552 +14,119 @@
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/api_helper.php'; ?>
 
- <!-- Hero Section -->
-<div class="relative w-full h-[600px] overflow-hidden bg-gray-900">
-  <!-- Slides -->
-  <div class="slider-wrapper flex transition-transform duration-700 ease-in-out" id="slider">
-    <!-- Slide 1 - Image -->
-    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="image">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg" alt="University Campus" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent flex items-center slide-overlay">
-        <div class="text-white max-w-3xl ml-16 animate-fade-in">
-          <h1 class="text-6xl font-bold mb-6 leading-tight">Welcome to Course Portal</h1>
-          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Access quality education materials anytime, anywhere with our comprehensive learning platform</p>
-          <a href="courses.php" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-            <span class="text-lg">Explore Courses</span>
-            <i class="fas fa-arrow-right ml-3"></i>
-          </a>
+  <!-- Hero Section -->
+  <div class="relative w-full h-[600px] overflow-hidden">
+    <!-- Slides -->
+    <div class="slider-wrapper flex transition-transform duration-700 ease-in-out" id="slider">
+      <div class="flex-shrink-0 w-full h-[600px] relative">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg" alt="University Campus" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
+          <div class="text-white max-w-2xl ml-16">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Course Portal</h1>
+            <p class="text-xl mb-8">Access quality education materials anytime, anywhere</p>
+            <a href="courses.php" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+              <span>Explore Courses</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <div class="flex-shrink-0 w-full h-[600px] relative">
+        <img src="https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg" alt="Library Interior" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
+          <div class="text-white max-w-2xl ml-16">
+            <h1 class="text-5xl font-bold mb-4">Comprehensive Learning</h1>
+            <p class="text-xl mb-8">Structured courses with semester-wise organization</p>
+            <a href="courses.php" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+              <span>View Programs</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0 w-full h-[600px] relative">
+        <img src="https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg" alt="Students Studying" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
+          <div class="text-white max-w-2xl ml-16">
+            <h1 class="text-5xl font-bold mb-4">Learn at Your Pace</h1>
+            <p class="text-xl mb-8">Download or view course materials online</p>
+            <a href="courses.php" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+              <span>Get Started</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Slide 2 - Video -->
-    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="video">
-      <video 
-        class="w-full h-full object-cover" 
-        muted 
-        preload="metadata"
-        poster="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-      >
-        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1920x1080_30mb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent flex items-center slide-overlay opacity-100 transition-opacity duration-500">
-        <div class="text-white max-w-3xl ml-16">
-          <h1 class="text-6xl font-bold mb-6 leading-tight">Interactive Learning</h1>
-          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Experience immersive educational content with our video-based learning modules</p>
-          <a href="courses.php" class="bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-            <span class="text-lg">View Programs</span>
-            <i class="fas fa-play ml-3"></i>
-          </a>
-        </div>
-      </div>
-      <!-- Video Controls -->
-      <div class="absolute bottom-20 left-16 flex items-center space-x-4 video-controls opacity-0 transition-opacity duration-300">
-        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
-          <i class="fas fa-play text-xl"></i>
-        </button>
-        <button class="stop-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
-          <i class="fas fa-stop text-xl"></i>
-        </button>
-        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
-          <i class="fas fa-volume-mute text-xl"></i>
-        </button>
-        <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-          <span class="text-white text-sm font-medium current-time">00:00</span>
-          <span class="text-white/60">/</span>
-          <span class="text-white text-sm font-medium duration-time">00:00</span>
-        </div>
-      </div>
-    </div>
+    <!-- Navigation Arrows -->
+    <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-4 rounded-full transition duration-300" aria-label="Previous Slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-4 rounded-full transition duration-300" aria-label="Next Slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
 
-    <!-- Slide 3 - Image -->
-    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="image">
-      <img src="https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg" alt="Library Interior" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent flex items-center slide-overlay">
-        <div class="text-white max-w-3xl ml-16">
-          <h1 class="text-6xl font-bold mb-6 leading-tight">Comprehensive Learning</h1>
-          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Structured courses with semester-wise organization tailored to your academic journey</p>
-          <a href="courses.php" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-            <span class="text-lg">Get Started</span>
-            <i class="fas fa-rocket ml-3"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 4 - Video -->
-    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="video">
-      <video 
-        class="w-full h-full object-cover" 
-        muted 
-        preload="metadata"
-        poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-      >
-        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1920x1080_20mb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent flex items-center slide-overlay opacity-100 transition-opacity duration-500">
-        <div class="text-white max-w-3xl ml-16">
-          <h1 class="text-6xl font-bold mb-6 leading-tight">Learn at Your Pace</h1>
-          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Download or view course materials online with flexible learning options</p>
-          <a href="courses.php" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
-            <span class="text-lg">Start Learning</span>
-            <i class="fas fa-graduation-cap ml-3"></i>
-          </a>
-        </div>
-      </div>
-      <!-- Video Controls -->
-      <div class="absolute bottom-20 left-16 flex items-center space-x-4 video-controls opacity-0 transition-opacity duration-300">
-        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
-          <i class="fas fa-play text-xl"></i>
-        </button>
-        <button class="stop-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
-          <i class="fas fa-stop text-xl"></i>
-        </button>
-        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
-          <i class="fas fa-volume-mute text-xl"></i>
-        </button>
-        <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-          <span class="text-white text-sm font-medium current-time">00:00</span>
-          <span class="text-white/60">/</span>
-          <span class="text-white text-sm font-medium duration-time">00:00</span>
-        </div>
-      </div>
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 slide-indicator active" data-index="0"></button>
+      <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 slide-indicator" data-index="1"></button>
+      <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 slide-indicator" data-index="2"></button>
     </div>
   </div>
 
-  <!-- Navigation Arrows -->
-  <button id="prev" class="absolute top-1/2 left-6 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" aria-label="Previous Slide">
-    <i class="fas fa-chevron-left text-xl"></i>
-  </button>
-  <button id="next" class="absolute top-1/2 right-6 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" aria-label="Next Slide">
-    <i class="fas fa-chevron-right text-xl"></i>
-  </button>
+  <script>
+    const slider = document.getElementById('slider');
+    const totalSlides = slider.children.length;
+    const indicators = document.querySelectorAll('.slide-indicator');
+    let index = 0;
 
-  <!-- Auto Play Toggle -->
-  <div class="absolute top-6 right-6 flex items-center space-x-3">
-    <span class="text-white/80 text-sm font-medium">Auto Play</span>
-    <button id="autoPlayToggle" class="relative inline-flex h-8 w-14 items-center justify-center rounded-full bg-green-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/25" aria-label="Toggle Auto Play">
-      <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition-transform duration-300 transform translate-x-0" id="toggleBall"></span>
-      <span class="sr-only">Toggle Auto Play</span>
-    </button>
-  </div>
-
-  <!-- Slide Indicators -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
-    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator active backdrop-blur-sm" data-index="0">
-      <span class="sr-only">Slide 1</span>
-    </button>
-    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator backdrop-blur-sm" data-index="1">
-      <span class="sr-only">Slide 2</span>
-    </button>
-    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator backdrop-blur-sm" data-index="2">
-      <span class="sr-only">Slide 3</span>
-    </button>
-    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator backdrop-blur-sm" data-index="3">
-      <span class="sr-only">Slide 4</span>
-    </button>
-  </div>
-
-  <!-- Progress Bar -->
-  <!-- Removed progress bar as requested -->
-</div>
-
-<style>
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
-
-.video-controls.show {
-  opacity: 1 !important;
-}
-
-.slide-overlay.hide {
-  opacity: 0 !important;
-}
-
-.slide-indicator.active {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  transform: scale(1.2);
-}
-
-.auto-play-off {
-  background-color: #ef4444 !important;
-}
-
-.auto-play-off .toggle-ball {
-  transform: translateX(0) !important;
-}
-
-.auto-play-on .toggle-ball {
-  transform: translateX(24px) !important;
-}
-</style>
-
-<script>
-const slider = document.getElementById('slider');
-const totalSlides = slider.children.length;
-const indicators = document.querySelectorAll('.slide-indicator');
-const autoPlayToggle = document.getElementById('autoPlayToggle');
-const toggleBall = document.getElementById('toggleBall');
-let index = 0;
-let autoPlayInterval;
-let isVideoPlaying = false;
-let autoPlayEnabled = true;
-
-// Format time helper
-function formatTime(seconds) {
-  const mins = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60);
-  return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Update active indicator
-function updateIndicators() {
-  indicators.forEach((indicator, i) => {
-    indicator.classList.toggle('active', i === index);
-  });
-}
-
-// Auto Play Toggle functionality
-autoPlayToggle.addEventListener('click', () => {
-  autoPlayEnabled = !autoPlayEnabled;
-  
-  if (autoPlayEnabled) {
-    autoPlayToggle.classList.remove('auto-play-off');
-    autoPlayToggle.classList.add('bg-green-500');
-    autoPlayToggle.classList.remove('bg-red-500');
-    toggleBall.style.transform = 'translateX(24px)';
-    startAutoPlay();
-  } else {
-    autoPlayToggle.classList.add('auto-play-off');
-    autoPlayToggle.classList.remove('bg-green-500');
-    autoPlayToggle.classList.add('bg-red-500');
-    toggleBall.style.transform = 'translateX(0)';
-    clearInterval(autoPlayInterval);
-  }
-});
-
-// Handle video controls
-function setupVideoControls(videoSlide, video) {
-  const playPauseBtn = videoSlide.querySelector('.play-pause-btn');
-  const stopBtn = videoSlide.querySelector('.stop-btn');
-  const muteBtn = videoSlide.querySelector('.mute-btn');
-  const currentTimeSpan = videoSlide.querySelector('.current-time');
-  const durationSpan = videoSlide.querySelector('.duration-time');
-  const videoControls = videoSlide.querySelector('.video-controls');
-  const overlay = videoSlide.querySelector('.slide-overlay');
-
-  // Show controls on video hover
-  video.addEventListener('mouseenter', () => {
-    videoControls.classList.add('show');
-  });
-
-  videoSlide.addEventListener('mouseleave', () => {
-    if (!video.paused) {
-      videoControls.classList.remove('show');
+    // Update active indicator
+    function updateIndicators() {
+      indicators.forEach((indicator, i) => {
+        if (i === index) {
+          indicator.classList.add('bg-white');
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('bg-white');
+          indicator.classList.remove('active');
+        }
+      });
     }
-  });
 
-  // Play/Pause functionality
-  playPauseBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (video.paused) {
-      video.play();
-      playPauseBtn.innerHTML = '<i class="fas fa-pause text-xl"></i>';
-      overlay.classList.add('hide');
-      isVideoPlaying = true;
-      clearInterval(autoPlayInterval);
-    } else {
-      video.pause();
-      playPauseBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
-      overlay.classList.remove('hide');
-      isVideoPlaying = false;
-      if (autoPlayEnabled) startAutoPlay();
-    }
-  });
+    // Next slide
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % totalSlides;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      updateIndicators();
+    });
 
-  // Stop functionality
-  stopBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    video.pause();
-    video.currentTime = 0;
-    playPauseBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
-    overlay.classList.remove('hide');
-    videoControls.classList.add('show');
-    isVideoPlaying = false;
-    if (autoPlayEnabled) startAutoPlay();
-  });
+    // Previous slide
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      updateIndicators();
+    });
 
-  // Mute/Unmute functionality
-  muteBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    video.muted = !video.muted;
-    muteBtn.innerHTML = video.muted ? 
-      '<i class="fas fa-volume-mute text-xl"></i>' : 
-      '<i class="fas fa-volume-up text-xl"></i>';
-  });
+    // Indicator clicks
+    indicators.forEach((indicator, i) => {
+      indicator.addEventListener('click', () => {
+        index = i;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        updateIndicators();
+      });
+    });
 
-  // Time update
-  video.addEventListener('timeupdate', () => {
-    if (currentTimeSpan) currentTimeSpan.textContent = formatTime(video.currentTime);
-  });
-
-  video.addEventListener('loadedmetadata', () => {
-    if (durationSpan) durationSpan.textContent = formatTime(video.duration);
-  });
-
-  // Video ended event
-  video.addEventListener('ended', () => {
-    playPauseBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
-    overlay.classList.remove('hide');
-    videoControls.classList.add('show');
-    isVideoPlaying = false;
-    if (autoPlayEnabled) startAutoPlay();
-  });
-}
-
-// Setup all video slides
-function setupVideos() {
-  const videoSlides = document.querySelectorAll('[data-slide-type="video"]');
-  videoSlides.forEach(slide => {
-    const video = slide.querySelector('video');
-    if (video) {
-      setupVideoControls(slide, video);
-    }
-  });
-}
-
-// Auto-play functionality
-function startAutoPlay() {
-  clearInterval(autoPlayInterval);
-  if (!isVideoPlaying && autoPlayEnabled) {
-    autoPlayInterval = setInterval(() => {
-      nextSlide();
+    // Auto-play every 5 seconds
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      updateIndicators();
     }, 6000);
-  }
-}
-
-// Next slide function
-function nextSlide() {
-  // Pause current video if playing
-  const currentSlide = slider.children[index];
-  if (currentSlide.dataset.slideType === 'video') {
-    const video = currentSlide.querySelector('video');
-    const overlay = currentSlide.querySelector('.slide-overlay');
-    const controls = currentSlide.querySelector('.video-controls');
-    const playBtn = currentSlide.querySelector('.play-pause-btn');
-    if (video && !video.paused) {
-      video.pause();
-      playBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
-      overlay.classList.remove('hide');
-      controls.classList.remove('show');
-    }
-  }
-
-  index = (index + 1) % totalSlides;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  updateIndicators();
-  isVideoPlaying = false;
-}
-
-// Previous slide function
-function prevSlide() {
-  // Pause current video if playing
-  const currentSlide = slider.children[index];
-  if (currentSlide.dataset.slideType === 'video') {
-    const video = currentSlide.querySelector('video');
-    const overlay = currentSlide.querySelector('.slide-overlay');
-    const controls = currentSlide.querySelector('.video-controls');
-    const playBtn = currentSlide.querySelector('.play-pause-btn');
-    if (video && !video.paused) {
-      video.pause();
-      playBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
-      overlay.classList.remove('hide');
-      controls.classList.remove('show');
-    }
-  }
-
-  index = (index - 1 + totalSlides) % totalSlides;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  updateIndicators();
-  isVideoPlaying = false;
-}
-
-// Navigation event listeners
-document.getElementById('next').addEventListener('click', () => {
-  nextSlide();
-  if (autoPlayEnabled) startAutoPlay();
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-  prevSlide();
-  if (autoPlayEnabled) startAutoPlay();
-});
-
-// Indicator clicks
-indicators.forEach((indicator, i) => {
-  indicator.addEventListener('click', () => {
-    // Pause current video if playing
-    const currentSlide = slider.children[index];
-    if (currentSlide.dataset.slideType === 'video') {
-      const video = currentSlide.querySelector('video');
-      const overlay = currentSlide.querySelector('.slide-overlay');
-      const controls = currentSlide.querySelector('.video-controls');
-      const playBtn = currentSlide.querySelector('.play-pause-btn');
-      if (video && !video.paused) {
-        video.pause();
-        playBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
-        overlay.classList.remove('hide');
-        controls.classList.remove('show');
-      }
-    }
-
-    index = i;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-    updateIndicators();
-    isVideoPlaying = false;
-    if (autoPlayEnabled) startAutoPlay();
-  });
-});
-
-// Initialize
-setupVideos();
-updateIndicators();
-if (autoPlayEnabled) startAutoPlay();
-
-// Pause auto-play when user interacts
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    clearInterval(autoPlayInterval);
-  } else {
-    if (autoPlayEnabled) startAutoPlay();
-  }
-});
-    startAutoPlay();
-  });
-}
-
-// Setup all video slides
-function setupVideos() {
-  const videoSlides = document.querySelectorAll('[data-slide-type="video"]');
-  videoSlides.forEach(slide => {
-    const video = slide.querySelector('video');
-    if (video) {
-      setupVideoControls(slide, video);
-    }
-  });
-}
-
-// Auto-play functionality
-function startAutoPlay() {
-  clearInterval(autoPlayInterval);
-  if (!isVideoPlaying) {
-    autoPlayInterval = setInterval(() => {
-      nextSlide();
-    }, 6000);
-  }
-}
-
-// Next slide function
-function nextSlide() {
-  // Pause current video if playing
-  const currentSlide = slider.children[index];
-  if (currentSlide.dataset.slideType === 'video') {
-    const video = currentSlide.querySelector('video');
-    const overlay = currentSlide.querySelector('.slide-overlay');
-    const controls = currentSlide.querySelector('.video-controls');
-    if (video && !video.paused) {
-      video.pause();
-      overlay.classList.remove('hide');
-      controls.classList.remove('show');
-    }
-  }
-
-  index = (index + 1) % totalSlides;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  updateIndicators();
-  isVideoPlaying = false;
-}
-
-// Previous slide function
-function prevSlide() {
-  // Pause current video if playing
-  const currentSlide = slider.children[index];
-  if (currentSlide.dataset.slideType === 'video') {
-    const video = currentSlide.querySelector('video');
-    const overlay = currentSlide.querySelector('.slide-overlay');
-    const controls = currentSlide.querySelector('.video-controls');
-    if (video && !video.paused) {
-      video.pause();
-      overlay.classList.remove('hide');
-      controls.classList.remove('show');
-    }
-  }
-
-  index = (index - 1 + totalSlides) % totalSlides;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-  updateIndicators();
-  isVideoPlaying = false;
-}
-
-// Navigation event listeners
-document.getElementById('next').addEventListener('click', () => {
-  nextSlide();
-  startAutoPlay();
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-  prevSlide();
-  startAutoPlay();
-});
-
-// Indicator clicks
-indicators.forEach((indicator, i) => {
-  indicator.addEventListener('click', () => {
-    // Pause current video if playing
-    const currentSlide = slider.children[index];
-    if (currentSlide.dataset.slideType === 'video') {
-      const video = currentSlide.querySelector('video');
-      const overlay = currentSlide.querySelector('.slide-overlay');
-      const controls = currentSlide.querySelector('.video-controls');
-      if (video && !video.paused) {
-        video.pause();
-        overlay.classList.remove('hide');
-        controls.classList.remove('show');
-      }
-    }
-
-    index = i;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-    updateIndicators();
-    isVideoPlaying = false;
-    startAutoPlay();
-  });
-});
-
-// Initialize
-setupVideos();
-updateIndicators();
-startAutoPlay();
-
-// Pause auto-play when user interacts
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    clearInterval(autoPlayInterval);
-  } else {
-    startAutoPlay();
-  }
-});
-</script>
+  </script>
 
   <!-- Featured Courses -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
