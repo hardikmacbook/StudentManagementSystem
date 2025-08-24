@@ -15,118 +15,300 @@
   <?php include 'includes/api_helper.php'; ?>
 
   <!-- Hero Section -->
-  <div class="relative w-full h-[600px] overflow-hidden">
-    <!-- Slides -->
-    <div class="slider-wrapper flex transition-transform duration-700 ease-in-out" id="slider">
-      <div class="flex-shrink-0 w-full h-[600px] relative">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg" alt="University Campus" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
-          <div class="text-white max-w-2xl ml-16">
-            <h1 class="text-5xl font-bold mb-4">Welcome to Course Portal</h1>
-            <p class="text-xl mb-8">Access quality education materials anytime, anywhere</p>
-            <a href="courses.php" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
-              <span>Explore Courses</span>
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex-shrink-0 w-full h-[600px] relative">
-        <img src="https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg" alt="Library Interior" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
-          <div class="text-white max-w-2xl ml-16">
-            <h1 class="text-5xl font-bold mb-4">Comprehensive Learning</h1>
-            <p class="text-xl mb-8">Structured courses with semester-wise organization</p>
-            <a href="courses.php" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
-              <span>View Programs</span>
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex-shrink-0 w-full h-[600px] relative">
-        <img src="https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg" alt="Students Studying" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-transparent flex items-center">
-          <div class="text-white max-w-2xl ml-16">
-            <h1 class="text-5xl font-bold mb-4">Learn at Your Pace</h1>
-            <p class="text-xl mb-8">Download or view course materials online</p>
-            <a href="courses.php" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
-              <span>Get Started</span>
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
+   <?php
+// --- SLIDES ARRAY, customize as you like ---
+$slides = [
+    [
+        'type' => 'image',
+        'src' => 'https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg',
+        'headline' => 'Welcome to Course Portal',
+        'subtext' => 'Access quality education materials anytime, anywhere',
+        'btn_text' => 'Explore Courses',
+        'btn_link' => 'courses.php'
+    ],
+    [
+        'type' => 'image',
+        'src' => 'https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg',
+        'headline' => 'Comprehensive Learning',
+        'subtext' => 'Structured courses with semester-wise organization',
+        'btn_text' => 'View Programs',
+        'btn_link' => 'courses.php'
+    ],
+    [
+        'type' => 'video',
+        'src' => 'https://www.w3schools.com/html/mov_bbb.mp4',
+        'poster' => 'https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg'
+    ],
+    [
+        'type' => 'image',
+        'src' => 'https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg',
+        'headline' => 'Learn at Your Pace',
+        'subtext' => 'Download or view course materials online',
+        'btn_text' => 'Get Started',
+        'btn_link' => 'courses.php'
+    ]
+];
+?>
+<!-- SLIDER START -->
+<div id="heroSlider" class="c-hero-slider">
+    <div class="c-hero-slider__inner" id="heroSliderInner">
+        <?php foreach ($slides as $s): ?>
+            <div class="c-hero-slide" data-type="<?= $s['type'] ?>">
+                <?php if($s['type'] === 'image'): ?>
+                    <img src="<?= htmlspecialchars($s['src']) ?>" alt="<?= htmlspecialchars($s['headline']) ?>">
+                    <div class="c-hero-overlay">
+                        <div class="c-hero-content">
+                            <h2><?= htmlspecialchars($s['headline']) ?></h2>
+                            <p><?= htmlspecialchars($s['subtext']) ?></p>
+                            <a href="<?= htmlspecialchars($s['btn_link']) ?>" class="c-hero-btn"><?= htmlspecialchars($s['btn_text']) ?></a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <video src="<?= htmlspecialchars($s['src']) ?>" poster="<?= isset($s['poster']) ? htmlspecialchars($s['poster']) : '' ?>" controls></video>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
     </div>
-
-    <!-- Navigation Arrows -->
-    <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-4 rounded-full transition duration-300" aria-label="Previous Slide">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-4 rounded-full transition duration-300" aria-label="Next Slide">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <!-- Slide Indicators -->
-    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-      <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 slide-indicator active" data-index="0"></button>
-      <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 slide-indicator" data-index="1"></button>
-      <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition duration-300 slide-indicator" data-index="2"></button>
+    <button class="c-hero-nav c-hero-nav--left" id="heroPrev" aria-label="Previous Slide">&#8592;</button>
+    <button class="c-hero-nav c-hero-nav--right" id="heroNext" aria-label="Next Slide">&#8594;</button>
+    <div class="c-hero-indicators" id="heroIndicators">
+        <?php foreach ($slides as $idx => $s): ?>
+            <button class="c-hero-indicator" data-index="<?= $idx ?>" <?= $idx === 0 ? 'aria-current="true"' : '' ?>></button>
+        <?php endforeach; ?>
     </div>
-  </div>
+</div>
+<!-- STYLES -->
+<style>
+.c-hero-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    margin: 3rem auto 2rem auto;
+    aspect-ratio: 16/6;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #22243a;
+    box-shadow: 0 8px 40px #17182133;
+}
+.c-hero-slider__inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.65s cubic-bezier(.82,0,.18,1);
+}
+.c-hero-slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    min-height: 300px;
+    background: #1a1a2d;
+    user-select: none;
+}
+.c-hero-slide img, .c-hero-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #191b2d;
+    border-radius: 0;
+}
+.c-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,rgba(0,0,0,.9) 8%,rgba(30,30,54,.55) 70%,rgba(0,0,0,0) 100%);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.c-hero-content {
+    color: #fff;
+    padding-left: 3vw;
+    max-width: 480px;
+    animation: hero_fadein .7s .1s both;
+}
+@keyframes hero_fadein {from {opacity:0;transform:translateY(20px);} to {opacity:1;transform:translateY(0)}}
+.c-hero-content h2 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 0 0 1.1rem 0;
+    text-shadow: 0 2px 24px #05032a88;
+}
+.c-hero-content p {
+    font-size: 1.16rem;
+    margin: 0 0 1.2rem 0;
+    color: #e3ebfc;
+    text-shadow: 0 2px 10px #02162333;
+}
+.c-hero-btn {
+    display: inline-block;
+    padding: 0.82rem 2.08rem;
+    font-size: 1.14rem;
+    font-weight: 700;
+    border-radius: 11px;
+    background: linear-gradient(94deg,#3451ff 34%,#a471c3 96%);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 4px 16px #3946b633;
+    transition: background 0.19s, filter .26s;
+}
+.c-hero-btn:hover,
+.c-hero-btn:focus { background: linear-gradient(94deg,#1e2a78,#8544b4); filter: brightness(1.08);}
+.c-hero-slide[data-type="video"] .c-hero-overlay {display: none;}
+.c-hero-nav {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(33,33,44,0.55);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px #0004;
+    width: 2.6rem; height: 2.6rem;
+    font-size: 1.4rem;
+    z-index: 10;
+    cursor: pointer;
+    transition: background .16s;
+    display: flex; align-items: center; justify-content: center;
+}
+.c-hero-nav:hover { background: #3451ff; }
+.c-hero-nav--left { left: 1.2rem;}
+.c-hero-nav--right { right: 1.2rem;}
+.c-hero-indicators {
+    position: absolute; left: 50%; bottom: 1.3rem; transform: translateX(-50%);
+    display: flex; gap: 13px; z-index: 19;
+}
+.c-hero-indicator {
+    width: 13px; height: 13px; border-radius: 50%;
+    background: #fff4; border: none;
+    box-shadow: 0 1px 16px #615fff15;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.2s;
+}
+.c-hero-indicator[aria-current="true"] {background: #3451ff; transform: scale(1.15);}
+@media (max-width: 920px) {
+    .c-hero-slider {aspect-ratio: 16/9; max-width:96vw}
+    .c-hero-content {max-width: 340px; padding-left: 4vw;}
+    .c-hero-content h2 {font-size:1.3rem;}
+}
+@media (max-width: 600px) {
+    .c-hero-slider {aspect-ratio: 16/13;}
+    .c-hero-content {padding-left: 6vw;max-width:99vw;}
+    .c-hero-nav {width:2rem;height:2rem;}
+    .c-hero-indicator {width:10px; height:10px;}
+    .c-hero-btn {font-size:0.99rem;padding:.7rem 1.2rem;}
+}
+</style>
+<!-- JS LOGIC -->
+<script>
+(function(){
+    const slider = document.getElementById('heroSlider'),
+          slides = slider.querySelectorAll('.c-hero-slide'),
+          inner = document.getElementById('heroSliderInner'),
+          indicators = slider.querySelectorAll('.c-hero-indicator'),
+          btnPrev = document.getElementById('heroPrev'),
+          btnNext = document.getElementById('heroNext');
 
-  <script>
-    const slider = document.getElementById('slider');
-    const totalSlides = slider.children.length;
-    const indicators = document.querySelectorAll('.slide-indicator');
-    let index = 0;
+    let index = 0, autoplay, transitioning = false, touchX = null, touchY = null, ignoreTouch = false;
 
-    // Update active indicator
-    function updateIndicators() {
-      indicators.forEach((indicator, i) => {
-        if (i === index) {
-          indicator.classList.add('bg-white');
-          indicator.classList.add('active');
-        } else {
-          indicator.classList.remove('bg-white');
-          indicator.classList.remove('active');
-        }
-      });
+    function goTo(n) {
+        if(n === index || transitioning) return;
+        transitioning = true;
+        index = (n + slides.length) % slides.length;
+        inner.style.transform = `translateX(-${index*100}%)`;
+        indicators.forEach((b,i)=>b.toggleAttribute('aria-current', i===index));
+        setTimeout(()=>transitioning=false, 370);
+        handleVideoPause();
     }
 
-    // Next slide
-    document.getElementById('next').addEventListener('click', () => {
-      index = (index + 1) % totalSlides;
-      slider.style.transform = `translateX(-${index * 100}%)`;
-      updateIndicators();
+    function next() { goTo(index+1); }
+    function prev() { goTo(index-1); }
+
+    // Click events
+    btnPrev.onclick = prev;
+    btnNext.onclick = next;
+    indicators.forEach((b,i)=>b.onclick=()=>goTo(i));
+
+    // Keyboard navigation
+    slider.tabIndex = 0;
+    slider.onkeydown = e=>{
+        if(e.key === "ArrowRight") next();
+        if(e.key === "ArrowLeft") prev();
+    };
+
+    // Touch/swipe logic
+    inner.addEventListener('touchstart', function(e){
+        if(ignoreTouch) return;
+        touchX = e.touches[0].clientX;
+        touchY = e.touches[0].clientY;
+    }, {passive:true});
+    inner.addEventListener('touchmove', function(e){
+        if(ignoreTouch || touchX === null) return;
+        let dX = e.touches[0].clientX - touchX;
+        let dY = e.touches[0].clientY - touchY;
+        if(Math.abs(dX) > 40 && Math.abs(dY) < 28){
+            goTo(index - Math.sign(dX));
+            touchX = null; touchY = null;
+        }
+    }, {passive:true});
+    inner.addEventListener('touchend', ()=>{touchX=null; touchY=null});
+
+    // Pause/play for video
+    function handleVideoPause() {
+        slides.forEach((s,i)=>{
+            if(s.dataset.type === 'video'){
+                let vid = s.querySelector('video');
+                vid.pause(); vid.currentTime = 0;
+                if(i === index){
+                    // when slide is shown, nothing (user can press play)
+                    ignoreTouch = false;
+                }
+            }
+        });
+    }
+
+    // When a video is played, stop autoplay and disable swipe left/right
+    slides.forEach(s=>{
+        if(s.dataset.type === "video"){
+            let vid = s.querySelector('video');
+            vid.addEventListener('play', ()=>{
+                clearInterval(autoplay); ignoreTouch=true;
+            });
+            vid.addEventListener('pause', ()=>{
+                if(index === Array.from(slides).indexOf(s)){
+                    ignoreTouch = false;
+                    startAutoplay();
+                }
+            });
+            vid.addEventListener('ended', ()=>{
+                ignoreTouch = false;
+                next();
+            });
+        }
     });
 
-    // Previous slide
-    document.getElementById('prev').addEventListener('click', () => {
-      index = (index - 1 + totalSlides) % totalSlides;
-      slider.style.transform = `translateX(-${index * 100}%)`;
-      updateIndicators();
-    });
+    // Autoplay for images only
+    function startAutoplay(){
+        clearInterval(autoplay);
+        autoplay = setInterval(()=>{
+            if(slides[index].dataset.type !== 'video'){
+                next();
+            }
+        }, 5500);
+    }
+    slider.addEventListener('mouseenter', ()=>clearInterval(autoplay));
+    slider.addEventListener('mouseleave', ()=>startAutoplay());
 
-    // Indicator clicks
-    indicators.forEach((indicator, i) => {
-      indicator.addEventListener('click', () => {
-        index = i;
-        slider.style.transform = `translateX(-${index * 100}%)`;
-        updateIndicators();
-      });
-    });
+    // Responsive (fix jump on resize)
+    window.addEventListener('resize', ()=>{ inner.style.transform = `translateX(-${index*100}%)`; });
 
-    // Auto-play every 5 seconds
-    setInterval(() => {
-      index = (index + 1) % totalSlides;
-      slider.style.transform = `translateX(-${index * 100}%)`;
-      updateIndicators();
-    }, 6000);
-  </script>
+    // Init
+    goTo(0);
+    startAutoplay();
+})();
+</script>
+<!-- SLIDER END -->
 
 
   <!-- Featured Courses -->
@@ -207,7 +389,6 @@
       </a>
     </div>
   </div>
-
   <!-- Features Section -->
   <div class="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

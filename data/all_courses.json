@@ -343,18 +343,232 @@
             "semester_number": 3,
             "subjects": [
               {
-                "id": "bca201",
-                "title": "Data Structures",
-                "description": "Introduction to data storage and algorithms.",
-                "pdf": "assest/pdfs/bca/year2/sem3/data_structures.pdf",
-                "image": "assest/images/subjects/data_structures.jpg"
+                "id": "stat_301",
+                "title": "Statistical Methods",
+                "description": "To develop statistical problems solving abilities relevant to Computer Science. To make students understand various statistical methods. To develop the ability to compute descriptive statistics including diagrammatic representation and interpretation. To be able to carry out simple linear regression analysis.",
+                "pdf": "https://drive.google.com/drive/folders/1EqeQL8yDJccx-1RzG6ZkS3P6vEWoGhoJ?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1606809956.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction and Presentation of statistical data",
+                    "pdf": "https://drive.google.com/drive/folders/1EthetuIn9v2q0qyoBrbrWxzbfHmB6w4X?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Measure of central tendency-mean, median and mode",
+                    "pdf": "https://drive.google.com/drive/folders/1EuG0S9opQFCjcoAxm-O-qXKwzReL6m3V?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Measures of dispersion (absolute as well as relative)",
+                    "pdf": "https://drive.google.com/drive/folders/1EyjM_-KodfjHEJUcSG_OqT3gkK2CbR_9?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Correlation",
+                    "pdf": "https://drive.google.com/drive/folders/1F3zQKWLxTVZMvsxuuTV5xEfwgXSQE-VX?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Regression",
+                    "pdf": "https://drive.google.com/drive/folders/1FDvfvo4SVpOmL0d24UIZB5_hFwfo17hX?usp=sharing"
+                  }
+                ]
               },
               {
-                "id": "bca202",
-                "title": "Operating Systems",
-                "description": "Concepts and architecture of modern OS.",
-                "pdf": "assest/pdfs/bca/year2/sem3/operating_systems.pdf",
-                "image": "assest/images/subjects/os.jpg"
+                "id": "se_302",
+                "title": "Software Engineering",
+                "description": "Computer software engineers apply the principles and techniques of computer science, engineering, and mathematical analysis to the design, development, testing, and evaluation of the software and the systems that enable computers to perform their many applications. Course Objective 1. To make students understand how to engineer the software. 2. To make students understand various components of the software process model and their working. 3. To make students understand various ways to test software.",
+                "pdf": "https://drive.google.com/drive/folders/1EpOffgI6oqOnr6eSif8l-cPE8yAZGupB?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1625248124.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Concepts of Software",
+                    "pdf": "https://drive.google.com/drive/folders/1FH7ZpWpr2ZJ4Ky7NA6ic5P7acmQzhCmn?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Software Process Models",
+                    "pdf": "https://drive.google.com/drive/folders/1FIFcrCTUvcWfBqicckq-O0ww4jnLAHqO?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Requirement Analysis",
+                    "pdf": "https://drive.google.com/drive/folders/1FTMrmwmZ_vorzD_pQv-UuQwVw1UicRy4?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "System Design",
+                    "pdf": "https://drive.google.com/drive/folders/1FTpodmH-vx_gQfaNnd_VjigWsbkSlzJU?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Software Testing",
+                    "pdf": "https://drive.google.com/drive/folders/1FTvGOaKIc0Bj2d5mTqnGb2J-kdWAJGXh?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "db_python_303",
+                "title": "Database handling using Python",
+                "description": "",
+                "pdf": "https://drive.google.com/drive/folders/1E_MZ-Ied52b4s8UJl6uwPhNo6nwKgoVo?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1625249097.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction to SQLite",
+                    "pdf": "https://drive.google.com/drive/folders/1FZ5LJkXvmmp0XnPa_OMDW6ntZHRgQbJ2?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Database backup and CSV handling",
+                    "pdf": "https://drive.google.com/drive/folders/1F_mjTcLZ6qeNu0aH6iTvgiRcvTGf9qVW?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Python Interaction with SQLite",
+                    "pdf": "https://drive.google.com/drive/folders/1F_zT9AcuHcufhkn3uW424eA0Z_ijNt5_?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Python interaction with text and CSV",
+                    "pdf": "https://drive.google.com/drive/folders/1Fbop4ueUOsHX29pCu1YEsHGUAh75-Tb5?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Data Visualization using data frame",
+                    "pdf": "https://drive.google.com/drive/folders/1Fi_hLwkwV-bhpwar9PRfXA6dP8kIi3s8?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "oopds_304",
+                "title": "OOPs and Data Structures",
+                "description": "Object of this course is to introduce students the essentials of computer Programming and programming methodology using C language. ",
+                "pdf": "https://drive.google.com/drive/folders/1EZh4qC0MuvfXw9fJRffIlcjGANqiO6jU?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1616052390.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction of C++",
+                    "pdf": "https://drive.google.com/drive/folders/1Fl25JcofUX9m-8nEHEFC8CXJfLjeb9b3?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Data Encapsulation and Inheritance",
+                    "pdf": "https://drive.google.com/drive/folders/1Fu01QQsOhfZXHTlFOTR1V5BoBBR8x_nr?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Polymorphism",
+                    "pdf": "https://drive.google.com/drive/folders/1G16SxETCfpQS3iL_xIUsAtJGm9QuFeOq?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Data Structure",
+                    "pdf": "https://drive.google.com/drive/folders/1G5yFHPzLPTF9npHLdlxpbhQ615s7v8ht?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Queue",
+                    "pdf": "https://drive.google.com/drive/folders/1GAU9jKwOYU71L0vX-2edRnYkclGU7ADx?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "md_305",
+                "title": "Mobile Application Development – 1",
+                "description": "",
+                "pdf": "https://drive.google.com/drive/folders/1EXowWbrjF5pQIjqGxIz60cYX_u1z8zL8?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1625249673.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Unit-1",
+                    "pdf": "https://drive.google.com/drive/folders/1GOFC6AJyZOtoRaQhXG5Q5_VdHg1QyBee?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Unit-2",
+                    "pdf": "https://drive.google.com/drive/folders/1GOwr6aGaURQYoY3-Ldlv3irRxBlzy_U-?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Unit-3",
+                    "pdf": "https://drive.google.com/drive/folders/1GStjx1W90Ul3wB-BvaU2fFKHUr0L0wSI?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Unit-4",
+                    "pdf": "https://drive.google.com/drive/folders/1GYIul2Q1srS7Tj4W-AsKCWLl3zfDtsyf?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Unit-5",
+                    "pdf": "https://drive.google.com/drive/folders/1GZEKDzazJPMWY4yHRkq2KN6Qxjn9gKCn?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "web_305",
+                "title": "Web Designing – 1",
+                "description": "",
+                "pdf": "https://drive.google.com/drive/folders/1EM_7o3hmY3KQv0TP1AX7Q1H-6-VEVHcd?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1625249538.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Working With HTML5 And CSS",
+                    "pdf": "https://drive.google.com/drive/folders/1GZRZUQY2wtO4cjKdyImVsmlQ-F-xzKp9?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Design Web Sites Using Bootstrap4",
+                    "pdf": "https://drive.google.com/drive/folders/1GboQXNsbcR8FPPyIDOMNDtMTH6tnzfko?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Overview of Java Script",
+                    "pdf": "https://drive.google.com/drive/folders/1GdiNqdzVTaJ5f3A23lKogwCw6MDztLr9?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "JavaScript Objects",
+                    "pdf": "https://drive.google.com/drive/folders/1GhI-NKyq85W9Ut3Wo-VaNbWv3KD2dz7m?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "JavaScript Functions",
+                    "pdf": "https://drive.google.com/drive/folders/1GhoO3n2cToSODDbG6mftGKIOmnbPTu_7?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "practical_306",
+                "title": "Practical",
+                "description": "Practical based on Papers 303(RDBMS), 304(Data Structures) and 305(Object Oriented Programming)",
+                "pdf": "https://drive.google.com/drive/folders/1dETxix-L92JDRGi1GMjh-gAi2BKCIiCl?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1606810284.jpeg",
+                "units": [
+                  {
+                    "unit_number": 303,
+                    "title": "Working With HTML5 And CSS",
+                    "pdf": "https://drive.google.com/drive/folders/1z-sZW5MN_VmjxLModEU0gLIjHM8Y0jIY?usp=sharing"
+                  },
+                  {
+                    "unit_number": 304,
+                    "title": "Design Web Sites Using Bootstrap4",
+                    "pdf": "https://drive.google.com/drive/folders/1z27tzKM4SJovxyiLHcJ3Bs3MkCzUzwhw?usp=sharing"
+                  },
+                  {
+                    "unit_number": 305,
+                    "title": "Projects",
+                    "pdf": "https://drive.google.com/drive/folders/1tGEdyoR7IYab0u4ryWbgL2tCQgetysm6?usp=sharing"
+                  }
+                ]
               }
             ]
           },
@@ -362,18 +576,232 @@
             "semester_number": 4,
             "subjects": [
               {
-                "id": "bca203",
-                "title": "Database Management Systems",
-                "description": "Design and management of databases.",
-                "pdf": "assest/pdfs/bca/year2/sem4/dbms.pdf",
-                "image": "assest/images/subjects/dbms.jpg"
+                "id": "is_401",
+                "title": "Information System",
+                "description": "Make students aware and understand various types of Information Systems. 1. Learn the different types of Information Systems. 2. To emphasize on the application of information to business management.",
+                "pdf": "https://drive.google.com/drive/folders/1H5J6b52SWdUj4WJ-m8ILUbM9BafflSqL?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1612268259.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction",
+                    "pdf": "https://drive.google.com/drive/folders/1M-uBGrWM5vRFMtpyDpF78xHr6Gdb8o2M?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Concepts of System",
+                    "pdf": "https://drive.google.com/drive/folders/1N3Gkl2rlYP9b71jL180ygrdew0vN-5sM?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Introduction to Information System",
+                    "pdf": "https://drive.google.com/drive/folders/16k7A4GgUsFb62QBqkqnO_l2urzSVnBoZ?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Transaction Processing System",
+                    "pdf": "https://drive.google.com/drive/folders/1DASDl-GQvt7rO9Nf3fEnbrh7gZWHXIG4?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Case Studies Based On TPS",
+                    "pdf": "https://drive.google.com/drive/folders/1AGWhk4KQ7kaTr9wC9xMee9XAYKZNlr-m?usp=sharing"
+                  }
+                ]
               },
               {
-                "id": "bca204",
-                "title": "Computer Networks",
-                "description": "Networking principles, protocols, and security.",
-                "pdf": "assest/pdfs/bca/year2/sem4/networks.pdf",
-                "image": "assest/images/subjects/networks.jpg"
+                "id": "iot_302",
+                "title": "Internet of Things (IoT)",
+                "description": "Computer software engineers apply the principles and techniques of computer science, engineering, and mathematical analysis to the design, development, testing, and evaluation of the software and the systems that enable computers to perform their many applications. Course Objective 1. To make students understand how to engineer the software. 2. To make students understand various components of the software process model and their working. 3. To make students understand various ways to test software.",
+                "pdf": "https://drive.google.com/drive/folders/15ygb7VIOksuuvTdfg-qhKoirti5wyvUE?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638381426.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction To Internet of Things",
+                    "pdf": "https://drive.google.com/drive/folders/1Cbj8Gya4j0bvD1JRf2QFXXjNpXEck0bm?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "IOT and M2M",
+                    "pdf": "https://drive.google.com/drive/folders/1JScy3HA5QUcLDJ4z-lEL7OAQYRZgDhlY?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Sensors And Actuators in IOT",
+                    "pdf": "https://drive.google.com/drive/folders/1KJ-wRjEYuXtB8EycymVJssNCKDqsJkka?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Introduction to Raspberry Pi and Arduino",
+                    "pdf": "https://drive.google.com/drive/folders/1VH6WVtS5UMM4KPCymBGhlThoXi3_Hlye?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Case Study",
+                    "pdf": "https://drive.google.com/drive/folders/11DtmJwfUnxDbok9Fi0R8ZG_-wizKakA7?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "java_403",
+                "title": "Java Programming",
+                "description": "To teach Object-Oriented Programming (OOP) concepts through programming using Java as the programming language. 1. To make students understand Object-Oriented Programming (OOP). 2. To make students understand various inbuilt Java classes and their working. 3. To make students understand the importance of OOP methodology. 4. To make students understand various types of OOP techniques.",
+                "pdf": "https://drive.google.com/drive/folders/1yp3v7PUY44YT5vgJlTVL_cuCn-q-xrjd?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1612268550.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction to Java",
+                    "pdf": "https://drive.google.com/drive/folders/1JGK76Ub3PoMfraPG_WDjCDAZzLCDOjQB?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Basics of Java",
+                    "pdf": "https://drive.google.com/drive/folders/1XjRC-b3SpNPE47_8YWrgWAFJ0nxAJagy?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Java Classes, Method & Objects",
+                    "pdf": "https://drive.google.com/drive/folders/1sBDlAjnHmx5pvyKXBY8rsjnFOay_0Zwi?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Interface and Package",
+                    "pdf": "https://drive.google.com/drive/folders/13y7kmC6pnOjkswWjYqxMIc8Qbsxx-0d6?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Exception and String",
+                    "pdf": "https://drive.google.com/drive/folders/1SpmrCFDfHE2TCawPSCER4BmDjHK_Bj75?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": ".net_404",
+                "title": "OOPs and Data Structures",
+                "description": "This syllabus has been prepared for beginners to help them understand basic VB.Net programming. After completing this, students will get a moderate level of expertise in VB .Net programming from where they can take themselves to the next levels. ",
+                "pdf": "https://drive.google.com/drive/folders/1TDYfV9HVnwXn5SL9Nr3zGVMHlC6XldDR?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1612268678.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Microsoft .NET Framework and IDE for VB.NET",
+                    "pdf": "https://drive.google.com/drive/folders/1hVbWb3oFm9Q9ZVU7HQdnKcSpcvvCO9HT?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Programming in Visual Basic .Net",
+                    "pdf": "https://drive.google.com/drive/folders/12YHwHWtxth475XD8Sr7PHec0ejGLfFsH?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Exceptiona Handling",
+                    "pdf": "https://drive.google.com/drive/folders/1q94XNKhiYVZllT8ZRkyHSLnCMlG6Huqr?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Object Oriented Programming",
+                    "pdf": "https://drive.google.com/drive/folders/1392RVWbAznh0XtExcwczpLrgwJpkzRP2?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Database access using ADO.NET",
+                    "pdf": "https://drive.google.com/drive/folders/1tKNnpz8pk-MpEfnMUBaG1eL5qVQQgtzm?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "wd_305",
+                "title": "Web Designing – 2",
+                "description": "",
+                "pdf": "https://drive.google.com/drive/folders/1OIKVQvNtJuhvuPia2v9ezpFwsDrpbuZ7?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1638104621.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Introduction of XML",
+                    "pdf": "https://drive.google.com/drive/folders/1LnsGGta-gJDZC_7tLsPK0UXNuPSMjDOB?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "jQuery fundamentals",
+                    "pdf": "https://drive.google.com/drive/folders/1w8Y319SJUEVA66uPHkMhx76OnVyzB_we?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "JSON (JavaScript Object Notation)",
+                    "pdf": "https://drive.google.com/drive/folders/1TR8fODDIhaAYi6OodCpL5mErCqjANopX?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "AJAX (Asynchronous JavaScript and XML)",
+                    "pdf": "https://drive.google.com/drive/folders/1JBEYYbOnDz0zA4GY1iEauxIsq1CzwN6c?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Node.js",
+                    "pdf": "https://drive.google.com/drive/folders/1aS9pzu1-0SiT0jDRzm90q1LWLAqpuYwC?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "mad_406",
+                "title": "Android – 2",
+                "description": "",
+                "pdf": "https://drive.google.com/drive/folders/15negwcW3AIGT93xNUk_QoQQyK27FNJLp?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1648463194.jpeg",
+                "units": [
+                  {
+                    "unit_number": 1,
+                    "title": "Unit-1",
+                    "pdf": "https://drive.google.com/drive/folders/1Q51gnIeOkw31vwsZBZ5q_aGFgX6kDtuu?usp=sharing"
+                  },
+                  {
+                    "unit_number": 2,
+                    "title": "Unit-2",
+                    "pdf": "https://drive.google.com/drive/folders/17aAqKOYFv1zYjUASjYjefZ-ANMY3tgY_?usp=sharing"
+                  },
+                  {
+                    "unit_number": 3,
+                    "title": "Unit-3",
+                    "pdf": "https://drive.google.com/drive/folders/1UO84HFbbgXveiw01W-U5jbeGJuMQ8PFy?usp=sharing"
+                  },
+                  {
+                    "unit_number": 4,
+                    "title": "Unit-4",
+                    "pdf": "https://drive.google.com/drive/folders/1043dQ9R5V1YZn5f8yFNs6k9LYUDVhnOb?usp=sharing"
+                  },
+                  {
+                    "unit_number": 5,
+                    "title": "Unit-5",
+                    "pdf": "https://drive.google.com/drive/folders/1es5C0UCoKX_e4sJfXu53xikF-8sx0usi?usp=sharing"
+                  }
+                ]
+              },
+              {
+                "id": "practical_306",
+                "title": "Practical",
+                "description": "Practical based on Papers 303(RDBMS), 304(Data Structures) and 305(Object Oriented Programming)",
+                "pdf": "https://drive.google.com/drive/folders/1dETxix-L92JDRGi1GMjh-gAi2BKCIiCl?usp=sharing",
+                "image": "https://jump2learn.com/storage/Users/Uploads/subject_banner__1606810284.jpeg",
+                "units": [
+                  {
+                    "unit_number": 303,
+                    "title": "Working With HTML5 And CSS",
+                    "pdf": "https://drive.google.com/drive/folders/1z-sZW5MN_VmjxLModEU0gLIjHM8Y0jIY?usp=sharing"
+                  },
+                  {
+                    "unit_number": 304,
+                    "title": "Design Web Sites Using Bootstrap4",
+                    "pdf": "https://drive.google.com/drive/folders/1z27tzKM4SJovxyiLHcJ3Bs3MkCzUzwhw?usp=sharing"
+                  },
+                  {
+                    "unit_number": 305,
+                    "title": "Projects",
+                    "pdf": "https://drive.google.com/drive/folders/1tGEdyoR7IYab0u4ryWbgL2tCQgetysm6?usp=sharing"
+                  }
+                ]
               }
             ]
           }
