@@ -14,302 +14,394 @@
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/api_helper.php'; ?>
 
-  <!-- Hero Section -->
-   <?php
-// --- SLIDES ARRAY, customize as you like ---
-$slides = [
-    [
-        'type' => 'image',
-        'src' => 'https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg',
-        'headline' => 'Welcome to Course Portal',
-        'subtext' => 'Access quality education materials anytime, anywhere',
-        'btn_text' => 'Explore Courses',
-        'btn_link' => 'courses.php'
-    ],
-    [
-        'type' => 'image',
-        'src' => 'https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg',
-        'headline' => 'Comprehensive Learning',
-        'subtext' => 'Structured courses with semester-wise organization',
-        'btn_text' => 'View Programs',
-        'btn_link' => 'courses.php'
-    ],
-    [
-        'type' => 'video',
-        'src' => 'https://www.w3schools.com/html/mov_bbb.mp4',
-        'poster' => 'https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg'
-    ],
-    [
-        'type' => 'image',
-        'src' => 'https://www.readlocalbc.ca/wp-content/uploads/2025/05/eBookshelf-banner.jpg',
-        'headline' => 'Learn at Your Pace',
-        'subtext' => 'Download or view course materials online',
-        'btn_text' => 'Get Started',
-        'btn_link' => 'courses.php'
-    ]
-];
-?>
-<!-- SLIDER START -->
-<div id="heroSlider" class="c-hero-slider">
-    <div class="c-hero-slider__inner" id="heroSliderInner">
-        <?php foreach ($slides as $s): ?>
-            <div class="c-hero-slide" data-type="<?= $s['type'] ?>">
-                <?php if($s['type'] === 'image'): ?>
-                    <img src="<?= htmlspecialchars($s['src']) ?>" alt="<?= htmlspecialchars($s['headline']) ?>">
-                    <div class="c-hero-overlay">
-                        <div class="c-hero-content">
-                            <h2><?= htmlspecialchars($s['headline']) ?></h2>
-                            <p><?= htmlspecialchars($s['subtext']) ?></p>
-                            <a href="<?= htmlspecialchars($s['btn_link']) ?>" class="c-hero-btn"><?= htmlspecialchars($s['btn_text']) ?></a>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <video src="<?= htmlspecialchars($s['src']) ?>" poster="<?= isset($s['poster']) ? htmlspecialchars($s['poster']) : '' ?>" controls></video>
-                <?php endif; ?>
-            </div>
-        <?php endforeach; ?>
+ <!-- Hero Section -->
+<div class="relative w-full h-[600px] overflow-hidden bg-gray-900">
+  <!-- Slides -->
+  <div class="slider-wrapper flex transition-transform duration-700 ease-in-out" id="slider">
+    <!-- Slide 1 - Image -->
+    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="image">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/006/296/747/small_2x/bookshelf-with-books-biography-adventure-novel-poem-fantasy-love-story-detective-art-romance-banner-for-library-book-store-genre-of-literature-illustration-in-flat-style-vector.jpg" alt="University Campus" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent flex items-center slide-overlay">
+        <div class="text-white max-w-3xl ml-16 animate-fade-in">
+          <h1 class="text-6xl font-bold mb-6 leading-tight">Welcome to Course Portal</h1>
+          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Access quality education materials anytime, anywhere with our comprehensive learning platform</p>
+          <a href="courses.php" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <span class="text-lg">Explore Courses</span>
+            <i class="fas fa-arrow-right ml-3"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <button class="c-hero-nav c-hero-nav--left" id="heroPrev" aria-label="Previous Slide">&#8592;</button>
-    <button class="c-hero-nav c-hero-nav--right" id="heroNext" aria-label="Next Slide">&#8594;</button>
-    <div class="c-hero-indicators" id="heroIndicators">
-        <?php foreach ($slides as $idx => $s): ?>
-            <button class="c-hero-indicator" data-index="<?= $idx ?>" <?= $idx === 0 ? 'aria-current="true"' : '' ?>></button>
-        <?php endforeach; ?>
+
+    <!-- Slide 2 - Video -->
+    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="video">
+      <video 
+        class="w-full h-full object-cover" 
+        muted 
+        preload="metadata"
+        poster="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      >
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent flex items-center slide-overlay opacity-100 transition-opacity duration-500">
+        <div class="text-white max-w-3xl ml-16">
+          <h1 class="text-6xl font-bold mb-6 leading-tight">Interactive Learning</h1>
+          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Experience immersive educational content with our video-based learning modules</p>
+          <a href="courses.php" class="bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <span class="text-lg">View Programs</span>
+            <i class="fas fa-play ml-3"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Video Controls -->
+      <div class="absolute bottom-20 left-16 flex items-center space-x-4 video-controls opacity-0 transition-opacity duration-300">
+        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+          <i class="fas fa-play text-lg"></i>
+        </button>
+        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+          <i class="fas fa-volume-mute text-lg"></i>
+        </button>
+        <div class="flex items-center space-x-2">
+          <span class="text-white text-sm font-medium">00:00</span>
+          <div class="progress-bar-container w-32 h-1 bg-white/30 rounded-full cursor-pointer">
+            <div class="progress-bar h-full bg-white rounded-full transition-all duration-150" style="width: 0%"></div>
+          </div>
+          <span class="text-white text-sm font-medium">00:00</span>
+        </div>
+      </div>
     </div>
+
+    <!-- Slide 3 - Image -->
+    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="image">
+      <img src="https://wallpapercrafter.com/desktop/159281-library-university-books-book-shelf-bookshelves.jpg" alt="Library Interior" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent flex items-center slide-overlay">
+        <div class="text-white max-w-3xl ml-16">
+          <h1 class="text-6xl font-bold mb-6 leading-tight">Comprehensive Learning</h1>
+          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Structured courses with semester-wise organization tailored to your academic journey</p>
+          <a href="courses.php" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <span class="text-lg">Get Started</span>
+            <i class="fas fa-rocket ml-3"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 - Video -->
+    <div class="flex-shrink-0 w-full h-[600px] relative" data-slide-type="video">
+      <video 
+        class="w-full h-full object-cover" 
+        muted 
+        preload="metadata"
+        poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      >
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </source>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent flex items-center slide-overlay opacity-100 transition-opacity duration-500">
+        <div class="text-white max-w-3xl ml-16">
+          <h1 class="text-6xl font-bold mb-6 leading-tight">Learn at Your Pace</h1>
+          <p class="text-xl mb-8 text-gray-200 leading-relaxed">Download or view course materials online with flexible learning options</p>
+          <a href="courses.php" class="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold py-4 px-10 rounded-full transition duration-300 inline-flex items-center shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <span class="text-lg">Start Learning</span>
+            <i class="fas fa-graduation-cap ml-3"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Video Controls -->
+      <div class="absolute bottom-20 left-16 flex items-center space-x-4 video-controls opacity-0 transition-opacity duration-300">
+        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+          <i class="fas fa-play text-lg"></i>
+        </button>
+        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
+          <i class="fas fa-volume-mute text-lg"></i>
+        </button>
+        <div class="flex items-center space-x-2">
+          <span class="text-white text-sm font-medium current-time">00:00</span>
+          <div class="progress-bar-container w-32 h-1 bg-white/30 rounded-full cursor-pointer">
+            <div class="progress-bar h-full bg-white rounded-full transition-all duration-150" style="width: 0%"></div>
+          </div>
+          <span class="text-white text-sm font-medium duration-time">00:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button id="prev" class="absolute top-1/2 left-6 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" aria-label="Previous Slide">
+    <i class="fas fa-chevron-left text-xl"></i>
+  </button>
+  <button id="next" class="absolute top-1/2 right-6 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" aria-label="Next Slide">
+    <i class="fas fa-chevron-right text-xl"></i>
+  </button>
+
+  <!-- Slide Indicators -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator active backdrop-blur-sm" data-index="0">
+      <span class="sr-only">Slide 1</span>
+    </button>
+    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator backdrop-blur-sm" data-index="1">
+      <span class="sr-only">Slide 2</span>
+    </button>
+    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator backdrop-blur-sm" data-index="2">
+      <span class="sr-only">Slide 3</span>
+    </button>
+    <button class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition duration-300 slide-indicator backdrop-blur-sm" data-index="3">
+      <span class="sr-only">Slide 4</span>
+    </button>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="absolute top-0 left-0 w-full h-1 bg-white/20">
+    <div class="slider-progress h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300" style="width: 25%"></div>
+  </div>
 </div>
-<!-- STYLES -->
+
 <style>
-.c-hero-slider {
-    position: relative;
-    width: 100%;
-    max-width: 1150px;
-    margin: 3rem auto 2rem auto;
-    aspect-ratio: 16/6;
-    border-radius: 24px;
-    overflow: hidden;
-    background: #22243a;
-    box-shadow: 0 8px 40px #17182133;
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-.c-hero-slider__inner {
-    display: flex;
-    height: 100%;
-    transition: transform 0.65s cubic-bezier(.82,0,.18,1);
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
 }
-.c-hero-slide {
-    position: relative;
-    flex: 0 0 100%;
-    width: 100%;
-    display: flex;
-    align-items: stretch;
-    justify-content: stretch;
-    min-height: 300px;
-    background: #1a1a2d;
-    user-select: none;
+
+.video-controls.show {
+  opacity: 1 !important;
 }
-.c-hero-slide img, .c-hero-slide video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background: #191b2d;
-    border-radius: 0;
+
+.slide-overlay.hide {
+  opacity: 0 !important;
 }
-.c-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg,rgba(0,0,0,.9) 8%,rgba(30,30,54,.55) 70%,rgba(0,0,0,0) 100%);
-    display: flex;
-    align-items: center;
-    z-index: 2;
+
+.slide-indicator.active {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transform: scale(1.2);
 }
-.c-hero-content {
-    color: #fff;
-    padding-left: 3vw;
-    max-width: 480px;
-    animation: hero_fadein .7s .1s both;
-}
-@keyframes hero_fadein {from {opacity:0;transform:translateY(20px);} to {opacity:1;transform:translateY(0)}}
-.c-hero-content h2 {
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin: 0 0 1.1rem 0;
-    text-shadow: 0 2px 24px #05032a88;
-}
-.c-hero-content p {
-    font-size: 1.16rem;
-    margin: 0 0 1.2rem 0;
-    color: #e3ebfc;
-    text-shadow: 0 2px 10px #02162333;
-}
-.c-hero-btn {
-    display: inline-block;
-    padding: 0.82rem 2.08rem;
-    font-size: 1.14rem;
-    font-weight: 700;
-    border-radius: 11px;
-    background: linear-gradient(94deg,#3451ff 34%,#a471c3 96%);
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    box-shadow: 0 4px 16px #3946b633;
-    transition: background 0.19s, filter .26s;
-}
-.c-hero-btn:hover,
-.c-hero-btn:focus { background: linear-gradient(94deg,#1e2a78,#8544b4); filter: brightness(1.08);}
-.c-hero-slide[data-type="video"] .c-hero-overlay {display: none;}
-.c-hero-nav {
-    position: absolute;
-    top: 50%; transform: translateY(-50%);
-    background: rgba(33,33,44,0.55);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px #0004;
-    width: 2.6rem; height: 2.6rem;
-    font-size: 1.4rem;
-    z-index: 10;
-    cursor: pointer;
-    transition: background .16s;
-    display: flex; align-items: center; justify-content: center;
-}
-.c-hero-nav:hover { background: #3451ff; }
-.c-hero-nav--left { left: 1.2rem;}
-.c-hero-nav--right { right: 1.2rem;}
-.c-hero-indicators {
-    position: absolute; left: 50%; bottom: 1.3rem; transform: translateX(-50%);
-    display: flex; gap: 13px; z-index: 19;
-}
-.c-hero-indicator {
-    width: 13px; height: 13px; border-radius: 50%;
-    background: #fff4; border: none;
-    box-shadow: 0 1px 16px #615fff15;
-    cursor: pointer;
-    transition: background 0.18s, transform 0.2s;
-}
-.c-hero-indicator[aria-current="true"] {background: #3451ff; transform: scale(1.15);}
-@media (max-width: 920px) {
-    .c-hero-slider {aspect-ratio: 16/9; max-width:96vw}
-    .c-hero-content {max-width: 340px; padding-left: 4vw;}
-    .c-hero-content h2 {font-size:1.3rem;}
-}
-@media (max-width: 600px) {
-    .c-hero-slider {aspect-ratio: 16/13;}
-    .c-hero-content {padding-left: 6vw;max-width:99vw;}
-    .c-hero-nav {width:2rem;height:2rem;}
-    .c-hero-indicator {width:10px; height:10px;}
-    .c-hero-btn {font-size:0.99rem;padding:.7rem 1.2rem;}
+
+.progress-bar-container:hover .progress-bar {
+  height: 6px;
 }
 </style>
-<!-- JS LOGIC -->
+
 <script>
-(function(){
-    const slider = document.getElementById('heroSlider'),
-          slides = slider.querySelectorAll('.c-hero-slide'),
-          inner = document.getElementById('heroSliderInner'),
-          indicators = slider.querySelectorAll('.c-hero-indicator'),
-          btnPrev = document.getElementById('heroPrev'),
-          btnNext = document.getElementById('heroNext');
+const slider = document.getElementById('slider');
+const totalSlides = slider.children.length;
+const indicators = document.querySelectorAll('.slide-indicator');
+const progressBar = document.querySelector('.slider-progress');
+let index = 0;
+let autoPlayInterval;
+let isVideoPlaying = false;
 
-    let index = 0, autoplay, transitioning = false, touchX = null, touchY = null, ignoreTouch = false;
+// Format time helper
+function formatTime(seconds) {
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
 
-    function goTo(n) {
-        if(n === index || transitioning) return;
-        transitioning = true;
-        index = (n + slides.length) % slides.length;
-        inner.style.transform = `translateX(-${index*100}%)`;
-        indicators.forEach((b,i)=>b.toggleAttribute('aria-current', i===index));
-        setTimeout(()=>transitioning=false, 370);
-        handleVideoPause();
+// Update active indicator and progress bar
+function updateIndicators() {
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === index);
+  });
+  
+  const progressWidth = ((index + 1) / totalSlides) * 100;
+  progressBar.style.width = `${progressWidth}%`;
+}
+
+// Handle video controls
+function setupVideoControls(videoSlide, video) {
+  const playPauseBtn = videoSlide.querySelector('.play-pause-btn');
+  const muteBtn = videoSlide.querySelector('.mute-btn');
+  const progressBar = videoSlide.querySelector('.progress-bar');
+  const progressContainer = videoSlide.querySelector('.progress-bar-container');
+  const currentTimeSpan = videoSlide.querySelector('.current-time');
+  const durationSpan = videoSlide.querySelector('.duration-time');
+  const videoControls = videoSlide.querySelector('.video-controls');
+  const overlay = videoSlide.querySelector('.slide-overlay');
+
+  // Show controls on video hover
+  video.addEventListener('mouseenter', () => {
+    videoControls.classList.add('show');
+  });
+
+  videoSlide.addEventListener('mouseleave', () => {
+    if (!video.paused) {
+      videoControls.classList.remove('show');
+    }
+  });
+
+  // Play/Pause functionality
+  playPauseBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (video.paused) {
+      video.play();
+      playPauseBtn.innerHTML = '<i class="fas fa-pause text-lg"></i>';
+      overlay.classList.add('hide');
+      isVideoPlaying = true;
+      clearInterval(autoPlayInterval);
+    } else {
+      video.pause();
+      playPauseBtn.innerHTML = '<i class="fas fa-play text-lg"></i>';
+      overlay.classList.remove('hide');
+      isVideoPlaying = false;
+      startAutoPlay();
+    }
+  });
+
+  // Mute/Unmute functionality
+  muteBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    video.muted = !video.muted;
+    muteBtn.innerHTML = video.muted ? 
+      '<i class="fas fa-volume-mute text-lg"></i>' : 
+      '<i class="fas fa-volume-up text-lg"></i>';
+  });
+
+  // Progress bar functionality
+  video.addEventListener('timeupdate', () => {
+    const progress = (video.currentTime / video.duration) * 100;
+    progressBar.style.width = `${progress}%`;
+    if (currentTimeSpan) currentTimeSpan.textContent = formatTime(video.currentTime);
+  });
+
+  video.addEventListener('loadedmetadata', () => {
+    if (durationSpan) durationSpan.textContent = formatTime(video.duration);
+  });
+
+  // Click on progress bar to seek
+  progressContainer.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const rect = progressContainer.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const newTime = (clickX / rect.width) * video.duration;
+    video.currentTime = newTime;
+  });
+
+  // Video ended event
+  video.addEventListener('ended', () => {
+    playPauseBtn.innerHTML = '<i class="fas fa-play text-lg"></i>';
+    overlay.classList.remove('hide');
+    videoControls.classList.add('show');
+    isVideoPlaying = false;
+    startAutoPlay();
+  });
+}
+
+// Setup all video slides
+function setupVideos() {
+  const videoSlides = document.querySelectorAll('[data-slide-type="video"]');
+  videoSlides.forEach(slide => {
+    const video = slide.querySelector('video');
+    if (video) {
+      setupVideoControls(slide, video);
+    }
+  });
+}
+
+// Auto-play functionality
+function startAutoPlay() {
+  clearInterval(autoPlayInterval);
+  if (!isVideoPlaying) {
+    autoPlayInterval = setInterval(() => {
+      nextSlide();
+    }, 6000);
+  }
+}
+
+// Next slide function
+function nextSlide() {
+  // Pause current video if playing
+  const currentSlide = slider.children[index];
+  if (currentSlide.dataset.slideType === 'video') {
+    const video = currentSlide.querySelector('video');
+    const overlay = currentSlide.querySelector('.slide-overlay');
+    const controls = currentSlide.querySelector('.video-controls');
+    if (video && !video.paused) {
+      video.pause();
+      overlay.classList.remove('hide');
+      controls.classList.remove('show');
+    }
+  }
+
+  index = (index + 1) % totalSlides;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  updateIndicators();
+  isVideoPlaying = false;
+}
+
+// Previous slide function
+function prevSlide() {
+  // Pause current video if playing
+  const currentSlide = slider.children[index];
+  if (currentSlide.dataset.slideType === 'video') {
+    const video = currentSlide.querySelector('video');
+    const overlay = currentSlide.querySelector('.slide-overlay');
+    const controls = currentSlide.querySelector('.video-controls');
+    if (video && !video.paused) {
+      video.pause();
+      overlay.classList.remove('hide');
+      controls.classList.remove('show');
+    }
+  }
+
+  index = (index - 1 + totalSlides) % totalSlides;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  updateIndicators();
+  isVideoPlaying = false;
+}
+
+// Navigation event listeners
+document.getElementById('next').addEventListener('click', () => {
+  nextSlide();
+  startAutoPlay();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+  prevSlide();
+  startAutoPlay();
+});
+
+// Indicator clicks
+indicators.forEach((indicator, i) => {
+  indicator.addEventListener('click', () => {
+    // Pause current video if playing
+    const currentSlide = slider.children[index];
+    if (currentSlide.dataset.slideType === 'video') {
+      const video = currentSlide.querySelector('video');
+      const overlay = currentSlide.querySelector('.slide-overlay');
+      const controls = currentSlide.querySelector('.video-controls');
+      if (video && !video.paused) {
+        video.pause();
+        overlay.classList.remove('hide');
+        controls.classList.remove('show');
+      }
     }
 
-    function next() { goTo(index+1); }
-    function prev() { goTo(index-1); }
+    index = i;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    updateIndicators();
+    isVideoPlaying = false;
+    startAutoPlay();
+  });
+});
 
-    // Click events
-    btnPrev.onclick = prev;
-    btnNext.onclick = next;
-    indicators.forEach((b,i)=>b.onclick=()=>goTo(i));
+// Initialize
+setupVideos();
+updateIndicators();
+startAutoPlay();
 
-    // Keyboard navigation
-    slider.tabIndex = 0;
-    slider.onkeydown = e=>{
-        if(e.key === "ArrowRight") next();
-        if(e.key === "ArrowLeft") prev();
-    };
-
-    // Touch/swipe logic
-    inner.addEventListener('touchstart', function(e){
-        if(ignoreTouch) return;
-        touchX = e.touches[0].clientX;
-        touchY = e.touches[0].clientY;
-    }, {passive:true});
-    inner.addEventListener('touchmove', function(e){
-        if(ignoreTouch || touchX === null) return;
-        let dX = e.touches[0].clientX - touchX;
-        let dY = e.touches[0].clientY - touchY;
-        if(Math.abs(dX) > 40 && Math.abs(dY) < 28){
-            goTo(index - Math.sign(dX));
-            touchX = null; touchY = null;
-        }
-    }, {passive:true});
-    inner.addEventListener('touchend', ()=>{touchX=null; touchY=null});
-
-    // Pause/play for video
-    function handleVideoPause() {
-        slides.forEach((s,i)=>{
-            if(s.dataset.type === 'video'){
-                let vid = s.querySelector('video');
-                vid.pause(); vid.currentTime = 0;
-                if(i === index){
-                    // when slide is shown, nothing (user can press play)
-                    ignoreTouch = false;
-                }
-            }
-        });
-    }
-
-    // When a video is played, stop autoplay and disable swipe left/right
-    slides.forEach(s=>{
-        if(s.dataset.type === "video"){
-            let vid = s.querySelector('video');
-            vid.addEventListener('play', ()=>{
-                clearInterval(autoplay); ignoreTouch=true;
-            });
-            vid.addEventListener('pause', ()=>{
-                if(index === Array.from(slides).indexOf(s)){
-                    ignoreTouch = false;
-                    startAutoplay();
-                }
-            });
-            vid.addEventListener('ended', ()=>{
-                ignoreTouch = false;
-                next();
-            });
-        }
-    });
-
-    // Autoplay for images only
-    function startAutoplay(){
-        clearInterval(autoplay);
-        autoplay = setInterval(()=>{
-            if(slides[index].dataset.type !== 'video'){
-                next();
-            }
-        }, 5500);
-    }
-    slider.addEventListener('mouseenter', ()=>clearInterval(autoplay));
-    slider.addEventListener('mouseleave', ()=>startAutoplay());
-
-    // Responsive (fix jump on resize)
-    window.addEventListener('resize', ()=>{ inner.style.transform = `translateX(-${index*100}%)`; });
-
-    // Init
-    goTo(0);
-    startAutoplay();
-})();
+// Pause auto-play when user interacts
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    clearInterval(autoPlayInterval);
+  } else {
+    startAutoPlay();
+  }
+});
 </script>
-<!-- SLIDER END -->
-
 
   <!-- Featured Courses -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
