@@ -41,7 +41,8 @@
         preload="metadata"
         poster="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       >
-        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1920x1080_30mb.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent flex items-center slide-overlay opacity-100 transition-opacity duration-500">
@@ -56,18 +57,19 @@
       </div>
       <!-- Video Controls -->
       <div class="absolute bottom-20 left-16 flex items-center space-x-4 video-controls opacity-0 transition-opacity duration-300">
-        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-          <i class="fas fa-play text-lg"></i>
+        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
+          <i class="fas fa-play text-xl"></i>
         </button>
-        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-          <i class="fas fa-volume-mute text-lg"></i>
+        <button class="stop-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
+          <i class="fas fa-stop text-xl"></i>
         </button>
-        <div class="flex items-center space-x-2">
-          <span class="text-white text-sm font-medium">00:00</span>
-          <div class="progress-bar-container w-32 h-1 bg-white/30 rounded-full cursor-pointer">
-            <div class="progress-bar h-full bg-white rounded-full transition-all duration-150" style="width: 0%"></div>
-          </div>
-          <span class="text-white text-sm font-medium">00:00</span>
+        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
+          <i class="fas fa-volume-mute text-xl"></i>
+        </button>
+        <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+          <span class="text-white text-sm font-medium current-time">00:00</span>
+          <span class="text-white/60">/</span>
+          <span class="text-white text-sm font-medium duration-time">00:00</span>
         </div>
       </div>
     </div>
@@ -95,9 +97,10 @@
         preload="metadata"
         poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       >
-        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1920x1080_20mb.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </source>
+      </video>
       <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent flex items-center slide-overlay opacity-100 transition-opacity duration-500">
         <div class="text-white max-w-3xl ml-16">
           <h1 class="text-6xl font-bold mb-6 leading-tight">Learn at Your Pace</h1>
@@ -110,17 +113,18 @@
       </div>
       <!-- Video Controls -->
       <div class="absolute bottom-20 left-16 flex items-center space-x-4 video-controls opacity-0 transition-opacity duration-300">
-        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-          <i class="fas fa-play text-lg"></i>
+        <button class="play-pause-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
+          <i class="fas fa-play text-xl"></i>
         </button>
-        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition duration-300">
-          <i class="fas fa-volume-mute text-lg"></i>
+        <button class="stop-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
+          <i class="fas fa-stop text-xl"></i>
         </button>
-        <div class="flex items-center space-x-2">
+        <button class="mute-btn bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition duration-300 shadow-lg">
+          <i class="fas fa-volume-mute text-xl"></i>
+        </button>
+        <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
           <span class="text-white text-sm font-medium current-time">00:00</span>
-          <div class="progress-bar-container w-32 h-1 bg-white/30 rounded-full cursor-pointer">
-            <div class="progress-bar h-full bg-white rounded-full transition-all duration-150" style="width: 0%"></div>
-          </div>
+          <span class="text-white/60">/</span>
           <span class="text-white text-sm font-medium duration-time">00:00</span>
         </div>
       </div>
@@ -134,6 +138,15 @@
   <button id="next" class="absolute top-1/2 right-6 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" aria-label="Next Slide">
     <i class="fas fa-chevron-right text-xl"></i>
   </button>
+
+  <!-- Auto Play Toggle -->
+  <div class="absolute top-6 right-6 flex items-center space-x-3">
+    <span class="text-white/80 text-sm font-medium">Auto Play</span>
+    <button id="autoPlayToggle" class="relative inline-flex h-8 w-14 items-center justify-center rounded-full bg-green-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/25" aria-label="Toggle Auto Play">
+      <span class="absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition-transform duration-300 transform translate-x-0" id="toggleBall"></span>
+      <span class="sr-only">Toggle Auto Play</span>
+    </button>
+  </div>
 
   <!-- Slide Indicators -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
@@ -152,9 +165,7 @@
   </div>
 
   <!-- Progress Bar -->
-  <div class="absolute top-0 left-0 w-full h-1 bg-white/20">
-    <div class="slider-progress h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300" style="width: 25%"></div>
-  </div>
+  <!-- Removed progress bar as requested -->
 </div>
 
 <style>
@@ -180,8 +191,16 @@
   transform: scale(1.2);
 }
 
-.progress-bar-container:hover .progress-bar {
-  height: 6px;
+.auto-play-off {
+  background-color: #ef4444 !important;
+}
+
+.auto-play-off .toggle-ball {
+  transform: translateX(0) !important;
+}
+
+.auto-play-on .toggle-ball {
+  transform: translateX(24px) !important;
 }
 </style>
 
@@ -189,10 +208,12 @@
 const slider = document.getElementById('slider');
 const totalSlides = slider.children.length;
 const indicators = document.querySelectorAll('.slide-indicator');
-const progressBar = document.querySelector('.slider-progress');
+const autoPlayToggle = document.getElementById('autoPlayToggle');
+const toggleBall = document.getElementById('toggleBall');
 let index = 0;
 let autoPlayInterval;
 let isVideoPlaying = false;
+let autoPlayEnabled = true;
 
 // Format time helper
 function formatTime(seconds) {
@@ -201,22 +222,37 @@ function formatTime(seconds) {
   return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Update active indicator and progress bar
+// Update active indicator
 function updateIndicators() {
   indicators.forEach((indicator, i) => {
     indicator.classList.toggle('active', i === index);
   });
-  
-  const progressWidth = ((index + 1) / totalSlides) * 100;
-  progressBar.style.width = `${progressWidth}%`;
 }
+
+// Auto Play Toggle functionality
+autoPlayToggle.addEventListener('click', () => {
+  autoPlayEnabled = !autoPlayEnabled;
+  
+  if (autoPlayEnabled) {
+    autoPlayToggle.classList.remove('auto-play-off');
+    autoPlayToggle.classList.add('bg-green-500');
+    autoPlayToggle.classList.remove('bg-red-500');
+    toggleBall.style.transform = 'translateX(24px)';
+    startAutoPlay();
+  } else {
+    autoPlayToggle.classList.add('auto-play-off');
+    autoPlayToggle.classList.remove('bg-green-500');
+    autoPlayToggle.classList.add('bg-red-500');
+    toggleBall.style.transform = 'translateX(0)';
+    clearInterval(autoPlayInterval);
+  }
+});
 
 // Handle video controls
 function setupVideoControls(videoSlide, video) {
   const playPauseBtn = videoSlide.querySelector('.play-pause-btn');
+  const stopBtn = videoSlide.querySelector('.stop-btn');
   const muteBtn = videoSlide.querySelector('.mute-btn');
-  const progressBar = videoSlide.querySelector('.progress-bar');
-  const progressContainer = videoSlide.querySelector('.progress-bar-container');
   const currentTimeSpan = videoSlide.querySelector('.current-time');
   const durationSpan = videoSlide.querySelector('.duration-time');
   const videoControls = videoSlide.querySelector('.video-controls');
@@ -238,17 +274,29 @@ function setupVideoControls(videoSlide, video) {
     e.stopPropagation();
     if (video.paused) {
       video.play();
-      playPauseBtn.innerHTML = '<i class="fas fa-pause text-lg"></i>';
+      playPauseBtn.innerHTML = '<i class="fas fa-pause text-xl"></i>';
       overlay.classList.add('hide');
       isVideoPlaying = true;
       clearInterval(autoPlayInterval);
     } else {
       video.pause();
-      playPauseBtn.innerHTML = '<i class="fas fa-play text-lg"></i>';
+      playPauseBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
       overlay.classList.remove('hide');
       isVideoPlaying = false;
-      startAutoPlay();
+      if (autoPlayEnabled) startAutoPlay();
     }
+  });
+
+  // Stop functionality
+  stopBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    video.pause();
+    video.currentTime = 0;
+    playPauseBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
+    overlay.classList.remove('hide');
+    videoControls.classList.add('show');
+    isVideoPlaying = false;
+    if (autoPlayEnabled) startAutoPlay();
   });
 
   // Mute/Unmute functionality
@@ -256,14 +304,12 @@ function setupVideoControls(videoSlide, video) {
     e.stopPropagation();
     video.muted = !video.muted;
     muteBtn.innerHTML = video.muted ? 
-      '<i class="fas fa-volume-mute text-lg"></i>' : 
-      '<i class="fas fa-volume-up text-lg"></i>';
+      '<i class="fas fa-volume-mute text-xl"></i>' : 
+      '<i class="fas fa-volume-up text-xl"></i>';
   });
 
-  // Progress bar functionality
+  // Time update
   video.addEventListener('timeupdate', () => {
-    const progress = (video.currentTime / video.duration) * 100;
-    progressBar.style.width = `${progress}%`;
     if (currentTimeSpan) currentTimeSpan.textContent = formatTime(video.currentTime);
   });
 
@@ -271,21 +317,133 @@ function setupVideoControls(videoSlide, video) {
     if (durationSpan) durationSpan.textContent = formatTime(video.duration);
   });
 
-  // Click on progress bar to seek
-  progressContainer.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const rect = progressContainer.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const newTime = (clickX / rect.width) * video.duration;
-    video.currentTime = newTime;
-  });
-
   // Video ended event
   video.addEventListener('ended', () => {
-    playPauseBtn.innerHTML = '<i class="fas fa-play text-lg"></i>';
+    playPauseBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
     overlay.classList.remove('hide');
     videoControls.classList.add('show');
     isVideoPlaying = false;
+    if (autoPlayEnabled) startAutoPlay();
+  });
+}
+
+// Setup all video slides
+function setupVideos() {
+  const videoSlides = document.querySelectorAll('[data-slide-type="video"]');
+  videoSlides.forEach(slide => {
+    const video = slide.querySelector('video');
+    if (video) {
+      setupVideoControls(slide, video);
+    }
+  });
+}
+
+// Auto-play functionality
+function startAutoPlay() {
+  clearInterval(autoPlayInterval);
+  if (!isVideoPlaying && autoPlayEnabled) {
+    autoPlayInterval = setInterval(() => {
+      nextSlide();
+    }, 6000);
+  }
+}
+
+// Next slide function
+function nextSlide() {
+  // Pause current video if playing
+  const currentSlide = slider.children[index];
+  if (currentSlide.dataset.slideType === 'video') {
+    const video = currentSlide.querySelector('video');
+    const overlay = currentSlide.querySelector('.slide-overlay');
+    const controls = currentSlide.querySelector('.video-controls');
+    const playBtn = currentSlide.querySelector('.play-pause-btn');
+    if (video && !video.paused) {
+      video.pause();
+      playBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
+      overlay.classList.remove('hide');
+      controls.classList.remove('show');
+    }
+  }
+
+  index = (index + 1) % totalSlides;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  updateIndicators();
+  isVideoPlaying = false;
+}
+
+// Previous slide function
+function prevSlide() {
+  // Pause current video if playing
+  const currentSlide = slider.children[index];
+  if (currentSlide.dataset.slideType === 'video') {
+    const video = currentSlide.querySelector('video');
+    const overlay = currentSlide.querySelector('.slide-overlay');
+    const controls = currentSlide.querySelector('.video-controls');
+    const playBtn = currentSlide.querySelector('.play-pause-btn');
+    if (video && !video.paused) {
+      video.pause();
+      playBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
+      overlay.classList.remove('hide');
+      controls.classList.remove('show');
+    }
+  }
+
+  index = (index - 1 + totalSlides) % totalSlides;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+  updateIndicators();
+  isVideoPlaying = false;
+}
+
+// Navigation event listeners
+document.getElementById('next').addEventListener('click', () => {
+  nextSlide();
+  if (autoPlayEnabled) startAutoPlay();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+  prevSlide();
+  if (autoPlayEnabled) startAutoPlay();
+});
+
+// Indicator clicks
+indicators.forEach((indicator, i) => {
+  indicator.addEventListener('click', () => {
+    // Pause current video if playing
+    const currentSlide = slider.children[index];
+    if (currentSlide.dataset.slideType === 'video') {
+      const video = currentSlide.querySelector('video');
+      const overlay = currentSlide.querySelector('.slide-overlay');
+      const controls = currentSlide.querySelector('.video-controls');
+      const playBtn = currentSlide.querySelector('.play-pause-btn');
+      if (video && !video.paused) {
+        video.pause();
+        playBtn.innerHTML = '<i class="fas fa-play text-xl"></i>';
+        overlay.classList.remove('hide');
+        controls.classList.remove('show');
+      }
+    }
+
+    index = i;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    updateIndicators();
+    isVideoPlaying = false;
+    if (autoPlayEnabled) startAutoPlay();
+  });
+});
+
+// Initialize
+setupVideos();
+updateIndicators();
+if (autoPlayEnabled) startAutoPlay();
+
+// Pause auto-play when user interacts
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    clearInterval(autoPlayInterval);
+  } else {
+    if (autoPlayEnabled) startAutoPlay();
+  }
+});
     startAutoPlay();
   });
 }
